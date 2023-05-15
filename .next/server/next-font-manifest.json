@@ -1,0 +1,14 @@
+{
+  "pages": {
+    "/": [
+      "static/media/2aaf0723e720e8b9-s.p.woff2"
+    ]
+  },
+  "app": {
+    "/Users/nguyenngoctoan/Documents/nextjs/houston/node_modules/next/font/google/target.css?{\"path\":\"src/pages/index.tsx\",\"import\":\"Inter\",\"arguments\":[{\"subsets\":[\"latin\"]}],\"variableName\":\"inter\"}": [
+      "static/media/2aaf0723e720e8b9-s.p.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": true
+}
