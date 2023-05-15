@@ -1,0 +1,36 @@
+.form_row {
+  width: 100%;
+  padding: 12px 0px;
+  position: relative;
+}
+.form_row_change_mail{
+  position: absolute;
+  z-index: 2;
+  margin-top: 6px;
+  right: 0;
+  color: var(--primary);
+}
+
+.form_row_error {
+  position: absolute;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 500;
+  color: var(--red);
+  bottom: -4px;
+}
+.form_btn_forgot{
+  margin-top: 8px;
+  display: block;
+  text-align: end;
+  color: var(--primary);
+  font-size: 14px;
+}
+.form_btn {
+  margin-top: 28px;
+}
+
+.form_btn button {
+  margin-top: 16px;
+  width: 100%;
+}

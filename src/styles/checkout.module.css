@@ -1,0 +1,291 @@
+.cnt {
+  display: flex;
+  justify-content: space-between;
+  margin: 78px 0px;
+}
+
+.cnt::after,
+.cnt::before,
+.detail_range_date::after,
+.detail_range_date::before,
+.right_villa_card::after,
+.right_villa_card::before,
+.right_info_card_head::after,
+.right_info_card_head::before,
+.info_column::after,
+.info_column::before,
+.bill_row::after,
+.bill_row::before {
+  display: none;
+}
+
+.left {
+  width: calc(35% - 12px);
+}
+
+.left_title {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.left_booking_detail {
+  padding: 12px;
+  border-radius: var(--small);
+  /* border: solid 1px var(--grey-light); */
+  box-shadow: var(--box-shadow);
+}
+
+.detail_range_date {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+}
+
+.range_item span {
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.range_item p {
+  margin-top: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  color: var(--grey-4);
+}
+
+.detail_count_date {
+  display: flex;
+  align-items: center;
+  margin-top: 14px;
+}
+
+.detail_count_date span {
+  margin-left: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--green-dark);
+}
+
+.detail_total_date {
+  margin-top: 14px;
+  display: flex;
+}
+
+.detail_total_date span {
+  font-weight: 600;
+}
+
+.left_bill {
+  padding: 12px;
+  border-radius: var(--small);
+  box-shadow: var(--box-shadow);
+  margin-top: 24px;
+}
+
+.bill_row {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bill_row_label {
+  font-size: 14px;
+}
+
+.bill_row_value {
+  font-weight: 18px;
+  font-weight: 500;
+}
+
+.bill_row_total {
+  border-top: solid 1px var(--grey-light);
+  padding-top: 12px;
+}
+
+.bill_row_total .bill_row_label {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 26px;
+}
+
+.bill_row_total .bill_row_value {
+  font-size: 24px;
+  line-height: 26px;
+  font-weight: 600;
+  color: var(--orange);
+}
+
+.right {
+  width: calc(65% - 12px);
+}
+
+.right_villa_card {
+  padding: 12px;
+  box-shadow: var(--box-shadow);
+  border-radius: var(--small);
+  display: flex;
+  justify-content: space-between;
+}
+
+.villa_img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.villa_detail {
+  width: calc(100% - 192px);
+}
+
+.villa_detail_cate_name {
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.villa_detail_name {
+  margin: 6px 0px;
+}
+
+.villa_detail_name span {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 600;
+}
+
+.fa_home {
+  margin: 0px 4px -2px 0px;
+}
+
+.villa_detail_address {
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 500;
+}
+
+.fa_location {
+  margin: 0px 5px -1px 3px;
+}
+
+.right_util_card,
+.right_info_card {
+  padding: 12px;
+  border-radius: var(--small);
+  box-shadow: var(--box-shadow);
+  margin-top: 24px;
+}
+
+.list_util {
+  margin-top: 14px;
+}
+
+.util_item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.util_item::after,.util_item::before{
+  display: none;
+}
+
+.util_item span {
+  width: calc(100% - 32px);
+  font-size: 14px;
+}
+
+.right_info_card_head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right_info_card_head a {
+  color: var(--primary);
+}
+
+.info_row,
+.info_row_note {
+  padding: 12px 12px;
+  width: 100%;
+  outline: none;
+  border: solid 1px #F5F8FA;
+  background-color: #F5F8FA;
+  border-radius: var(--normal);
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  margin-top: 14px;
+}
+
+.info_row_note {
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 98px;
+}
+
+.info_column {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info_column .info_row {
+  width: calc(50% - 7px);
+}
+
+.right_bot {
+  margin-top: 24px;
+}
+
+.right_bot button {
+  width: 100%;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 767px) {}
+
+@media only screen and (max-width: 767px) {
+  .cnt {
+    flex-direction: column-reverse;
+    padding-bottom: 84px;
+  }
+
+  .right,
+  .left {
+    width: 100%;
+  }
+
+  .villa_img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .villa_detail {
+    width: calc(100% - 112px);
+  }
+
+  .right_util_card,
+  .right_info_card {
+    margin-top: 12px;
+  }
+  .villa_detail_name{
+    font-size: 14px;
+  }
+  .villa_detail_address{
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .right_bot {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    background-color: var(--white);
+    z-index: 1;
+    border-radius: 12px 12px 0 0;
+    padding: 12px 12px 20px;
+    box-shadow: var(--box-shadow);
+  }
+}

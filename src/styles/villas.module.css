@@ -1,0 +1,221 @@
+.banner {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.banner_img {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(85%);
+}
+
+.banner_content {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.banner_content_title {
+  font-size: 75px;
+  color: var(--white);
+  font-weight: 600;
+  text-transform: uppercase
+}
+
+.banner_content span {
+  margin-top: 54px;
+  color: var(--white);
+  text-align: center;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.villa_list {
+  padding: 32px;
+}
+
+.villa_item {
+  display: flex;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.item_bg {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.item::after,
+.item::before {
+  display: none;
+}
+
+.item {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item_re {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.item_img {
+  height: 100%;
+  width: calc(65% - 8px);
+  object-fit: cover;
+}
+
+.item_detail {
+  height: 100%;
+  width: calc(35% - 8px);
+  padding: 18px;
+}
+
+.item_detail h1 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--white);
+}
+
+.item_detail_desc {
+  margin-top: 12px;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  color: var(--white);
+  display: -webkit-box;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  min-height: 32px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+
+.item_detail_price {
+  margin-top: 8px;
+  color: var(--white);
+  text-align: end;
+}
+
+.item_detail_price p:first-child {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.item_detail_price p:nth-child(2) {
+  margin-top: 6px;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 767px) {
+  .banner {
+    height: 50vh;
+  }
+
+  .banner_content_title {
+    font-size: 44px;
+  }
+
+  .banner_content span {
+    font-size: 26px;
+    margin-top: 24px;
+  }
+
+  .villa_list {
+    padding: 32px 0px;
+  }
+
+  .villa_item {
+    height: 250px;
+  }
+
+  .item_detail {
+    padding: 12px;
+  }
+
+  .item_detail h1 {
+    font-size: 20px;
+  }
+
+  .item_detail_desc {
+    font-size: 12px;
+    margin-top: 8px;
+    -webkit-line-clamp: 4
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banner {
+    height: 40vh;
+  }
+
+  .banner_content_title {
+    font-size: 24px;
+  }
+
+  .banner_content span {
+    margin-top: 8px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .villa_list {
+    padding: 24px 0px;
+  }
+
+  .villa_item {
+    min-height: 450px;
+    height: max-content;
+  }
+
+  .item,
+  .item_re {
+    flex-direction: column;
+  }
+
+  .item_img,
+  .item_detail {
+    width: 100%;
+  }
+
+  .item_img {
+    height: 200px;
+  }
+
+  .item_detail {
+    padding: 12px;
+  }
+
+  .item_detail_desc {
+    -webkit-line-clamp: 5;
+    font-size: 12px;
+  }
+}
