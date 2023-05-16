@@ -33,7 +33,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3537:
+/***/ 9430:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -48,9 +48,9 @@ __webpack_require__.d(__webpack_exports__, {
 
 // EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
 var jsx_runtime = __webpack_require__(5893);
-;// CONCATENATED MODULE: external "react-slick"
-const external_react_slick_namespaceObject = require("react-slick");
-var external_react_slick_default = /*#__PURE__*/__webpack_require__.n(external_react_slick_namespaceObject);
+// EXTERNAL MODULE: external "react-slick"
+var external_react_slick_ = __webpack_require__(8096);
+var external_react_slick_default = /*#__PURE__*/__webpack_require__.n(external_react_slick_);
 // EXTERNAL MODULE: ./src/components/pages/home/home.module.css
 var home_module = __webpack_require__(2597);
 var home_module_default = /*#__PURE__*/__webpack_require__.n(home_module);
@@ -58,8 +58,8 @@ var home_module_default = /*#__PURE__*/__webpack_require__.n(home_module);
 var material_ = __webpack_require__(5692);
 // EXTERNAL MODULE: external "next/router"
 var router_ = __webpack_require__(1853);
-// EXTERNAL MODULE: ./src/utils/index.ts + 4 modules
-var utils = __webpack_require__(588);
+// EXTERNAL MODULE: ./src/utils/index.ts + 5 modules
+var utils = __webpack_require__(4074);
 // EXTERNAL MODULE: external "react"
 var external_react_ = __webpack_require__(6689);
 ;// CONCATENATED MODULE: ./src/components/pages/home/Banner.tsx
@@ -257,7 +257,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4277);
-/* harmony import */ var _components_pages_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3537);
+/* harmony import */ var _components_pages_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9430);
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7430);
 /* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8557);
 /* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1280);
@@ -524,6 +524,14 @@ module.exports = require("react-icons/fa");
 
 "use strict";
 module.exports = require("react-icons/md");
+
+/***/ }),
+
+/***/ 8096:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-slick");
 
 /***/ }),
 

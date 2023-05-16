@@ -600,11 +600,11 @@ function Seo(props) {
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "$S": () => (/* binding */ captKey),
 /* harmony export */   "NL": () => (/* binding */ apiBlog),
 /* harmony export */   "p7": () => (/* binding */ axiosConfig),
 /* harmony export */   "v2": () => (/* binding */ baseURL)
 /* harmony export */ });
-/* unused harmony export captKey */
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
 /* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2194);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9915);
@@ -615,7 +615,7 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axio
 
 // export const baseURL = process.env.NEXT_PUBLIC_API_URL_DEV;
 const baseURL = "https://api.houstongarden.click/";
-const captKey = (/* unused pure expression or super */ null && ("6Lfma7olAAAAAGLvchLIB9_nQQY8dW5X2U_uTNGh" ?? 0));
+const captKey = "6Lfma7olAAAAAGLvchLIB9_nQQY8dW5X2U_uTNGh" ?? 0;
 const apiBlog = "https://admin.houstongarden.vn";
 const axiosConfig = axios__WEBPACK_IMPORTED_MODULE_0__["default"].create({
     baseURL: baseURL,
@@ -685,6 +685,7 @@ __webpack_async_result__();
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "$S": () => (/* reexport safe */ _axios_config__WEBPACK_IMPORTED_MODULE_2__.$S),
 /* harmony export */   "Eh": () => (/* reexport safe */ _query_client_config__WEBPACK_IMPORTED_MODULE_1__.E),
 /* harmony export */   "NL": () => (/* reexport safe */ _axios_config__WEBPACK_IMPORTED_MODULE_2__.NL),
 /* harmony export */   "O3": () => (/* reexport safe */ _server_side_cache_config__WEBPACK_IMPORTED_MODULE_0__.O),
@@ -1004,6 +1005,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "Ef": () => (/* reexport safe */ _sign_layout__WEBPACK_IMPORTED_MODULE_2__.E),
 /* harmony export */   "Tp": () => (/* reexport safe */ _empty__WEBPACK_IMPORTED_MODULE_0__.T),
 /* harmony export */   "Zn": () => (/* reexport safe */ _main__WEBPACK_IMPORTED_MODULE_1__.Z),
+/* harmony export */   "g1": () => (/* reexport safe */ _auth_layout__WEBPACK_IMPORTED_MODULE_3__.g),
 /* harmony export */   "p0": () => (/* reexport safe */ _account_layout__WEBPACK_IMPORTED_MODULE_4__.p)
 /* harmony export */ });
 /* harmony import */ var _empty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1906);
@@ -1274,6 +1276,7 @@ __webpack_async_result__();
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "M": () => (/* reexport safe */ _useBookingStore__WEBPACK_IMPORTED_MODULE_1__.M),
 /* harmony export */   "O": () => (/* reexport safe */ _useProfileStore__WEBPACK_IMPORTED_MODULE_0__.O)
 /* harmony export */ });
 /* harmony import */ var _useProfileStore__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2165);
@@ -1293,9 +1296,11 @@ __webpack_async_result__();
 
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* unused harmony export useBookingStore */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "M": () => (/* binding */ useBookingStore)
+/* harmony export */ });
 /* harmony import */ var zustand__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6912);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(588);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4074);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([zustand__WEBPACK_IMPORTED_MODULE_0__]);
 zustand__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -1385,7 +1390,7 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 588:
+/***/ 4074:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1393,12 +1398,13 @@ __webpack_async_result__();
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   "BX": () => (/* reexport */ fmPrice),
+  "hD": () => (/* reexport */ rangeDate),
   "lV": () => (/* reexport */ slugify),
   "tO": () => (/* reexport */ storage),
   "Gu": () => (/* reexport */ validate)
 });
 
-// UNUSED EXPORTS: imageProxy, rangeDate
+// UNUSED EXPORTS: imageProxy
 
 ;// CONCATENATED MODULE: ./src/utils/validate.ts
 const validate = {
@@ -1442,6 +1448,15 @@ function storage() {
     };
     return actionStorage;
 }
+
+;// CONCATENATED MODULE: ./src/utils/range-date.ts
+const rangeDate = (dateFrom, dateTo)=>{
+    const startTime = new Date(dateFrom);
+    const endTime = new Date(dateTo);
+    const timeDiff = endTime.getTime() - startTime.getTime();
+    const date = timeDiff / (1000 * 60 * 60 * 24);
+    return date;
+};
 
 ;// CONCATENATED MODULE: ./src/utils/format.ts
 const fmPrice = (num)=>{
