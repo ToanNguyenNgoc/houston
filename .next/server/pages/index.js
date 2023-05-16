@@ -256,13 +256,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "getStaticProps": () => (/* binding */ getStaticProps)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
-/* harmony import */ var _components_pages_home__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3537);
-/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7430);
-/* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8557);
-/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1280);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(9648);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_config__WEBPACK_IMPORTED_MODULE_2__, _layouts__WEBPACK_IMPORTED_MODULE_3__, _services__WEBPACK_IMPORTED_MODULE_4__, axios__WEBPACK_IMPORTED_MODULE_5__]);
-([_config__WEBPACK_IMPORTED_MODULE_2__, _layouts__WEBPACK_IMPORTED_MODULE_3__, _services__WEBPACK_IMPORTED_MODULE_4__, axios__WEBPACK_IMPORTED_MODULE_5__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4277);
+/* harmony import */ var _components_pages_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3537);
+/* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7430);
+/* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8557);
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1280);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9648);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_1__, _config__WEBPACK_IMPORTED_MODULE_3__, _layouts__WEBPACK_IMPORTED_MODULE_4__, _services__WEBPACK_IMPORTED_MODULE_5__, axios__WEBPACK_IMPORTED_MODULE_6__]);
+([_components__WEBPACK_IMPORTED_MODULE_1__, _config__WEBPACK_IMPORTED_MODULE_3__, _layouts__WEBPACK_IMPORTED_MODULE_4__, _services__WEBPACK_IMPORTED_MODULE_5__, axios__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -271,36 +273,43 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_con
 
 const Home = (props)=>{
     const { branches , villas , banners  } = props;
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
-        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
-            children: [
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_1__/* .HomeBanner */ .FS, {
-                    banners: banners
-                }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_1__/* .WelCome */ .Fx, {}),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_1__/* .HomeBranch */ .CX, {
-                    branches: branches
-                }),
-                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_1__/* .HomeVilla */ .se, {
-                    villas: villas
-                })
-            ]
-        })
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_1__/* .Seo */ .pQ, {
+                title: "Trang chủ",
+                description: "Trang chủ Houston Garden",
+                url: ""
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("main", {
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_2__/* .HomeBanner */ .FS, {
+                        banners: banners
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_2__/* .WelCome */ .Fx, {}),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_2__/* .HomeBranch */ .CX, {
+                        branches: branches
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_2__/* .HomeVilla */ .se, {
+                        villas: villas
+                    })
+                ]
+            })
+        ]
     });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Home);
-Home.Layout = _layouts__WEBPACK_IMPORTED_MODULE_3__/* .MainLayout */ .Zn;
+Home.Layout = _layouts__WEBPACK_IMPORTED_MODULE_4__/* .MainLayout */ .Zn;
 const getStaticProps = async (context)=>{
     let branches = [];
     let villas = [];
     let banners = [];
     try {
-        const response = await axios__WEBPACK_IMPORTED_MODULE_5__["default"].get(`${_config__WEBPACK_IMPORTED_MODULE_2__/* .baseURL */ .v2}branches`);
+        const response = await axios__WEBPACK_IMPORTED_MODULE_6__["default"].get(`${_config__WEBPACK_IMPORTED_MODULE_3__/* .baseURL */ .v2}branches`);
         branches = response.data?.data;
     } catch (error) {}
     //
     try {
-        const response = await _services__WEBPACK_IMPORTED_MODULE_4__/* .api.banners */ .h.banners();
+        const response = await _services__WEBPACK_IMPORTED_MODULE_5__/* .api.banners */ .h.banners();
         banners = response.data;
     } catch (error) {}
     return {

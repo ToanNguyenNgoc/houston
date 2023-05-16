@@ -1,4 +1,5 @@
 import { NextPageWithLayout } from '@/common'
+import { Seo } from '@/components'
 import { HomeBanner, HomeBranch, HomeVilla, WelCome } from '@/components/pages/home'
 import { baseURL } from '@/config'
 import { Banner, Branch, Villa } from '@/interfaces'
@@ -17,6 +18,7 @@ const Home: NextPageWithLayout = (props) => {
   const { branches, villas, banners } = props as HomeProps;
   return (
     <>
+      <Seo title='Trang chủ' description='Trang chủ Houston Garden' url='' />
       <main>
         <HomeBanner banners={banners} />
         <WelCome />
