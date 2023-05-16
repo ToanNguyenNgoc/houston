@@ -1,0 +1,127 @@
+.booking_form_title {
+  font-size: 22px;
+  line-height: 28px;
+  font-weight: 500;
+  color: var(--grey-3);
+}
+
+.booking_form {
+  margin-top: 16px;
+}
+
+.form_row {
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.form_row_col_2 {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.input_date {
+  width: calc(50% - 12px);
+}
+
+.input_date::after,
+.input_date::before,
+.form_row_col_2::after,
+.form_row_col_2::before {
+  display: none;
+}
+
+.range_date_cnt {
+  position: absolute;
+  width: 100%;
+  height: fit-content;
+  background-color: var(--white);
+  border-radius: var(--normal);
+  box-shadow: var(--box-shadow);
+  margin-top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--trans);
+  z-index: 10;
+}
+
+.range_date_act {
+  margin-top: 0px;
+  opacity: 1;
+  visibility: visible;
+  transition: var(--trans);
+}
+
+.booking_range_date_picker {
+  width: 100%;
+}
+
+.form_row_label {
+  font-size: 16px;
+}
+
+.note {
+  max-width: 100%;
+  min-width: 100%;
+  padding: 12px 12px;
+  outline: none;
+  width: 100%;
+  border: solid 1px #F5F8FA;
+  background-color: #F5F8FA;
+  border-radius: var(--normal);
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 500;
+  min-height: 150px;
+}
+
+.form_row_error {
+  position: absolute;
+  margin: 4px 0px 0px 4px;
+  font-size: 11px;
+  color: var(--red);
+}
+
+.form_bot_btn {
+  width: 100%;
+  background-color: var(--primary);
+}
+
+/* util */
+.util_cnt {
+  margin-top: 12px;
+}
+
+.list_util::after,
+.list_util::before,
+.util_item::after,
+.util_item::before {
+  display: none;
+}
+
+.list_util {
+  margin-top: 8px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.util_item {
+  width: 33.33%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0px;
+}
+
+.util_item_content {
+  width: calc(100% - 22px);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+}
+@media only screen and (max-width: 767px) {
+  .util_item{
+    width: calc(50% - 6px);
+  }
+}
