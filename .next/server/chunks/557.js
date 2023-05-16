@@ -2,6 +2,20 @@ exports.id = 557;
 exports.ids = [557];
 exports.modules = {
 
+/***/ 1776:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"container": "head-banner_container__M8K7F",
+	"body": "head-banner_body__sC7N6",
+	"title": "head-banner_title__Qq1D4",
+	"content": "head-banner_content__WMnC8"
+};
+
+
+/***/ }),
+
 /***/ 9158:
 /***/ ((module) => {
 
@@ -183,27 +197,31 @@ function Footer() {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* unused harmony export HeadBanner */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "R": () => (/* binding */ HeadBanner)
+/* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _head_banner_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1776);
+/* harmony import */ var _head_banner_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_head_banner_module_css__WEBPACK_IMPORTED_MODULE_1__);
 /* eslint-disable @next/next/no-img-element */ 
 
 const HeadBanner = (props)=>{
-    return /*#__PURE__*/ _jsxs("div", {
-        className: style.container,
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        className: (_head_banner_module_css__WEBPACK_IMPORTED_MODULE_1___default().container),
         children: [
-            /*#__PURE__*/ _jsx("img", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
                 src: props.image_url,
                 alt: ""
             }),
-            /*#__PURE__*/ _jsxs("div", {
-                className: style.body,
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_head_banner_module_css__WEBPACK_IMPORTED_MODULE_1___default().body),
                 children: [
-                    /*#__PURE__*/ _jsx("h1", {
-                        className: style.title,
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                        className: (_head_banner_module_css__WEBPACK_IMPORTED_MODULE_1___default().title),
                         children: props.title
                     }),
-                    /*#__PURE__*/ _jsx("span", {
-                        className: style.content,
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                        className: (_head_banner_module_css__WEBPACK_IMPORTED_MODULE_1___default().content),
                         children: props.content
                     })
                 ]
@@ -400,6 +418,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "$_": () => (/* reexport safe */ _footer__WEBPACK_IMPORTED_MODULE_0__.$),
 /* harmony export */   "Ct": () => (/* reexport safe */ _app_snack__WEBPACK_IMPORTED_MODULE_4__.C),
+/* harmony export */   "RJ": () => (/* reexport safe */ _head_banner__WEBPACK_IMPORTED_MODULE_5__.R),
 /* harmony export */   "bN": () => (/* reexport safe */ _route_progress__WEBPACK_IMPORTED_MODULE_2__.b),
 /* harmony export */   "h4": () => (/* reexport safe */ _header__WEBPACK_IMPORTED_MODULE_1__.h),
 /* harmony export */   "pQ": () => (/* reexport safe */ _seo__WEBPACK_IMPORTED_MODULE_3__.p)
@@ -557,10 +576,11 @@ function Seo(props) {
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NL": () => (/* binding */ apiBlog),
 /* harmony export */   "p7": () => (/* binding */ axiosConfig),
 /* harmony export */   "v2": () => (/* binding */ baseURL)
 /* harmony export */ });
-/* unused harmony exports captKey, apiBlog */
+/* unused harmony export captKey */
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9648);
 /* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2194);
 /* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9915);
@@ -572,7 +592,7 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axio
 // export const baseURL = process.env.NEXT_PUBLIC_API_URL_DEV;
 const baseURL = "https://api.houstongarden.click/";
 const captKey = (/* unused pure expression or super */ null && ("6Lfma7olAAAAAGLvchLIB9_nQQY8dW5X2U_uTNGh" ?? 0));
-const apiBlog = (/* unused pure expression or super */ null && ("https://admin.houstongarden.vn"));
+const apiBlog = "https://admin.houstongarden.vn";
 const axiosConfig = axios__WEBPACK_IMPORTED_MODULE_0__["default"].create({
     baseURL: baseURL,
     withCredentials: true,
@@ -641,14 +661,17 @@ __webpack_async_result__();
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "Eh": () => (/* reexport safe */ _query_client_config__WEBPACK_IMPORTED_MODULE_0__.E),
-/* harmony export */   "p7": () => (/* reexport safe */ _axios_config__WEBPACK_IMPORTED_MODULE_1__.p7),
-/* harmony export */   "v2": () => (/* reexport safe */ _axios_config__WEBPACK_IMPORTED_MODULE_1__.v2)
+/* harmony export */   "Eh": () => (/* reexport safe */ _query_client_config__WEBPACK_IMPORTED_MODULE_1__.E),
+/* harmony export */   "NL": () => (/* reexport safe */ _axios_config__WEBPACK_IMPORTED_MODULE_2__.NL),
+/* harmony export */   "O3": () => (/* reexport safe */ _server_side_cache_config__WEBPACK_IMPORTED_MODULE_0__.O),
+/* harmony export */   "p7": () => (/* reexport safe */ _axios_config__WEBPACK_IMPORTED_MODULE_2__.p7),
+/* harmony export */   "v2": () => (/* reexport safe */ _axios_config__WEBPACK_IMPORTED_MODULE_2__.v2)
 /* harmony export */ });
-/* harmony import */ var _query_client_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7829);
-/* harmony import */ var _axios_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2946);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_query_client_config__WEBPACK_IMPORTED_MODULE_0__, _axios_config__WEBPACK_IMPORTED_MODULE_1__]);
-([_query_client_config__WEBPACK_IMPORTED_MODULE_0__, _axios_config__WEBPACK_IMPORTED_MODULE_1__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var _server_side_cache_config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(7024);
+/* harmony import */ var _query_client_config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7829);
+/* harmony import */ var _axios_config__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2946);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_query_client_config__WEBPACK_IMPORTED_MODULE_1__, _axios_config__WEBPACK_IMPORTED_MODULE_2__]);
+([_query_client_config__WEBPACK_IMPORTED_MODULE_1__, _axios_config__WEBPACK_IMPORTED_MODULE_2__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -681,6 +704,20 @@ const queryClient = new _tanstack_react_query__WEBPACK_IMPORTED_MODULE_0__.Query
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 7024:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "O": () => (/* binding */ serverSideCache)
+/* harmony export */ });
+const serverSideCache = (ctx, time = 1000000)=>{
+    return ctx.res.setHeader("Cache-Control", `s-maxage=${time}, stale-while-revalidate=${time}`);
+};
+
 
 /***/ }),
 
