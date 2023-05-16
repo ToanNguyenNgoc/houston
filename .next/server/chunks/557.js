@@ -569,8 +569,8 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axio
 
 
 
-const baseURL = "http://localhost:3003/";
-// export const baseURL = process.env.NEXT_PUBLIC_API_URL
+// export const baseURL = process.env.NEXT_PUBLIC_API_URL_DEV;
+const baseURL = "https://api.houstongarden.click/";
 const captKey = (/* unused pure expression or super */ null && ("6Lfma7olAAAAAGLvchLIB9_nQQY8dW5X2U_uTNGh" ?? 0));
 const apiBlog = (/* unused pure expression or super */ null && ("https://admin.houstongarden.vn"));
 const axiosConfig = axios__WEBPACK_IMPORTED_MODULE_0__["default"].create({
