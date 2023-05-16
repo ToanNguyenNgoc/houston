@@ -23,12 +23,38 @@ module.exports = {
 
 /***/ }),
 
+/***/ 1404:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"container": "sign-layout_container__TuODY",
+	"image_bg": "sign-layout_image_bg__KkR_P",
+	"wrapper": "sign-layout_wrapper__1IRnk",
+	"header": "sign-layout_header___SfML",
+	"header_cnt": "sign-layout_header_cnt__qpgT1",
+	"header_link": "sign-layout_header_link__Z6QRQ",
+	"header_icon": "sign-layout_header_icon__8SshH",
+	"header_title": "sign-layout_header_title__f6fS5",
+	"header_path": "sign-layout_header_path__VeIWT",
+	"child_cnt": "sign-layout_child_cnt__kOpWC",
+	"card_cnt": "sign-layout_card_cnt__QY3Au",
+	"card_cnt_head": "sign-layout_card_cnt_head__uXOk9",
+	"card_cnt_head_link": "sign-layout_card_cnt_head_link__YI92o"
+};
+
+
+/***/ }),
+
 /***/ 9297:
-/***/ (() => {
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
-// UNUSED EXPORTS: icon
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "q": () => (/* binding */ icon)
+});
 
 ;// CONCATENATED MODULE: ./src/assets/icon/iconOrigin.png
 /* harmony default export */ const iconOrigin = ({"src":"/_next/static/media/iconOrigin.55c94a04.png","height":1024,"width":1024,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA10lEQVR42mMAgavW6sxg2kbdFsjWAbGve6gxPyxWZWQAgfOG6ky3PdRYgZIXgfjQ3VA1NgYYuGKpzgmir1mpxQFN+A/GpmrhILG7yWoSIGMDrlipHwXSTTeC1H9ec1b/dcNbfcq9TLXXj0pV40A6VYCSP6/7qf+/l6X262aY2q87iWr/H1eqPn/RrazCAAK3o9QS7+cABetV/t/PVfv/pFbl/+upip3//zMwAV2rzn4vXS34ca3KpldTFZc8bVduf9GjvPz9AoXwL5ukBBiQwdNGZX0GNAAAbDlbB82uUDoAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
@@ -57,7 +83,9 @@ const icon = {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* unused harmony export AppSnack */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "C": () => (/* binding */ AppSnack)
+/* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5692);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_1__);
@@ -70,7 +98,7 @@ function AppSnack(props) {
             close();
         }
     };
-    return /*#__PURE__*/ _jsx(Snackbar, {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_1__.Snackbar, {
         anchorOrigin: {
             vertical: "top",
             horizontal: "right"
@@ -78,7 +106,7 @@ function AppSnack(props) {
         open: open,
         autoHideDuration: 4000,
         onClose: handleClose,
-        children: /*#__PURE__*/ _jsx(Alert, {
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_1__.Alert, {
             onClose: handleClose,
             severity: severity,
             sx: {
@@ -371,8 +399,10 @@ __webpack_async_result__();
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "$_": () => (/* reexport safe */ _footer__WEBPACK_IMPORTED_MODULE_0__.$),
+/* harmony export */   "Ct": () => (/* reexport safe */ _app_snack__WEBPACK_IMPORTED_MODULE_4__.C),
 /* harmony export */   "bN": () => (/* reexport safe */ _route_progress__WEBPACK_IMPORTED_MODULE_2__.b),
-/* harmony export */   "h4": () => (/* reexport safe */ _header__WEBPACK_IMPORTED_MODULE_1__.h)
+/* harmony export */   "h4": () => (/* reexport safe */ _header__WEBPACK_IMPORTED_MODULE_1__.h),
+/* harmony export */   "pQ": () => (/* reexport safe */ _seo__WEBPACK_IMPORTED_MODULE_3__.p)
 /* harmony export */ });
 /* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9972);
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8376);
@@ -443,7 +473,9 @@ function RouteProgress() {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* unused harmony export Seo */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "p": () => (/* binding */ Seo)
+/* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -455,60 +487,60 @@ function RouteProgress() {
 function Seo(props) {
     const domain = "https://houstongarden.click";
     const { title , description , url , image_url  } = props;
-    return /*#__PURE__*/ _jsxs(Head, {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {
         children: [
-            /*#__PURE__*/ _jsx("title", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("title", {
                 children: title + " " + "| Houston Garden"
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 name: "title",
                 content: title + "| Houston Garden"
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 name: "description",
                 content: description
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 name: "viewport",
                 content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "og:type",
                 content: "website"
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "og:url",
                 content: `${domain}${url}`
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "og:title",
                 content: title
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "og:description",
                 content: description
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "og:image",
                 content: image_url ?? ""
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "twitter:card",
                 content: "summary_large_image"
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "twitter:url",
                 content: `${domain}${url}`
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "twitter:title",
                 content: title
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "twitter:description",
                 content: description
             }),
-            /*#__PURE__*/ _jsx("meta", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "twitter:image",
                 content: image_url ?? ""
             })
@@ -902,6 +934,7 @@ function EmptyLayout({ children  }) {
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Ef": () => (/* reexport safe */ _sign_layout__WEBPACK_IMPORTED_MODULE_2__.E),
 /* harmony export */   "Tp": () => (/* reexport safe */ _empty__WEBPACK_IMPORTED_MODULE_0__.T),
 /* harmony export */   "Zn": () => (/* reexport safe */ _main__WEBPACK_IMPORTED_MODULE_1__.Z)
 /* harmony export */ });
@@ -959,9 +992,13 @@ __webpack_async_result__();
 
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* unused harmony export SignLayout */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "E": () => (/* binding */ SignLayout)
+/* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4277);
+/* harmony import */ var _styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1404);
+/* harmony import */ var _styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9297);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5675);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
@@ -985,72 +1022,72 @@ _components__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then 
 
 
 const SignLayout = ({ children  })=>{
-    const router = useRouter();
-    const [tab, setTab] = useState(router.pathname);
-    return /*#__PURE__*/ _jsxs(_Fragment, {
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_6__.useRouter)();
+    const [tab, setTab] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(router.pathname);
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
-            /*#__PURE__*/ _jsx(Seo, {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_1__/* .Seo */ .pQ, {
                 title: tab === "/auth/login" ? "Đăng nhập" : "Đăng k\xfd",
                 description: tab === "/auth/login" ? "Đăng nhập" : "Đăng k\xfd",
                 url: router.pathname
             }),
-            /*#__PURE__*/ _jsxs("div", {
-                className: style.container,
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().container),
                 children: [
-                    /*#__PURE__*/ _jsx(Image, {
-                        className: style.image_bg,
-                        src: icon.bgSign,
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                        className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().image_bg),
+                        src: _assets_icon__WEBPACK_IMPORTED_MODULE_2__/* .icon.bgSign */ .q.bgSign,
                         alt: ""
                     }),
-                    /*#__PURE__*/ _jsxs("div", {
-                        className: style.wrapper,
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().wrapper),
                         children: [
-                            /*#__PURE__*/ _jsx("div", {
-                                className: style.header,
-                                children: /*#__PURE__*/ _jsx(Container, {
-                                    children: /*#__PURE__*/ _jsxs("div", {
-                                        className: style.header_cnt,
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().header),
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_4__.Container, {
+                                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().header_cnt),
                                         children: [
-                                            /*#__PURE__*/ _jsxs(Link, {
-                                                className: style.header_link,
+                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_5___default()), {
+                                                className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().header_link),
                                                 href: "/",
                                                 children: [
-                                                    /*#__PURE__*/ _jsx(Image, {
-                                                        className: style.header_icon,
-                                                        src: icon.iconOrigin,
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                                        className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().header_icon),
+                                                        src: _assets_icon__WEBPACK_IMPORTED_MODULE_2__/* .icon.iconOrigin */ .q.iconOrigin,
                                                         alt: ""
                                                     }),
-                                                    /*#__PURE__*/ _jsx("span", {
-                                                        className: style.header_title,
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                        className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().header_title),
                                                         children: "Houston Garden"
                                                     })
                                                 ]
                                             }),
-                                            /*#__PURE__*/ _jsx("span", {
-                                                className: style.header_path,
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().header_path),
                                                 children: tab === "/auth/login" ? "Đăng nhập" : "Đăng k\xfd"
                                             })
                                         ]
                                     })
                                 })
                             }),
-                            /*#__PURE__*/ _jsx(Container, {
-                                className: style.child_cnt,
-                                children: /*#__PURE__*/ _jsxs("div", {
-                                    className: style.card_cnt,
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_4__.Container, {
+                                className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().child_cnt),
+                                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                    className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().card_cnt),
                                     children: [
-                                        /*#__PURE__*/ _jsxs("div", {
-                                            className: style.card_cnt_head,
+                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                            className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().card_cnt_head),
                                             children: [
-                                                /*#__PURE__*/ _jsx(Link, {
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_5___default()), {
                                                     onClick: ()=>setTab("/auth/login"),
-                                                    className: style.card_cnt_head_link,
+                                                    className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().card_cnt_head_link),
                                                     href: "/auth/login",
                                                     children: "Đăng nhập"
                                                 }),
-                                                /*#__PURE__*/ _jsx(Link, {
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_5___default()), {
                                                     onClick: ()=>setTab("/auth/register"),
-                                                    className: style.card_cnt_head_link,
+                                                    className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().card_cnt_head_link),
                                                     href: "/auth/register",
                                                     children: "Đăng k\xfd"
                                                 })
@@ -1064,7 +1101,7 @@ const SignLayout = ({ children  })=>{
                     })
                 ]
             }),
-            /*#__PURE__*/ _jsx(Footer, {})
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_1__/* .Footer */ .$_, {})
         ]
     });
 };
@@ -1288,10 +1325,11 @@ __webpack_async_result__();
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
   "lV": () => (/* reexport */ slugify),
-  "tO": () => (/* reexport */ storage)
+  "tO": () => (/* reexport */ storage),
+  "Gu": () => (/* reexport */ validate)
 });
 
-// UNUSED EXPORTS: fmPrice, imageProxy, rangeDate, validate
+// UNUSED EXPORTS: fmPrice, imageProxy, rangeDate
 
 ;// CONCATENATED MODULE: ./src/utils/validate.ts
 const validate = {
