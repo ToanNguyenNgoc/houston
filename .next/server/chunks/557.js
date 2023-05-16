@@ -16,6 +16,27 @@ module.exports = {
 
 /***/ }),
 
+/***/ 1439:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"container": "account-layout_container__An2nx",
+	"left_profile": "account-layout_left_profile__e31r5",
+	"l_profile_right_item": "account-layout_l_profile_right_item__JaZpd",
+	"l_nav_link": "account-layout_l_nav_link__pEyOX",
+	"left": "account-layout_left__nNXCT",
+	"l_profile_left": "account-layout_l_profile_left__29QQg",
+	"l_profile_right": "account-layout_l_profile_right__aWJ_J",
+	"l_profile_right_name": "account-layout_l_profile_right_name__AQsM5",
+	"left_link_list": "account-layout_left_link_list__4gaCl",
+	"left_link_list_item": "account-layout_left_link_list_item__6U2Jn",
+	"right": "account-layout_right__98iXb"
+};
+
+
+/***/ }),
+
 /***/ 9158:
 /***/ ((module) => {
 
@@ -138,7 +159,9 @@ function AppSnack(props) {
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* unused harmony export ButtonUpload */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "Z": () => (/* binding */ ButtonUpload)
+/* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6290);
 /* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__);
@@ -147,9 +170,9 @@ function AppSnack(props) {
 const ButtonUpload = (props)=>{
     const { multiple , onChange  } = props;
     const change = (e)=>onChange && onChange(e);
-    return /*#__PURE__*/ _jsxs(_Fragment, {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
-            /*#__PURE__*/ _jsx("input", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("input", {
                 onChange: change,
                 type: "file",
                 accept: "image/*",
@@ -157,13 +180,13 @@ const ButtonUpload = (props)=>{
                 hidden: true,
                 multiple: multiple
             }),
-            /*#__PURE__*/ _jsx("label", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("label", {
                 style: {
                     cursor: "pointer"
                 },
                 className: props.className,
                 htmlFor: "ip-media",
-                children: /*#__PURE__*/ _jsx(FaCamera, {
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__.FaCamera, {
                     size: props.iconSize,
                     color: props.iconColor
                 })
@@ -419,6 +442,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "$_": () => (/* reexport safe */ _footer__WEBPACK_IMPORTED_MODULE_0__.$),
 /* harmony export */   "Ct": () => (/* reexport safe */ _app_snack__WEBPACK_IMPORTED_MODULE_4__.C),
 /* harmony export */   "RJ": () => (/* reexport safe */ _head_banner__WEBPACK_IMPORTED_MODULE_5__.R),
+/* harmony export */   "Zy": () => (/* reexport safe */ _button_upload__WEBPACK_IMPORTED_MODULE_6__.Z),
 /* harmony export */   "bN": () => (/* reexport safe */ _route_progress__WEBPACK_IMPORTED_MODULE_2__.b),
 /* harmony export */   "h4": () => (/* reexport safe */ _header__WEBPACK_IMPORTED_MODULE_1__.h),
 /* harmony export */   "pQ": () => (/* reexport safe */ _seo__WEBPACK_IMPORTED_MODULE_3__.p)
@@ -726,10 +750,14 @@ const serverSideCache = (ctx, time = 1000000)=>{
 
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* unused harmony export AccountLayout */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "p": () => (/* binding */ AccountLayout)
+/* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var _layouts_auth_layout__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8365);
 /* harmony import */ var _stores_zustand__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4433);
+/* harmony import */ var _styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1439);
+/* harmony import */ var _styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5692);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1664);
@@ -770,8 +798,8 @@ const links = [
     }
 ];
 function AccountLayout({ children  }) {
-    const router = useRouter();
-    const [profile, logoutProfile] = useProfileStore((state)=>[
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_7__.useRouter)();
+    const [profile, logoutProfile] = (0,_stores_zustand__WEBPACK_IMPORTED_MODULE_2__/* .useProfileStore */ .O)((state)=>[
             state.profile,
             state.logoutProfile
         ]);
@@ -779,39 +807,39 @@ function AccountLayout({ children  }) {
         await logoutProfile();
         router.push("/");
     };
-    return /*#__PURE__*/ _jsx(AuthLayout, {
-        children: /*#__PURE__*/ _jsx(Container, {
-            children: /*#__PURE__*/ _jsxs("div", {
-                className: style.container,
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_layouts_auth_layout__WEBPACK_IMPORTED_MODULE_1__/* .AuthLayout */ .g, {
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_3__.Container, {
+            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().container),
                 children: [
-                    /*#__PURE__*/ _jsxs("div", {
-                        className: style.left,
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().left),
                         children: [
-                            /*#__PURE__*/ _jsxs("div", {
-                                className: style.left_profile,
+                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().left_profile),
                                 children: [
-                                    /*#__PURE__*/ _jsx("div", {
-                                        className: style.l_profile_left,
-                                        children: /*#__PURE__*/ _jsx("img", {
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                        className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().l_profile_left),
+                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
                                             src: profile?.avatar?.original_url,
                                             alt: ""
                                         })
                                     }),
-                                    /*#__PURE__*/ _jsxs("div", {
-                                        className: style.l_profile_right,
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().l_profile_right),
                                         children: [
-                                            /*#__PURE__*/ _jsx("span", {
-                                                className: style.l_profile_right_name,
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().l_profile_right_name),
                                                 children: profile?.fullname
                                             }),
-                                            /*#__PURE__*/ _jsxs("div", {
-                                                className: style.l_profile_right_item,
+                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().l_profile_right_item),
                                                 children: [
-                                                    /*#__PURE__*/ _jsx(MdOutlineMail, {
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_md__WEBPACK_IMPORTED_MODULE_5__.MdOutlineMail, {
                                                         color: "var(--white)",
                                                         size: 12
                                                     }),
-                                                    /*#__PURE__*/ _jsxs("span", {
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
                                                         children: [
                                                             " ",
                                                             profile?.email
@@ -819,14 +847,14 @@ function AccountLayout({ children  }) {
                                                     })
                                                 ]
                                             }),
-                                            /*#__PURE__*/ _jsxs("div", {
-                                                className: style.l_profile_right_item,
+                                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                                className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().l_profile_right_item),
                                                 children: [
-                                                    /*#__PURE__*/ _jsx(MdPhone, {
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_md__WEBPACK_IMPORTED_MODULE_5__.MdPhone, {
                                                         color: "var(--white)",
                                                         size: 12
                                                     }),
-                                                    /*#__PURE__*/ _jsxs("span", {
+                                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
                                                         children: [
                                                             " ",
                                                             profile?.telephone
@@ -838,38 +866,38 @@ function AccountLayout({ children  }) {
                                     })
                                 ]
                             }),
-                            /*#__PURE__*/ _jsxs("ul", {
-                                className: style.left_link_list,
+                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
+                                className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().left_link_list),
                                 children: [
-                                    links.map((link, i)=>/*#__PURE__*/ _jsx("li", {
-                                            className: style.left_link_list_item,
-                                            children: /*#__PURE__*/ _jsxs(Link, {
+                                    links.map((link, i)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                            className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().left_link_list_item),
+                                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
                                                 style: link.href === router.pathname ? {
                                                     backgroundColor: "var(--bg-act)"
                                                 } : {},
-                                                className: style.l_nav_link,
+                                                className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().l_nav_link),
                                                 href: link.href,
                                                 children: [
                                                     link.icon,
-                                                    /*#__PURE__*/ _jsx("span", {
-                                                        className: style.l_nav_link_txt,
+                                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                        className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().l_nav_link_txt),
                                                         children: link.title
                                                     })
                                                 ]
                                             })
                                         }, i)),
-                                    /*#__PURE__*/ _jsx("li", {
-                                        className: style.left_link_list_item,
-                                        children: /*#__PURE__*/ _jsxs("div", {
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                        className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().left_link_list_item),
+                                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                             onClick: onLogout,
-                                            className: style.l_nav_link,
+                                            className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().l_nav_link),
                                             children: [
-                                                /*#__PURE__*/ _jsx(FaSignOutAlt, {
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_6__.FaSignOutAlt, {
                                                     size: 14,
                                                     color: "var(--primary)"
                                                 }),
-                                                /*#__PURE__*/ _jsx("span", {
-                                                    className: style.l_nav_link_txt,
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                    className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().l_nav_link_txt),
                                                     children: "Đăng xuất"
                                                 })
                                             ]
@@ -879,11 +907,11 @@ function AccountLayout({ children  }) {
                             })
                         ]
                     }),
-                    /*#__PURE__*/ _jsx("div", {
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                         style: router.pathname !== "/account" ? {
                             left: "0"
                         } : {},
-                        className: style.right,
+                        className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().right),
                         children: children
                     })
                 ]
@@ -902,7 +930,9 @@ __webpack_async_result__();
 
 "use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* unused harmony export AuthLayout */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "g": () => (/* binding */ AuthLayout)
+/* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4277);
 /* harmony import */ var _stores_zustand__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4433);
@@ -918,12 +948,12 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_com
 
 
 function AuthLayout({ children  }) {
-    const router = useRouter();
-    const [isLoading, profile] = useProfileStore((state)=>[
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
+    const [isLoading, profile] = (0,_stores_zustand__WEBPACK_IMPORTED_MODULE_2__/* .useProfileStore */ .O)((state)=>[
             state.isLoading,
             state.profile
         ]);
-    useEffect(()=>{
+    (0,react__WEBPACK_IMPORTED_MODULE_4__.useEffect)(()=>{
         if (!isLoading && !profile) {
             router.push("/auth/login");
         }
@@ -931,13 +961,13 @@ function AuthLayout({ children  }) {
         isLoading,
         profile
     ]);
-    return /*#__PURE__*/ _jsxs(_Fragment, {
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
-            /*#__PURE__*/ _jsx(Header, {}),
-            /*#__PURE__*/ _jsx("div", {
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_1__/* .Header */ .h4, {}),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                 children: children
             }),
-            /*#__PURE__*/ _jsx(Footer, {})
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_1__/* .Footer */ .$_, {})
         ]
     });
 }
@@ -973,7 +1003,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "Ef": () => (/* reexport safe */ _sign_layout__WEBPACK_IMPORTED_MODULE_2__.E),
 /* harmony export */   "Tp": () => (/* reexport safe */ _empty__WEBPACK_IMPORTED_MODULE_0__.T),
-/* harmony export */   "Zn": () => (/* reexport safe */ _main__WEBPACK_IMPORTED_MODULE_1__.Z)
+/* harmony export */   "Zn": () => (/* reexport safe */ _main__WEBPACK_IMPORTED_MODULE_1__.Z),
+/* harmony export */   "p0": () => (/* reexport safe */ _account_layout__WEBPACK_IMPORTED_MODULE_4__.p)
 /* harmony export */ });
 /* harmony import */ var _empty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1906);
 /* harmony import */ var _main__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3213);
@@ -1264,7 +1295,7 @@ __webpack_async_result__();
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* unused harmony export useBookingStore */
 /* harmony import */ var zustand__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(6912);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(2644);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(588);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([zustand__WEBPACK_IMPORTED_MODULE_0__]);
 zustand__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -1354,19 +1385,20 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 2644:
+/***/ 588:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
+  "BX": () => (/* reexport */ fmPrice),
   "lV": () => (/* reexport */ slugify),
   "tO": () => (/* reexport */ storage),
   "Gu": () => (/* reexport */ validate)
 });
 
-// UNUSED EXPORTS: fmPrice, imageProxy, rangeDate
+// UNUSED EXPORTS: imageProxy, rangeDate
 
 ;// CONCATENATED MODULE: ./src/utils/validate.ts
 const validate = {
@@ -1410,6 +1442,11 @@ function storage() {
     };
     return actionStorage;
 }
+
+;// CONCATENATED MODULE: ./src/utils/format.ts
+const fmPrice = (num)=>{
+    return parseInt(num)?.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1.");
+};
 
 ;// CONCATENATED MODULE: ./src/utils/index.ts
 

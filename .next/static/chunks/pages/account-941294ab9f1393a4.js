@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[966],{7017:function(n,u,t){(window.__NEXT_P=window.__NEXT_P||[]).push(["/account",function(){return t(2546)}])},2546:function(n,u,t){"use strict";t.r(u);var _=t(5893),c=t(546);let e=()=>(0,_.jsx)(_.Fragment,{});e.Layout=c.p0,u.default=e}},function(n){n.O(0,[774,888,179],function(){return n(n.s=7017)}),_N_E=n.O()}]);

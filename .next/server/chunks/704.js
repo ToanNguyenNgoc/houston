@@ -1,29 +1,15 @@
-exports.id = 112;
-exports.ids = [112];
+"use strict";
+exports.id = 704;
+exports.ids = [704];
 exports.modules = {
-
-/***/ 6027:
-/***/ ((module) => {
-
-// Exports
-module.exports = {
-	"form_row": "login_form_row__FlaK7",
-	"form_row_change_mail": "login_form_row_change_mail__Oj8Mc",
-	"form_row_error": "login_form_row_error__OjLUG",
-	"form_btn_forgot": "login_form_btn_forgot__LbQvU",
-	"form_btn": "login_form_btn__QU4OW"
-};
-
-
-/***/ }),
 
 /***/ 5704:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "D": () => (/* reexport safe */ _useNoti__WEBPACK_IMPORTED_MODULE_0__.D)
+/* harmony export */   "D": () => (/* reexport safe */ _useNoti__WEBPACK_IMPORTED_MODULE_0__.D),
+/* harmony export */   "z": () => (/* reexport safe */ _usePostMedia__WEBPACK_IMPORTED_MODULE_1__.z)
 /* harmony export */ });
 /* harmony import */ var _useNoti__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(93);
 /* harmony import */ var _usePostMedia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1209);
@@ -40,7 +26,6 @@ __webpack_async_result__();
 /***/ 93:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "D": () => (/* binding */ useNoti)
 /* harmony export */ });
@@ -85,9 +70,10 @@ function useNoti() {
 /***/ 1209:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
-"use strict";
 __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
-/* unused harmony export usePostMedia */
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "z": () => (/* binding */ usePostMedia)
+/* harmony export */ });
 /* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1280);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -96,7 +82,7 @@ _services__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? 
 
 
 function usePostMedia() {
-    const [medias, setMedias] = useState([]);
+    const [medias, setMedias] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
     const handlePostMedia = async ({ e , callBack  })=>{
         if (e.target.files) {
             try {
@@ -109,7 +95,7 @@ function usePostMedia() {
                         mediaId: i
                     };
                     formData.append("file", fileItem);
-                    const res = await api.uploadMedia(formData);
+                    const res = await _services__WEBPACK_IMPORTED_MODULE_0__/* .api.uploadMedia */ .h.uploadMedia(formData);
                     if (res) {
                         resMedia = {
                             original_url: res.data.original_url,
