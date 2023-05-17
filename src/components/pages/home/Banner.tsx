@@ -24,7 +24,7 @@ export const HomeBanner = ({ banners }: { banners: Banner[] }) => {
     speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 2500,
     arrows: false,
     dots: true,

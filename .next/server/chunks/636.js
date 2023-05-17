@@ -33,7 +33,7 @@ const _sideeffect = /*#__PURE__*/ _interop_require_default._(__webpack_require__
 const _ampcontext = __webpack_require__(3918);
 const _headmanagercontext = __webpack_require__(2796);
 const _ampmode = __webpack_require__(5732);
-const _warnonce = __webpack_require__(618);
+const _warnonce = __webpack_require__(8513);
 function defaultHead(inAmpMode) {
     if (inAmpMode === void 0) inAmpMode = false;
     const head = [

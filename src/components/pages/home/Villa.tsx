@@ -3,8 +3,9 @@ import style from './home.module.css'
 import { Container } from "@mui/material"
 import { useQuery } from "@tanstack/react-query"
 import { api } from "@/services"
-import { useState } from "react"
+import { ReactElement, useState } from "react"
 import { VillaCard } from "@/components/villa-card-item"
+import { VillaCardLoad } from "@/components/villa-card-load"
 
 export const HomeVilla = () => {
   const [cate, setCate] = useState<number | string | undefined>()
@@ -13,7 +14,7 @@ export const HomeVilla = () => {
     queryFn: () => api.villaCates({ page: 1, limit: 15, status: true })
   })
   const cates = data?.data ?? []
-  const { data: dataVilla } = useQuery({
+  const { data: dataVilla, isLoading } = useQuery({
     queryKey: ['HOME_VILLA', cate],
     queryFn: () => api.villas({
       page: 1,
@@ -51,6 +52,7 @@ export const HomeVilla = () => {
         </ul>
       </div>
       <div className={style.villa_cnt}>
+        {isLoading && <LoadVilla />}
         <ul className={style.villa_list}>
           {
             villas.map(item => (
@@ -62,5 +64,20 @@ export const HomeVilla = () => {
         </ul>
       </div>
     </Container>
+  )
+}
+const LoadVilla = () => {
+  let list: JSX.Element[] = []
+  for (var i = 0; i < 4; i++) {
+    const item =
+      <li key={i} className={style.villa_item}>
+        <VillaCardLoad />
+      </li>
+    list.push(item)
+  }
+  return (
+    <ul className={style.villa_list}>
+      {list}
+    </ul>
   )
 }

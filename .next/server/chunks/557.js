@@ -33,6 +33,22 @@ module.exports = {
 
 /***/ }),
 
+/***/ 6948:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"container": "villa-load_container__FLkVk",
+	"image_cnt": "villa-load_image_cnt__A8YXJ",
+	"detail": "villa-load_detail__eTLfv",
+	"detail_name": "villa-load_detail_name__Z9wP8",
+	"detail_address": "villa-load_detail_address__irlxC",
+	"detail_price": "villa-load_detail_price__cXqrg"
+};
+
+
+/***/ }),
+
 /***/ 1439:
 /***/ ((module) => {
 
@@ -472,8 +488,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _head_banner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4532);
 /* harmony import */ var _button_upload__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(3478);
 /* harmony import */ var _villa_card_item__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4485);
+/* harmony import */ var _villa_card_load__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(618);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_header__WEBPACK_IMPORTED_MODULE_1__]);
 _header__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -677,6 +695,50 @@ const VillaCard = ({ villa  })=>{
                                 " VND/đ\xeam"
                             ]
                         })
+                    })
+                ]
+            })
+        ]
+    });
+};
+
+
+/***/ }),
+
+/***/ 618:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "G": () => (/* binding */ VillaCardLoad)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _villa_load_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6948);
+/* harmony import */ var _villa_load_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_villa_load_module_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const VillaCardLoad = ()=>{
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        className: (_villa_load_module_css__WEBPACK_IMPORTED_MODULE_1___default().container),
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: (_villa_load_module_css__WEBPACK_IMPORTED_MODULE_1___default().image_cnt)
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_villa_load_module_css__WEBPACK_IMPORTED_MODULE_1___default().detail),
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: (_villa_load_module_css__WEBPACK_IMPORTED_MODULE_1___default().detail_name)
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: (_villa_load_module_css__WEBPACK_IMPORTED_MODULE_1___default().detail_address)
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: (_villa_load_module_css__WEBPACK_IMPORTED_MODULE_1___default().detail_price),
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {}),
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {})
+                        ]
                     })
                 ]
             })

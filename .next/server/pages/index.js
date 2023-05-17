@@ -33,7 +33,8 @@ module.exports = {
 	"villa_cate_list": "home_villa_cate_list__YSChb",
 	"villa_cate_item": "home_villa_cate_item__o_by_",
 	"villa_cnt": "home_villa_cnt__XXG5u",
-	"villa_list": "home_villa_list__xl46i"
+	"villa_list": "home_villa_list__xl46i",
+	"banner_cnt": "home_banner_cnt__bKP9T"
 };
 
 
@@ -81,7 +82,7 @@ const HomeBanner = ({ banners  })=>{
         speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 2500,
         arrows: false,
         dots: true,
@@ -239,8 +240,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "s": () => (/* binding */ HomeVilla)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
-/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2597);
-/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_home_module_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(2597);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_home_module_css__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5692);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9752);
@@ -248,8 +249,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_villa_card_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4485);
+/* harmony import */ var _components_villa_card_load__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(618);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__]);
 ([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -270,7 +273,7 @@ const HomeVilla = ()=>{
             })
     });
     const cates = data?.data ?? [];
-    const { data: dataVilla  } = (0,_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__.useQuery)({
+    const { data: dataVilla , isLoading  } = (0,_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__.useQuery)({
         queryKey: [
             "HOME_VILLA",
             cate
@@ -286,13 +289,13 @@ const HomeVilla = ()=>{
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_1__.Container, {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_title),
+                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_title),
                 children: "Biệt thự nổi bật"
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_cate_cnt),
+                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_cate_cnt),
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
-                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_cate_list),
+                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_cate_list),
                     children: [
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                             style: !cate ? {
@@ -300,7 +303,7 @@ const HomeVilla = ()=>{
                                 color: "var(--white)"
                             } : {},
                             onClick: ()=>setCate(undefined),
-                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_cate_item),
+                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_cate_item),
                             children: "Tất cả"
                         }),
                         cates.map((item)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
@@ -309,25 +312,42 @@ const HomeVilla = ()=>{
                                     color: "var(--white)"
                                 } : {},
                                 onClick: ()=>setCate(item.id),
-                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_cate_item),
+                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_cate_item),
                                 children: item.villa_cate_name
                             }, item.id))
                     ]
                 })
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_cnt),
-                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
-                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_list),
-                    children: villas.map((item)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_item),
-                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_villa_card_item__WEBPACK_IMPORTED_MODULE_5__/* .VillaCard */ .J, {
-                                villa: item
-                            })
-                        }, item.id))
-                })
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_cnt),
+                children: [
+                    isLoading && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(LoadVilla, {}),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
+                        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_list),
+                        children: villas.map((item)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_item),
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_villa_card_item__WEBPACK_IMPORTED_MODULE_5__/* .VillaCard */ .J, {
+                                    villa: item
+                                })
+                            }, item.id))
+                    })
+                ]
             })
         ]
+    });
+};
+const LoadVilla = ()=>{
+    let list = [];
+    for(var i = 0; i < 4; i++){
+        const item = /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_item),
+            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_villa_card_load__WEBPACK_IMPORTED_MODULE_6__/* .VillaCardLoad */ .G, {})
+        }, i);
+        list.push(item);
+    }
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
+        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_list),
+        children: list
     });
 };
 
@@ -603,7 +623,7 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ 618:
+/***/ 8513:
 /***/ ((module) => {
 
 "use strict";

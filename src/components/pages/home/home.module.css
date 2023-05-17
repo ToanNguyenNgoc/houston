@@ -179,19 +179,24 @@
   line-height: 30px;
   font-weight: 600;
 }
-.villa_cate_cnt{
+
+.villa_cate_cnt {
   width: 100%;
   margin-top: 24px;
 }
-.villa_cate_list{
+
+.villa_cate_list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
-.villa_cate_list::after,.villa_cate_list::before{
+
+.villa_cate_list::after,
+.villa_cate_list::before {
   display: none;
 }
-.villa_cate_item{
+
+.villa_cate_item {
   transition: var(--trans);
   cursor: pointer;
   border: solid 1px var(--primary);
@@ -202,6 +207,7 @@
   padding: 10px 14px;
   border-radius: 18px;
 }
+
 .villa_cnt {
   margin-top: 24px;
 }
@@ -211,7 +217,9 @@
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 24px;
 }
-.villa_list::after,.villa_list::before{
+
+.villa_list::after,
+.villa_list::before {
   display: none;
 }
 
@@ -220,6 +228,26 @@
 /* end-branch */
 
 @media only screen and (max-width: 992px) and (min-width: 767px) {
+
+  /* banner */
+  .banner_item_cnt {
+    height: 33.33vh;
+  }
+
+  .banner_item {
+    padding: 0px 24px;
+  }
+
+  .banner_item_name {
+    font-size: 32px;
+  }
+
+  .banner_item_cnt {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  /* end banner */
   .branch_item {
     height: 50vh;
   }
@@ -239,9 +267,37 @@
     line-height: 24px;
     font-weight: 400;
   }
+
+  .villa_list {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media only screen and (max-width: 767px) {
+
+  /* banner */
+  .banner_cnt {
+    margin-top: 48px;
+  }
+
+  .banner_item_cnt {
+    height: 25vh;
+  }
+
+  .banner_item_content {
+    display: none;
+  }
+
+  .banner_dot {
+    margin-top: -30px;
+  }
+
+  .dot_item_btn {
+    width: 14px;
+    height: 14px;
+  }
+
+  /* end banner */
   .branch_item {
     margin-bottom: 2px;
   }
@@ -273,6 +329,22 @@
     line-height: 24px;
     font-weight: 400;
     -webkit-line-clamp: 6;
+  }
+
+  .villa_cate_cnt {
+    overflow-x: scroll;
+    margin: 0px;
+    padding: 20px 0px 12px 0px;
+  }
+
+  .villa_cate_list {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: max-content;
+  }
+
+  .villa_list {
+    grid-template-columns: repeat(2, 1fr);
   }
 
 }
