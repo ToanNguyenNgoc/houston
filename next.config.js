@@ -6,7 +6,8 @@ const nextConfig = {
 module.exports = {
   images: {
 		domains: [
-			'api.houstongarden.click'
+			'api.houstongarden.click',
+      'admin.houstongarden.vn'
 		],
 	},
   async rewrites() {

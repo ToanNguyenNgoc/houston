@@ -1,5 +1,5 @@
 import iconOrigin from './iconOrigin.png'
-import bgSign from './bgSign.jpeg'
+import bgSign from './bgSign.jpg'
 import villasBg from './villasBg.jpeg'
 import alternate from './alternate.png'
 
