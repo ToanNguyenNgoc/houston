@@ -114,7 +114,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 9248:
+/***/ 2642:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -132,7 +132,19 @@ __webpack_require__.d(__webpack_exports__, {
 /* harmony default export */ const villasBg = ({"src":"/_next/static/media/villasBg.be0fd93d.jpeg","height":667,"width":1000,"blurDataURL":"data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoKCgoKCgsMDAsPEA4QDxYUExMUFiIYGhgaGCIzICUgICUgMy03LCksNy1RQDg4QFFeT0pPXnFlZXGPiI+7u/sBCgoKCgoKCwwMCw8QDhAPFhQTExQWIhgaGBoYIjMgJSAgJSAzLTcsKSw3LVFAODhAUV5PSk9ecWVlcY+Ij7u7+//CABEIAAUACAMBIgACEQEDEQH/xAAoAAEBAAAAAAAAAAAAAAAAAAAAAgEBAQAAAAAAAAAAAAAAAAAAAgP/2gAMAwEAAhADEAAAAKDn/8QAGxAAAgIDAQAAAAAAAAAAAAAAAhEBBAADEkH/2gAIAQEAAT8Asbjk7BFL5QrxPP/EABkRAAIDAQAAAAAAAAAAAAAAAAEDAAISIf/aAAgBAgEBPwAKWVKOems//8QAHREAAQIHAAAAAAAAAAAAAAAAAgABAxESEyExkf/aAAgBAwEBPwCsrsZp6PHF/9k=","blurWidth":8,"blurHeight":5});
 ;// CONCATENATED MODULE: ./src/assets/icon/alternate.png
 /* harmony default export */ const alternate = ({"src":"/_next/static/media/alternate.33f27276.png","height":1176,"width":1682,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGAgMAAACDazdoAAAACVBMVEUUcXgEa3IBaXCcj1JHAAAAFUlEQVR42mMAgtBQhlWrgAjEYGAAACPuA/0oQT6EAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":6});
+;// CONCATENATED MODULE: ./src/assets/icon/dinner_cate.png
+/* harmony default export */ const dinner_cate = ({"src":"/_next/static/media/dinner_cate.9e4544f6.png","height":200,"width":200,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAbFBMVEX////0+/rG7unG7enF7enF7ei26uSz6+W16eS16eOy6uSy6eOx6eOx6OKw6OKv6OKq6OGt5uCp5+Gp5+Co5t+r5N6o5d+s492r492p4tyr4dum3tik3Naj29Wf1c+a0cuXzsiUy8WPxb+DubMGLDaHAAAASUlEQVR42hXL2RZAIBQF0HN1DSVNZoXw//9otd83QLVSTABJF2OQBA5HOlfH0POdUt40+v19vuwHVNMVfTsKUOOsXbrS2BhB+AGEUwOa/LgZJAAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./src/assets/icon/food_cate.png
+/* harmony default export */ const food_cate = ({"src":"/_next/static/media/food_cate.26545ad5.png","height":200,"width":200,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAuklEQVR42iWO3wvBUBzF7/+uPMiDouRBorWw0YYJUaRtfhTzYKLZr3tt9y7jxRMP8217+p7z6fQ9ByVJ8vl91ZgNGJYZVmMKFiCCozDcCb2ub4nEFhhWGAGItJi1A2f0DKqHTWWvNi8nsACRRH2J4fr5WDN2nGWW9JX4cOAnkinuBW55u+adK6CGafRDD9JIf0ct91ZYTPLzcW46LC5nPLlrrygtp5jzLYHYUA4CtgBE2VyIyOlcENncP6nXn/k/PQ8kAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./src/assets/icon/transport_cate.png
+/* harmony default export */ const transport_cate = ({"src":"/_next/static/media/transport_cate.b13c572f.png","height":200,"width":200,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAMAAADz0U65AAAAYFBMVEX////0+/rH7+rG7urF7ei26eS16eSx6eOx6OKv6OKr6eKs5d+s5N6r5N6r492m5N2r4dul492l49yj4Nqc1M6c082TysSSycOOxb+NxL6Nw72Mw72Lv7mIv7mIvriGvLbxZs7fAAAAPklEQVR42gVAsQ2AMAyz46hCDIj/r4ShDJDUiKCEbos5pICpw8kvbg2cC/vjQLSiiKyNiWYJK67J2QQ58No/0DYXF1BPMKQAAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./src/assets/icon/spa_cate.png
+/* harmony default export */ const spa_cate = ({"src":"/_next/static/media/spa_cate.60824732.png","height":200,"width":200,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAArklEQVR42iWOSw7CIBQAeVBoYq2/+LmBrtQjeHaPoMsewGhFUfpJeI8WSd3OLGYghNB4ulijyTHGljI9TuZZIqEmPL/LqvMKIAoMIRfitNjwqzXW01ipt9bl/Z4rVfddhLxEN5Lyay0RtU1TFIXo+qdHDgDe+8ftFmPOuZfWiBghX6dpS0jOfYyJIs8yF/qVTJP9eGYQxW4rGXDOibFcRDiF/+61+jyH3VWiDsPuD3DlbP5xA6O5AAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./src/assets/icon/index.js
+
+
+
+
 
 
 
@@ -141,7 +153,11 @@ const icon = {
     iconOrigin: iconOrigin,
     bgSign: bgSign,
     villasBg: villasBg,
-    alternate: alternate
+    alternate: alternate,
+    dinnerCate: dinner_cate,
+    foodCate: food_cate,
+    transportCate: transport_cate,
+    spaCate: spa_cate
 };
 
 
@@ -1224,7 +1240,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4277);
 /* harmony import */ var _styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1404);
 /* harmony import */ var _styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9248);
+/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2642);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5675);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5692);

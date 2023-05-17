@@ -21,8 +21,8 @@ const Home: NextPageWithLayout = (props) => {
       <main>
         <HomeBanner banners={banners} />
         <WelCome />
-        <HomeBranch branches={branches} />
         <HomeVilla/>
+        <HomeBranch branches={branches} />
       </main>
     </>
   )

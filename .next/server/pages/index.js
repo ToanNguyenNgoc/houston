@@ -34,6 +34,15 @@ module.exports = {
 	"villa_cate_item": "home_villa_cate_item__o_by_",
 	"villa_cnt": "home_villa_cnt__XXG5u",
 	"villa_list": "home_villa_list__xl46i",
+	"welcome_cnt_content": "home_welcome_cnt_content__KLmQC",
+	"welcome_cnt_content_left": "home_welcome_cnt_content_left__b_0hy",
+	"welcome_cnt_video": "home_welcome_cnt_video__zZaAg",
+	"welcome_cnt_content_right": "home_welcome_cnt_content_right__rgxYe",
+	"welcome_right_more": "home_welcome_right_more__bIfBl",
+	"welcome_right_social": "home_welcome_right_social__tzmFN",
+	"util_list": "home_util_list__CoSdx",
+	"util_item": "home_util_item__EaAJb",
+	"util_item_name": "home_util_item_name__VzciO",
 	"banner_cnt": "home_banner_cnt__bKP9T"
 };
 
@@ -82,7 +91,7 @@ const HomeBanner = ({ banners  })=>{
         speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        // autoplay: true,
+        autoplay: true,
         autoplaySpeed: 2500,
         arrows: false,
         dots: true,
@@ -364,10 +373,147 @@ __webpack_async_result__();
 /* harmony export */   "F": () => (/* binding */ WelCome)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5692);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2597);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_home_module_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2642);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5675);
+/* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1664);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6290);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__);
+
+
+
+
+
+
 
 const WelCome = ()=>{
-    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-        children: "WelCome"
+    const socials = [
+        {
+            link: "https://www.youtube.com/watch?v=o0mSrIedcq8",
+            icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__.FaYoutube, {
+                color: "var(--primary)",
+                size: 18
+            })
+        },
+        {
+            link: "https://www.facebook.com/houston.garden01",
+            icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__.FaFacebook, {
+                color: "var(--primary)",
+                size: 18
+            })
+        },
+        {
+            link: "https://www.instagram.com/houston.garden/",
+            icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__.FaInstagram, {
+                color: "var(--primary)",
+                size: 18
+            })
+        },
+        {
+            link: "https://www.tiktok.com/@houstongarden",
+            icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__.FaTiktok, {
+                color: "var(--primary)",
+                size: 18
+            })
+        }
+    ];
+    const utils = [
+        {
+            name: "Lễ t\xe2n 24/7",
+            icon: _assets_icon__WEBPACK_IMPORTED_MODULE_2__/* .icon.foodCate */ .q.foodCate
+        },
+        {
+            name: "Nh\xe0 h\xe0ng",
+            icon: _assets_icon__WEBPACK_IMPORTED_MODULE_2__/* .icon.dinnerCate */ .q.dinnerCate
+        },
+        {
+            name: "Dịch vụ vận chuyển",
+            icon: _assets_icon__WEBPACK_IMPORTED_MODULE_2__/* .icon.transportCate */ .q.transportCate
+        },
+        {
+            name: "Spa Suites",
+            icon: _assets_icon__WEBPACK_IMPORTED_MODULE_2__/* .icon.spaCate */ .q.spaCate
+        }
+    ];
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_1__.Container, {
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().welcome_cnt),
+            children: [
+                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().welcome_cnt_content),
+                    children: [
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().welcome_cnt_content_left),
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().welcome_cnt_video),
+                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("iframe", {
+                                    style: {
+                                        width: "100%",
+                                        height: "100%"
+                                    },
+                                    src: "https://www.youtube.com/embed/o0mSrIedcq8?autoplay=1",
+                                    title: "YouTube video player",
+                                    frameBorder: 0,
+                                    allow: "autoplay; encrypted-media"
+                                })
+                            })
+                        }),
+                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().welcome_cnt_content_right),
+                            children: [
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                    children: "BIỆT THỰ NGHỈ DƯỠNG TỐT NHẤT Ở VŨNG T\xc0U"
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h3", {
+                                    children: "Thức dậy với niềm hạnh ph\xfac, nhẹ nh\xe0ng v\xe0 s\xe2u lắng trong t\xe2m hồn. Sự pha trộn của lối sống hiện đại, ẩm thực tuyệt vời với sự đa dạng của ẩm thực 3 miền v\xe0 đội ngũ nh\xe2n vi\xean sẽ vượt qu\xe1 mọi sự mong đợi. Houston Garden Villa l\xe0 chuỗi nghỉ dưỡng kiểu Indochine sẽ mang đến trải nghiệm nghỉ ngơi thư gi\xe3n, độc đ\xe1o – thực sự l\xe0 ng\xf4i nh\xe0 của bạn khi xa nh\xe0."
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
+                                    href: "/",
+                                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().welcome_right_more),
+                                    children: "Kh\xe1m ph\xe1m th\xeam"
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
+                                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().welcome_right_social),
+                                    children: socials.map((item, i)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
+                                                href: item.link,
+                                                target: "_blank",
+                                                children: item.icon
+                                            })
+                                        }, i))
+                                })
+                            ]
+                        })
+                    ]
+                }),
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().welcome_cnt_utils),
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
+                        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().util_list),
+                        children: utils.map((item, i)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
+                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().util_item),
+                                children: [
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_image__WEBPACK_IMPORTED_MODULE_3___default()), {
+                                        src: item.icon,
+                                        alt: item.name,
+                                        width: 100,
+                                        height: 100
+                                    }),
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().util_item_name),
+                                        children: item.name
+                                    })
+                                ]
+                            }, i))
+                    })
+                })
+            ]
+        })
     });
 };
 
@@ -442,10 +588,10 @@ const Home = (props)=>{
                         banners: banners
                     }),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_2__/* .WelCome */ .Fx, {}),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_2__/* .HomeVilla */ .se, {}),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_2__/* .HomeBranch */ .CX, {
                         branches: branches
-                    }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_2__/* .HomeVilla */ .se, {})
+                    })
                 ]
             })
         ]
