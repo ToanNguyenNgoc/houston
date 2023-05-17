@@ -10,12 +10,11 @@ import { GetStaticProps, GetStaticPropsContext } from 'next'
 
 interface HomeProps {
   branches: Branch[];
-  villas: Villa[];
   banners: Banner[]
 }
 
 const Home: NextPageWithLayout = (props) => {
-  const { branches, villas, banners } = props as HomeProps;
+  const { branches, banners } = props as HomeProps;
   return (
     <>
       <Seo title='Trang chủ' description='Trang chủ Houston Garden' url='' />
@@ -23,7 +22,7 @@ const Home: NextPageWithLayout = (props) => {
         <HomeBanner banners={banners} />
         <WelCome />
         <HomeBranch branches={branches} />
-        <HomeVilla villas={villas} />
+        <HomeVilla/>
       </main>
     </>
   )
@@ -35,7 +34,6 @@ export const getStaticProps: GetStaticProps<HomeProps> = async (
   context: GetStaticPropsContext
 ) => {
   let branches: Branch[] = []
-  let villas: Villa[] = []
   let banners: Banner[] = []
   try {
     const response = await axios.get(`${baseURL}branches`)
@@ -47,7 +45,7 @@ export const getStaticProps: GetStaticProps<HomeProps> = async (
     banners = response.data
   } catch (error) { }
   return {
-    props: { branches, villas, banners },
+    props: { branches, banners },
     revalidate: 3600 * 24
   }
 }

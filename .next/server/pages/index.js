@@ -27,42 +27,37 @@ module.exports = {
 	"branch_detail_head": "home_branch_detail_head__dTBcT",
 	"branch_detail_name": "home_branch_detail_name__7RiOa",
 	"branch_detail_desc": "home_branch_detail_desc___i9WI",
-	"branch_detail_bot_btn": "home_branch_detail_bot_btn__B2O8G"
+	"branch_detail_bot_btn": "home_branch_detail_bot_btn__B2O8G",
+	"villa_title": "home_villa_title__PptEM",
+	"villa_cate_cnt": "home_villa_cate_cnt__dFrzo",
+	"villa_cate_list": "home_villa_cate_list__YSChb",
+	"villa_cate_item": "home_villa_cate_item__o_by_",
+	"villa_cnt": "home_villa_cnt__XXG5u",
+	"villa_list": "home_villa_list__xl46i"
 };
 
 
 /***/ }),
 
-/***/ 9430:
+/***/ 1356:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "FS": () => (/* reexport */ HomeBanner),
-  "CX": () => (/* reexport */ HomeBranch),
-  "se": () => (/* reexport */ HomeVilla),
-  "Fx": () => (/* reexport */ WelCome)
-});
-
-// EXTERNAL MODULE: ./node_modules/react/jsx-runtime.js
-var jsx_runtime = __webpack_require__(5893);
-// EXTERNAL MODULE: external "react-slick"
-var external_react_slick_ = __webpack_require__(8096);
-var external_react_slick_default = /*#__PURE__*/__webpack_require__.n(external_react_slick_);
-// EXTERNAL MODULE: ./src/components/pages/home/home.module.css
-var home_module = __webpack_require__(2597);
-var home_module_default = /*#__PURE__*/__webpack_require__.n(home_module);
-// EXTERNAL MODULE: external "@mui/material"
-var material_ = __webpack_require__(5692);
-// EXTERNAL MODULE: external "next/router"
-var router_ = __webpack_require__(1853);
-// EXTERNAL MODULE: ./src/utils/index.ts + 5 modules
-var utils = __webpack_require__(4074);
-// EXTERNAL MODULE: external "react"
-var external_react_ = __webpack_require__(6689);
-;// CONCATENATED MODULE: ./src/components/pages/home/Banner.tsx
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "F": () => (/* binding */ HomeBanner)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8096);
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_slick__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2597);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_home_module_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5692);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1853);
+/* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4074);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
 /* eslint-disable @next/next/no-img-element */ 
 
 
@@ -71,17 +66,17 @@ var external_react_ = __webpack_require__(6689);
 
 
 const HomeBanner = ({ banners  })=>{
-    const [crrSlide, setCrrSlide] = (0,external_react_.useState)(0);
+    const [crrSlide, setCrrSlide] = (0,react__WEBPACK_IMPORTED_MODULE_5__.useState)(0);
     const settings = {
         customPaging: (index)=>{
-            return /*#__PURE__*/ jsx_runtime.jsx("button", {
+            return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("button", {
                 style: index === crrSlide ? {
                     backgroundColor: "var(--primary)"
                 } : {},
-                className: (home_module_default()).dot_item_btn
+                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().dot_item_btn)
             });
         },
-        dotsClass: (home_module_default()).banner_dot,
+        dotsClass: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().banner_dot),
         infinite: true,
         speed: 1000,
         slidesToShow: 1,
@@ -92,50 +87,50 @@ const HomeBanner = ({ banners  })=>{
         dots: true,
         afterChange: (currentSlide)=>setCrrSlide(currentSlide)
     };
-    const router = (0,router_.useRouter)();
+    const router = (0,next_router__WEBPACK_IMPORTED_MODULE_3__.useRouter)();
     const onBannerClick = (banner)=>{
         switch(banner.type){
             case "BRANCH":
-                router.push(`/branches/${(0,utils/* slugify */.lV)(banner.name)}&id=${banner.original_id}`);
+                router.push(`/branches/${(0,_utils__WEBPACK_IMPORTED_MODULE_4__/* .slugify */ .lV)(banner.name)}&id=${banner.original_id}`);
                 break;
             case "VILLA":
-                router.push(`/danh-sach-villa/${(0,utils/* slugify */.lV)(banner.name)}&id=${banner.original_id}`);
+                router.push(`/danh-sach-villa/${(0,_utils__WEBPACK_IMPORTED_MODULE_4__/* .slugify */ .lV)(banner.name)}&id=${banner.original_id}`);
                 break;
             default:
                 break;
         }
     };
-    return /*#__PURE__*/ jsx_runtime.jsx("div", {
-        className: (home_module_default()).banner_cnt,
-        children: /*#__PURE__*/ jsx_runtime.jsx((external_react_slick_default()), {
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().banner_cnt),
+        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_slick__WEBPACK_IMPORTED_MODULE_1___default()), {
             ...settings,
-            children: banners.map((item, i)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                    className: (home_module_default()).banner_item_cnt,
+            children: banners.map((item, i)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().banner_item_cnt),
                     children: [
-                        /*#__PURE__*/ jsx_runtime.jsx("img", {
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
                             style: item.content !== "" ? {
                                 filter: "brightness(70%)"
                             } : {},
                             src: item.media?.original_url,
-                            className: (home_module_default()).banner_item_img,
+                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().banner_item_img),
                             alt: ""
                         }),
-                        /*#__PURE__*/ jsx_runtime.jsx("div", {
-                            className: (home_module_default()).banner_item,
-                            children: /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                className: (home_module_default()).banner_item_content,
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().banner_item),
+                            children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().banner_item_content),
                                 children: [
-                                    i == 0 && /*#__PURE__*/ jsx_runtime.jsx("h1", {
-                                        className: (home_module_default()).banner_item_name,
+                                    i == 0 && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().banner_item_name),
                                         children: item.name
                                     }),
-                                    /*#__PURE__*/ jsx_runtime.jsx("span", {
-                                        className: (home_module_default()).banner_item_content,
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().banner_item_content),
                                         children: item.content
                                     }),
-                                    item.type !== "HOME" && /*#__PURE__*/ jsx_runtime.jsx("div", {
-                                        className: (home_module_default()).banner_item_btn,
-                                        children: /*#__PURE__*/ jsx_runtime.jsx(material_.Button, {
+                                    item.type !== "HOME" && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().banner_item_btn),
+                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_2__.Button, {
                                             onClick: ()=>onBannerClick(item),
                                             variant: "contained",
                                             size: "large",
@@ -154,68 +149,72 @@ const HomeBanner = ({ banners  })=>{
     });
 };
 
-;// CONCATENATED MODULE: ./src/components/pages/home/WelCome.tsx
 
-const WelCome = ()=>{
-    return /*#__PURE__*/ jsx_runtime.jsx("div", {
-        children: "WelCome"
-    });
-};
+/***/ }),
 
-// EXTERNAL MODULE: ./node_modules/next/link.js
-var next_link = __webpack_require__(1664);
-var link_default = /*#__PURE__*/__webpack_require__.n(next_link);
-// EXTERNAL MODULE: external "react-icons/fa"
-var fa_ = __webpack_require__(6290);
-;// CONCATENATED MODULE: ./src/components/pages/home/Branch.tsx
+/***/ 3168:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "C": () => (/* binding */ HomeBranch)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(2597);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_home_module_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1664);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(6290);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(4074);
 /* eslint-disable @next/next/no-img-element */ 
 
 
 
 
 const HomeBranch = ({ branches  })=>{
-    return /*#__PURE__*/ jsx_runtime.jsx("div", {
-        className: (home_module_default()).home_section_item,
-        children: branches.map((item, i)=>/*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                className: (home_module_default()).branch_item,
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().home_section_item),
+        children: branches.map((item, i)=>/*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_item),
                 children: [
-                    /*#__PURE__*/ jsx_runtime.jsx("img", {
-                        className: (home_module_default()).branch_item_bg,
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_item_bg),
                         src: item.image?.original_url,
                         alt: ""
                     }),
-                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                        className: i % 2 !== 0 ? `${(home_module_default()).branch_cnt} ${(home_module_default()).branch_cnt_re}` : (home_module_default()).branch_cnt,
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                        className: i % 2 !== 0 ? `${(_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_cnt)} ${(_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_cnt_re)}` : (_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_cnt),
                         children: [
-                            /*#__PURE__*/ jsx_runtime.jsx("img", {
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
                                 src: item.image?.original_url,
                                 alt: "",
-                                className: (home_module_default()).branch_cnt_img
+                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_cnt_img)
                             }),
-                            /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                className: (home_module_default()).branch_detail,
+                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_detail),
                                 children: [
-                                    /*#__PURE__*/ (0,jsx_runtime.jsxs)("div", {
-                                        className: (home_module_default()).branch_detail_head,
+                                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_detail_head),
                                         children: [
-                                            /*#__PURE__*/ jsx_runtime.jsx("h1", {
-                                                className: (home_module_default()).branch_detail_name,
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_detail_name),
                                                 children: item.name
                                             }),
-                                            /*#__PURE__*/ jsx_runtime.jsx("span", {
-                                                className: (home_module_default()).branch_detail_desc,
+                                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_detail_desc),
                                                 children: item.content
                                             })
                                         ]
                                     }),
-                                    /*#__PURE__*/ jsx_runtime.jsx("div", {
-                                        className: (home_module_default()).branch_detail_bot,
-                                        children: /*#__PURE__*/ (0,jsx_runtime.jsxs)((link_default()), {
-                                            href: `/branches/${(0,utils/* slugify */.lV)(item.name)}&id=${item.id}`,
-                                            className: (home_module_default()).branch_detail_bot_btn,
+                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_detail_bot),
+                                        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {
+                                            href: `/branches/${(0,_utils__WEBPACK_IMPORTED_MODULE_3__/* .slugify */ .lV)(item.name)}&id=${item.id}`,
+                                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_4___default().branch_detail_bot_btn),
                                             children: [
                                                 "T\xecm hiểu th\xeam",
-                                                /*#__PURE__*/ jsx_runtime.jsx(fa_.FaArrowRight, {})
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_2__.FaArrowRight, {})
                                             ]
                                         })
                                     })
@@ -228,20 +227,157 @@ const HomeBranch = ({ branches  })=>{
     });
 };
 
-;// CONCATENATED MODULE: ./src/components/pages/home/Villa.tsx
 
-const HomeVilla = ({ villas  })=>{
-    return /*#__PURE__*/ jsx_runtime.jsx("div", {
-        children: "HomeVilla"
+/***/ }),
+
+/***/ 7679:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "s": () => (/* binding */ HomeVilla)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2597);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_home_module_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5692);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9752);
+/* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1280);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _components_villa_card_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4485);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__]);
+([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
+
+
+
+
+
+
+const HomeVilla = ()=>{
+    const [cate, setCate] = (0,react__WEBPACK_IMPORTED_MODULE_4__.useState)();
+    const { data  } = (0,_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__.useQuery)({
+        queryKey: [
+            "HOME_VILLA_CATE"
+        ],
+        queryFn: ()=>_services__WEBPACK_IMPORTED_MODULE_3__/* .api.villaCates */ .h.villaCates({
+                page: 1,
+                limit: 15,
+                status: true
+            })
+    });
+    const cates = data?.data ?? [];
+    const { data: dataVilla  } = (0,_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__.useQuery)({
+        queryKey: [
+            "HOME_VILLA",
+            cate
+        ],
+        queryFn: ()=>_services__WEBPACK_IMPORTED_MODULE_3__/* .api.villas */ .h.villas({
+                page: 1,
+                limit: 12,
+                villa_cate_id: cate,
+                includes: "full_address"
+            })
+    });
+    const villas = dataVilla?.data ?? [];
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_1__.Container, {
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_title),
+                children: "Biệt thự nổi bật"
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_cate_cnt),
+                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
+                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_cate_list),
+                    children: [
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                            style: !cate ? {
+                                backgroundColor: "var(--primary)",
+                                color: "var(--white)"
+                            } : {},
+                            onClick: ()=>setCate(undefined),
+                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_cate_item),
+                            children: "Tất cả"
+                        }),
+                        cates.map((item)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                style: item.id === cate ? {
+                                    backgroundColor: "var(--primary)",
+                                    color: "var(--white)"
+                                } : {},
+                                onClick: ()=>setCate(item.id),
+                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_cate_item),
+                                children: item.villa_cate_name
+                            }, item.id))
+                    ]
+                })
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_cnt),
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
+                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_list),
+                    children: villas.map((item)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().villa_item),
+                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_villa_card_item__WEBPACK_IMPORTED_MODULE_5__/* .VillaCard */ .J, {
+                                villa: item
+                            })
+                        }, item.id))
+                })
+            })
+        ]
     });
 };
 
-;// CONCATENATED MODULE: ./src/components/pages/home/index.ts
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 5894:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "F": () => (/* binding */ WelCome)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+
+const WelCome = ()=>{
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+        children: "WelCome"
+    });
+};
+
+
+/***/ }),
+
+/***/ 8950:
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __webpack_async_result__) => { try {
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "CX": () => (/* reexport safe */ _Branch__WEBPACK_IMPORTED_MODULE_2__.C),
+/* harmony export */   "FS": () => (/* reexport safe */ _Banner__WEBPACK_IMPORTED_MODULE_0__.F),
+/* harmony export */   "Fx": () => (/* reexport safe */ _WelCome__WEBPACK_IMPORTED_MODULE_1__.F),
+/* harmony export */   "se": () => (/* reexport safe */ _Villa__WEBPACK_IMPORTED_MODULE_3__.s)
+/* harmony export */ });
+/* harmony import */ var _Banner__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1356);
+/* harmony import */ var _WelCome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5894);
+/* harmony import */ var _Branch__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3168);
+/* harmony import */ var _Villa__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7679);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_Villa__WEBPACK_IMPORTED_MODULE_3__]);
+_Villa__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
 
 
 
 
+__webpack_async_result__();
+} catch(e) { __webpack_async_result__(e); } });
 
 /***/ }),
 
@@ -257,13 +393,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4277);
-/* harmony import */ var _components_pages_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9430);
+/* harmony import */ var _components_pages_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8950);
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(7430);
 /* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(8557);
 /* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(1280);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(9648);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_1__, _config__WEBPACK_IMPORTED_MODULE_3__, _layouts__WEBPACK_IMPORTED_MODULE_4__, _services__WEBPACK_IMPORTED_MODULE_5__, axios__WEBPACK_IMPORTED_MODULE_6__]);
-([_components__WEBPACK_IMPORTED_MODULE_1__, _config__WEBPACK_IMPORTED_MODULE_3__, _layouts__WEBPACK_IMPORTED_MODULE_4__, _services__WEBPACK_IMPORTED_MODULE_5__, axios__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_1__, _components_pages_home__WEBPACK_IMPORTED_MODULE_2__, _config__WEBPACK_IMPORTED_MODULE_3__, _layouts__WEBPACK_IMPORTED_MODULE_4__, _services__WEBPACK_IMPORTED_MODULE_5__, axios__WEBPACK_IMPORTED_MODULE_6__]);
+([_components__WEBPACK_IMPORTED_MODULE_1__, _components_pages_home__WEBPACK_IMPORTED_MODULE_2__, _config__WEBPACK_IMPORTED_MODULE_3__, _layouts__WEBPACK_IMPORTED_MODULE_4__, _services__WEBPACK_IMPORTED_MODULE_5__, axios__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
 
 
@@ -272,7 +408,7 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_com
 
 
 const Home = (props)=>{
-    const { branches , villas , banners  } = props;
+    const { branches , banners  } = props;
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_1__/* .Seo */ .pQ, {
@@ -289,9 +425,7 @@ const Home = (props)=>{
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_2__/* .HomeBranch */ .CX, {
                         branches: branches
                     }),
-                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_2__/* .HomeVilla */ .se, {
-                        villas: villas
-                    })
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_home__WEBPACK_IMPORTED_MODULE_2__/* .HomeVilla */ .se, {})
                 ]
             })
         ]
@@ -301,7 +435,6 @@ const Home = (props)=>{
 Home.Layout = _layouts__WEBPACK_IMPORTED_MODULE_4__/* .MainLayout */ .Zn;
 const getStaticProps = async (context)=>{
     let branches = [];
-    let villas = [];
     let banners = [];
     try {
         const response = await axios__WEBPACK_IMPORTED_MODULE_6__["default"].get(`${_config__WEBPACK_IMPORTED_MODULE_3__/* .baseURL */ .v2}branches`);
@@ -315,7 +448,6 @@ const getStaticProps = async (context)=>{
     return {
         props: {
             branches,
-            villas,
             banners
         },
         revalidate: 3600 * 24

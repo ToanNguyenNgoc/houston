@@ -1,5 +1,19 @@
 import { axiosConfig } from "@/config";
-import { Banner, Booking, Branch, ParamBooking, ReqBooking, ReqForgot, ReqLogin, ReqProfile, ReqRegister, ResponseDetail, ResponseList } from "@/interfaces";
+import {
+  Banner,
+  Booking,
+  Branch,
+  ParamBooking,
+  ParamVilla,
+  ParamVillaCate,
+  ReqBooking,
+  ReqForgot,
+  ReqLogin,
+  ReqProfile,
+  ReqRegister,
+  ResponseDetail,
+  ResponseList, Villa, VillaCate
+} from "@/interfaces";
 
 export const api = {
   login: (body: ReqLogin) => {
@@ -48,5 +62,11 @@ export const api = {
   },
   branchById: (id: number | string) => {
     return axiosConfig.get(`branches/${id}`).then<ResponseDetail<Branch>>(res => res.data)
+  },
+  villaCates: (params: ParamVillaCate) => {
+    return axiosConfig.get(`villa_cates`, { params }).then<ResponseList<VillaCate[]>>(res => res.data)
+  },
+  villas: (params: ParamVilla) => {
+    return axiosConfig.get('villas', { params }).then<ResponseList<Villa[]>>(res => res.data)
   }
 }

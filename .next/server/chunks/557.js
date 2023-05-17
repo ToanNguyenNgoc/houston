@@ -16,6 +16,23 @@ module.exports = {
 
 /***/ }),
 
+/***/ 648:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"container": "vall-card_container___BnHe",
+	"image_cnt": "vall-card_image_cnt__ox_7D",
+	"image": "vall-card_image__pIcj8",
+	"detail": "vall-card_detail__6mEYc",
+	"detail_name": "vall-card_detail_name__6nHo2",
+	"detail_address": "vall-card_detail_address__WL4QC",
+	"detail_price": "vall-card_detail_price___3sgD"
+};
+
+
+/***/ }),
+
 /***/ 1439:
 /***/ ((module) => {
 
@@ -454,8 +471,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _app_snack__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6934);
 /* harmony import */ var _head_banner__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4532);
 /* harmony import */ var _button_upload__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(3478);
+/* harmony import */ var _villa_card_item__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4485);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_header__WEBPACK_IMPORTED_MODULE_1__]);
 _header__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -590,6 +609,80 @@ function Seo(props) {
         ]
     });
 }
+
+
+/***/ }),
+
+/***/ 4485:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "J": () => (/* binding */ VillaCard)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _vall_card_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(648);
+/* harmony import */ var _vall_card_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_vall_card_module_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(1664);
+/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4074);
+/* eslint-disable @next/next/no-img-element */ 
+
+
+
+const VillaCard = ({ villa  })=>{
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {
+        href: `/danh-sach-villa/${(0,_utils__WEBPACK_IMPORTED_MODULE_2__/* .slugify */ .lV)(villa.name)}&id=${villa.id}`,
+        className: (_vall_card_module_css__WEBPACK_IMPORTED_MODULE_3___default().container),
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: (_vall_card_module_css__WEBPACK_IMPORTED_MODULE_3___default().image_cnt),
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                    src: villa.thumbnail?.original_url,
+                    alt: "",
+                    className: (_vall_card_module_css__WEBPACK_IMPORTED_MODULE_3___default().image)
+                })
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_vall_card_module_css__WEBPACK_IMPORTED_MODULE_3___default().detail),
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                        className: (_vall_card_module_css__WEBPACK_IMPORTED_MODULE_3___default().detail_name),
+                        children: villa.name
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                        className: (_vall_card_module_css__WEBPACK_IMPORTED_MODULE_3___default().detail_address),
+                        children: villa.branch?.address
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: (_vall_card_module_css__WEBPACK_IMPORTED_MODULE_3___default().detail_price),
+                        children: villa.special_price < villa.price ? /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+                            children: [
+                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+                                    style: {
+                                        color: "var(--orange)"
+                                    },
+                                    children: [
+                                        (0,_utils__WEBPACK_IMPORTED_MODULE_2__/* .fmPrice */ .BX)(villa.special_price),
+                                        " VND/đ\xeam"
+                                    ]
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                    children: (0,_utils__WEBPACK_IMPORTED_MODULE_2__/* .fmPrice */ .BX)(villa.price)
+                                })
+                            ]
+                        }) : /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+                            children: [
+                                (0,_utils__WEBPACK_IMPORTED_MODULE_2__/* .fmPrice */ .BX)(villa.price),
+                                " VND/đ\xeam"
+                            ]
+                        })
+                    })
+                ]
+            })
+        ]
+    });
+};
 
 
 /***/ }),
@@ -1244,6 +1337,16 @@ const api = {
     },
     branchById: (id)=>{
         return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get(`branches/${id}`).then((res)=>res.data);
+    },
+    villaCates: (params)=>{
+        return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get(`villa_cates`, {
+            params
+        }).then((res)=>res.data);
+    },
+    villas: (params)=>{
+        return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get("villas", {
+            params
+        }).then((res)=>res.data);
     }
 };
 

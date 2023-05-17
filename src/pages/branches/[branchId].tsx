@@ -8,6 +8,7 @@ import style from '@/styles/branch.module.css'
 import { HeadBanner, Seo } from "@/components";
 import { slugify } from "@/utils";
 import queryString from "query-string";
+import { Container } from "@mui/material";
 
 interface BranchProps {
   branch: Branch
@@ -24,6 +25,17 @@ const Branch: NextPageWithLayout = (props) => {
         url={`branches/${slugify(branch.name)}&id=${branch.id}`}
       />
       <HeadBanner title={branch.name} image_url={branch.image?.original_url} content="Branch" />
+      <Container>
+        <div className={style.body}>
+          <div className={style.left}>
+            <div
+              className={style.left_desc}
+              dangerouslySetInnerHTML={{ __html: branch.description }}
+            />
+          </div>
+          <div className={style.right}></div>
+        </div>
+      </Container>
     </>
   )
 }
