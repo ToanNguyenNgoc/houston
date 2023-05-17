@@ -615,7 +615,7 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axio
 
 // export const baseURL = process.env.NEXT_PUBLIC_API_URL_DEV;
 const baseURL = "https://api.houstongarden.click/";
-const captKey = "6Lfma7olAAAAAGLvchLIB9_nQQY8dW5X2U_uTNGh" ?? 0;
+const captKey = "6Ld6kRYmAAAAALuaAH_7ch8Q9AV2SCq5F6WfRpLp" ?? 0;
 const apiBlog = "https://admin.houstongarden.vn";
 const axiosConfig = axios__WEBPACK_IMPORTED_MODULE_0__["default"].create({
     baseURL: baseURL,
