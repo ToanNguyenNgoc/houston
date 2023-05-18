@@ -6,6 +6,7 @@ import dinnerCate from './dinner_cate.png';
 import foodCate from './food_cate.png';
 import transportCate from './transport_cate.png';
 import spaCate from './spa_cate.png'
+import nullResult from './dribbble.png'
 
 export const icon = {
   iconOrigin,
@@ -15,5 +16,6 @@ export const icon = {
   dinnerCate,
   foodCate,
   transportCate,
-  spaCate
+  spaCate,
+  nullResult
 }

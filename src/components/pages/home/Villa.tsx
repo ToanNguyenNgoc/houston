@@ -6,6 +6,7 @@ import { api } from "@/services"
 import { ReactElement, useState } from "react"
 import { VillaCard } from "@/components/villa-card-item"
 import { VillaCardLoad } from "@/components/villa-card-load"
+import { QR_TIME_CACHE } from "@/assets/constants"
 
 export const HomeVilla = () => {
   const [cate, setCate] = useState<number | string | undefined>()
@@ -21,7 +22,8 @@ export const HomeVilla = () => {
       limit: 12,
       villa_cate_id: cate,
       includes: 'full_address'
-    })
+    }),
+    staleTime: QR_TIME_CACHE
   })
   const villas = dataVilla?.data ?? []
   return (

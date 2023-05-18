@@ -7,7 +7,7 @@
 
 .image_cnt {
   width: 100%;
-  padding-bottom: 100%;
+  aspect-ratio: 1 / 1;
   background-color: var(--grey);
   border-radius: var(--max);
   position: relative;

@@ -49,6 +49,28 @@ module.exports = {
 
 /***/ }),
 
+/***/ 3250:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "C": () => (/* reexport */ QR_TIME_CACHE)
+});
+
+// UNUSED EXPORTS: KEY
+
+;// CONCATENATED MODULE: ./src/assets/constants/react-query.ts
+const KEY = {};
+const QR_TIME_CACHE = 15 * (60 * 1000);
+
+;// CONCATENATED MODULE: ./src/assets/constants/index.ts
+
+
+
+/***/ }),
+
 /***/ 1356:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -249,8 +271,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "s": () => (/* binding */ HomeVilla)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
-/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(2597);
-/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_home_module_css__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(2597);
+/* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_home_module_css__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5692);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(9752);
@@ -259,8 +281,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_villa_card_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4485);
 /* harmony import */ var _components_villa_card_load__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(618);
+/* harmony import */ var _assets_constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(3250);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__]);
 ([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+
 
 
 
@@ -292,19 +316,20 @@ const HomeVilla = ()=>{
                 limit: 12,
                 villa_cate_id: cate,
                 includes: "full_address"
-            })
+            }),
+        staleTime: _assets_constants__WEBPACK_IMPORTED_MODULE_7__/* .QR_TIME_CACHE */ .C
     });
     const villas = dataVilla?.data ?? [];
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_1__.Container, {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_title),
+                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_8___default().villa_title),
                 children: "Biệt thự nổi bật"
             }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_cate_cnt),
+                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_8___default().villa_cate_cnt),
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
-                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_cate_list),
+                    className: (_home_module_css__WEBPACK_IMPORTED_MODULE_8___default().villa_cate_list),
                     children: [
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                             style: !cate ? {
@@ -312,7 +337,7 @@ const HomeVilla = ()=>{
                                 color: "var(--white)"
                             } : {},
                             onClick: ()=>setCate(undefined),
-                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_cate_item),
+                            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_8___default().villa_cate_item),
                             children: "Tất cả"
                         }),
                         cates.map((item)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
@@ -321,20 +346,20 @@ const HomeVilla = ()=>{
                                     color: "var(--white)"
                                 } : {},
                                 onClick: ()=>setCate(item.id),
-                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_cate_item),
+                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_8___default().villa_cate_item),
                                 children: item.villa_cate_name
                             }, item.id))
                     ]
                 })
             }),
             /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_cnt),
+                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_8___default().villa_cnt),
                 children: [
                     isLoading && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(LoadVilla, {}),
                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
-                        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_list),
+                        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_8___default().villa_list),
                         children: villas.map((item)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_item),
+                                className: (_home_module_css__WEBPACK_IMPORTED_MODULE_8___default().villa_item),
                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_villa_card_item__WEBPACK_IMPORTED_MODULE_5__/* .VillaCard */ .J, {
                                     villa: item
                                 })
@@ -349,13 +374,13 @@ const LoadVilla = ()=>{
     let list = [];
     for(var i = 0; i < 4; i++){
         const item = /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
-            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_item),
+            className: (_home_module_css__WEBPACK_IMPORTED_MODULE_8___default().villa_item),
             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_villa_card_load__WEBPACK_IMPORTED_MODULE_6__/* .VillaCardLoad */ .G, {})
         }, i);
         list.push(item);
     }
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
-        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_7___default().villa_list),
+        className: (_home_module_css__WEBPACK_IMPORTED_MODULE_8___default().villa_list),
         children: list
     });
 };
@@ -377,7 +402,7 @@ __webpack_async_result__();
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2597);
 /* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_home_module_css__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(2642);
+/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7780);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5675);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1664);

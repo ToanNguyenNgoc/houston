@@ -9,11 +9,43 @@ exports.modules = {
 
 // Exports
 module.exports = {
-	"body": "branch_body__o4BW_",
-	"left": "branch_left__mOM_6",
-	"right": "branch_right__BsLsw",
-	"left_desc": "branch_left_desc__Njl_Y"
+	"container": "branch_container__5o33f",
+	"banner_head": "branch_banner_head__jS4cH",
+	"banner_head_right": "branch_banner_head_right__lm5KT",
+	"banner_head_left": "branch_banner_head_left__RvfnQ",
+	"branch_name": "branch_branch_name__OqYyt",
+	"banner_address": "branch_banner_address__aH6N7",
+	"banner_image_cnt": "branch_banner_image_cnt__vZ5wG",
+	"banner_image": "branch_banner_image__c6KCm",
+	"tab_cnt": "branch_tab_cnt__axbjC",
+	"tab_item": "branch_tab_item__KIZVR",
+	"villa_list": "branch_villa_list__q0_xS",
+	"villa_bot": "branch_villa_bot__Oe4Ov",
+	"desc_cnt": "branch_desc_cnt__EIIOh",
+	"banner_cnt": "branch_banner_cnt__6XWr0"
 };
+
+
+/***/ }),
+
+/***/ 3250:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "C": () => (/* reexport */ QR_TIME_CACHE)
+});
+
+// UNUSED EXPORTS: KEY
+
+;// CONCATENATED MODULE: ./src/assets/constants/react-query.ts
+const KEY = {};
+const QR_TIME_CACHE = 15 * (60 * 1000);
+
+;// CONCATENATED MODULE: ./src/assets/constants/index.ts
+
 
 
 /***/ }),
@@ -32,15 +64,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(7430);
 /* harmony import */ var _layouts__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(8557);
 /* harmony import */ var _services__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(1280);
-/* harmony import */ var _styles_branch_module_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(5745);
-/* harmony import */ var _styles_branch_module_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(5745);
+/* harmony import */ var _styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(4277);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4074);
 /* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2194);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(5692);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_7__);
-var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_config__WEBPACK_IMPORTED_MODULE_1__, _layouts__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__, _components__WEBPACK_IMPORTED_MODULE_4__, query_string__WEBPACK_IMPORTED_MODULE_6__]);
-([_config__WEBPACK_IMPORTED_MODULE_1__, _layouts__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__, _components__WEBPACK_IMPORTED_MODULE_4__, query_string__WEBPACK_IMPORTED_MODULE_6__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(6290);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _tanstack_react_query__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(9752);
+/* harmony import */ var _assets_constants__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(3250);
+/* harmony import */ var _mui_lab__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(6072);
+/* harmony import */ var _mui_lab__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_mui_lab__WEBPACK_IMPORTED_MODULE_12__);
+var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_config__WEBPACK_IMPORTED_MODULE_1__, _layouts__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__, _components__WEBPACK_IMPORTED_MODULE_4__, query_string__WEBPACK_IMPORTED_MODULE_6__, _tanstack_react_query__WEBPACK_IMPORTED_MODULE_10__]);
+([_config__WEBPACK_IMPORTED_MODULE_1__, _layouts__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__, _components__WEBPACK_IMPORTED_MODULE_4__, query_string__WEBPACK_IMPORTED_MODULE_6__, _tanstack_react_query__WEBPACK_IMPORTED_MODULE_10__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
+/* eslint-disable @next/next/no-img-element */ 
+
+
+
+
 
 
 
@@ -52,6 +97,32 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_con
 
 const Branch = (props)=>{
     const { branch  } = props;
+    const tabs = [
+        {
+            id: 1,
+            name: "Biệt thự"
+        },
+        {
+            id: 2,
+            name: "Giới thiệu"
+        }
+    ];
+    const [tab, setTab] = (0,react__WEBPACK_IMPORTED_MODULE_9__.useState)(1);
+    const renderTab = ()=>{
+        let child;
+        switch(tab){
+            case 1:
+                return child = /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(TabVillas, {
+                    branch: branch
+                });
+            case 2:
+                return child = /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(TabDecs, {
+                    branch: branch
+                });
+            default:
+                break;
+        }
+    };
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_4__/* .Seo */ .pQ, {
@@ -60,26 +131,66 @@ const Branch = (props)=>{
                 image_url: branch.image?.original_url,
                 url: `branches/${(0,_utils__WEBPACK_IMPORTED_MODULE_5__/* .slugify */ .lV)(branch.name)}&id=${branch.id}`
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_4__/* .HeadBanner */ .RJ, {
-                title: branch.name,
-                image_url: branch.image?.original_url,
-                content: "Branch"
-            }),
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_7__.Container, {
                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                    className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_8___default().body),
+                    className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().container),
                     children: [
-                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                            className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_8___default().left),
-                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_8___default().left_desc),
-                                dangerouslySetInnerHTML: {
-                                    __html: branch.description
-                                }
-                            })
+                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().banner_cnt),
+                            children: [
+                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                    className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().banner_head),
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                            className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().banner_head_left),
+                                            children: [
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                                    className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().branch_name),
+                                                    children: branch.name
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                                                    className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().banner_address),
+                                                    children: [
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__.FaMapMarkerAlt, {
+                                                            color: "var(--primary)",
+                                                            style: {
+                                                                margin: "0px 4px -1px 0px"
+                                                            }
+                                                        }),
+                                                        branch.address
+                                                    ]
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                            className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().banner_head_right)
+                                        })
+                                    ]
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                    className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().banner_image_cnt),
+                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                                        src: branch.image?.original_url,
+                                        className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().banner_image),
+                                        alt: ""
+                                    })
+                                })
+                            ]
+                        }),
+                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
+                            className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().tab_cnt),
+                            children: tabs.map((item)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                    onClick: ()=>setTab(item.id),
+                                    style: item.id === tab ? {
+                                        color: "var(--primary)"
+                                    } : {},
+                                    className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().tab_item),
+                                    children: item.name
+                                }, item.id))
                         }),
                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                            className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_8___default().right)
+                            className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().tab_render_cnt),
+                            children: renderTab()
                         })
                     ]
                 })
@@ -89,6 +200,70 @@ const Branch = (props)=>{
 };
 Branch.Layout = _layouts__WEBPACK_IMPORTED_MODULE_2__/* .MainLayout */ .Zn;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Branch);
+const TabVillas = ({ branch  })=>{
+    const { data , isLoading , fetchNextPage , isFetchingNextPage  } = (0,_tanstack_react_query__WEBPACK_IMPORTED_MODULE_10__.useInfiniteQuery)({
+        queryKey: [
+            "BRANCH_VILLA",
+            branch.id
+        ],
+        queryFn: ({ pageParam =1  })=>_services__WEBPACK_IMPORTED_MODULE_3__/* .api.villas */ .h.villas({
+                page: pageParam,
+                limit: 16,
+                branch_id: branch.id,
+                status: true
+            }),
+        staleTime: _assets_constants__WEBPACK_IMPORTED_MODULE_11__/* .QR_TIME_CACHE */ .C,
+        getNextPageParam: (page)=>page?.current_page + 1
+    });
+    const villas = data?.pages?.map((i)=>i.data).flat() ?? [];
+    const totalItem = data?.pages[0]?.total ?? 0;
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
+                className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().villa_list),
+                children: isLoading ? [
+                    1,
+                    2,
+                    3,
+                    4
+                ].map((i)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                        className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().villa_list_item),
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_4__/* .VillaCardLoad */ .Gg, {})
+                    }, i)) : villas.map((item)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                        className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().villa_list_item),
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_4__/* .VillaCard */ .Jp, {
+                            villa: item
+                        })
+                    }, item.id))
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().villa_bot),
+                children: villas.length < totalItem && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_lab__WEBPACK_IMPORTED_MODULE_12__.LoadingButton, {
+                    variant: "contained",
+                    loading: isFetchingNextPage,
+                    style: {
+                        backgroundColor: "var(--primary)"
+                    },
+                    onClick: ()=>fetchNextPage(),
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_8__.FaAngleDown, {
+                        size: 20
+                    })
+                })
+            }),
+            !isLoading && totalItem === 0 && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_4__/* .EmptyResult */ ._f, {
+                title: "Đang cập nhật danh s\xe1ch biệt thự"
+            })
+        ]
+    });
+};
+const TabDecs = ({ branch  })=>{
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+        className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().desc_cnt),
+        dangerouslySetInnerHTML: {
+            __html: branch.description
+        }
+    });
+};
 async function getServerSideProps(context) {
     (0,_config__WEBPACK_IMPORTED_MODULE_1__/* .serverSideCache */ .O3)(context);
     let branch;
@@ -114,6 +289,14 @@ async function getServerSideProps(context) {
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 6072:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("@mui/lab");
 
 /***/ }),
 
