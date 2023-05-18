@@ -24,11 +24,12 @@ export const WelCome = () => {
         <div className={style.welcome_cnt_content}>
           <div className={style.welcome_cnt_content_left}>
             <div className={style.welcome_cnt_video}>
-              <iframe
+              <iframe src='https://www.youtube.com/embed/o0mSrIedcq8?autoplay=1&mute=1&loop=1&color=white&controls=0'
+                frameBorder='0'
+                allow='autoplay; encrypted-media'
+                allowFullScreen
+                title="YouTube video player"
                 style={{ width: '100%', height: '100%' }}
-                src="https://www.youtube.com/embed/o0mSrIedcq8?autoplay=1"
-                title="YouTube video player" frameBorder={0}
-                allow="autoplay; encrypted-media"
               />
             </div>
           </div>

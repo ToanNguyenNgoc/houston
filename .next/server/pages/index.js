@@ -452,14 +452,15 @@ const WelCome = ()=>{
                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                 className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().welcome_cnt_video),
                                 children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("iframe", {
+                                    src: "https://www.youtube.com/embed/o0mSrIedcq8?autoplay=1&mute=1&loop=1&color=white&controls=0",
+                                    frameBorder: "0",
+                                    allow: "autoplay; encrypted-media",
+                                    allowFullScreen: true,
+                                    title: "YouTube video player",
                                     style: {
                                         width: "100%",
                                         height: "100%"
-                                    },
-                                    src: "https://www.youtube.com/embed/o0mSrIedcq8?autoplay=1",
-                                    title: "YouTube video player",
-                                    frameBorder: 0,
-                                    allow: "autoplay; encrypted-media"
+                                    }
                                 })
                             })
                         }),

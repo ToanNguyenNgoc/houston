@@ -441,4 +441,33 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .welcome_cnt_content {
+    flex-direction: column-reverse;
+    margin: 16px 0px;
+  }
+
+  .welcome_cnt_content_left {
+    display: none;
+  }
+
+  .welcome_cnt_content_right {
+    width: 100%;
+  }
+
+  .welcome_cnt_content_right h3 {
+    font-size: 13px;
+    line-height: 22px;
+    margin: 6px 0px 12px 0px;
+  }
+
+  .util_item img {
+    width: 58px;
+    height: 58px;
+  }
+
+  .util_item_name {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
 }
