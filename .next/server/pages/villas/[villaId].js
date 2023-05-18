@@ -24,7 +24,8 @@ module.exports = {
 	"util_cnt": "villa-detail_util_cnt__mOsNB",
 	"list_util": "villa-detail_list_util__83o5V",
 	"util_item": "villa-detail_util_item__mmgly",
-	"util_item_content": "villa-detail_util_item_content__BbAfO"
+	"util_item_content": "villa-detail_util_item_content__BbAfO",
+	"list_util_free": "villa-detail_list_util_free__D4NXP"
 };
 
 
@@ -35,18 +36,50 @@ module.exports = {
 
 // Exports
 module.exports = {
-	"villa_img_cnt": "villa_villa_img_cnt__h7XiE",
-	"villa_img": "villa_villa_img__JdYqY",
+	"container": "villa_container__OmfSI",
+	"head_banner_cnt": "villa_head_banner_cnt__yUJj5",
 	"villa_name": "villa_villa_name__U4yVn",
+	"villa_cate": "villa_villa_cate__FOU2y",
+	"villa_star": "villa_villa_star__fgvJ0",
+	"head_banner_desk": "villa_head_banner_desk__a1Y8b",
+	"banner_item_cnt": "villa_banner_item_cnt__nBEvO",
+	"price": "villa_price__sXIf2",
 	"body": "villa_body__wNB4S",
 	"body_left": "villa_body_left__lPXoG",
-	"body_left_name": "villa_body_left_name__hAaZs",
-	"body_left_images": "villa_body_left_images__1s7t9",
-	"slick_img_cnt": "villa_slick_img_cnt__nGYvu",
-	"slick_img": "villa_slick_img__j479h",
-	"body_left_desc": "villa_body_left_desc__qL6KZ",
-	"body_right": "villa_body_right__hw_b8"
+	"body_right": "villa_body_right__hw_b8",
+	"body_title": "villa_body_title__v5mVP",
+	"body_desc": "villa_body_desc__9E8UC",
+	"head": "villa_head__31e8D",
+	"head_detail": "villa_head_detail__etaiU",
+	"head_banner_mb": "villa_head_banner_mb__r0t57",
+	"slide_page": "villa_slide_page__JuoZf",
+	"slider_item": "villa_slider_item__g0RTj",
+	"bottom": "villa_bottom__8Oa3O",
+	"bottom_right": "villa_bottom_right__Bc_ce",
+	"bottom_form_cnt": "villa_bottom_form_cnt__OUff_"
 };
+
+
+/***/ }),
+
+/***/ 3250:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "C": () => (/* reexport */ QR_TIME_CACHE)
+});
+
+// UNUSED EXPORTS: KEY
+
+;// CONCATENATED MODULE: ./src/assets/constants/react-query.ts
+const KEY = {};
+const QR_TIME_CACHE = 15 * (60 * 1000);
+
+;// CONCATENATED MODULE: ./src/assets/constants/index.ts
+
 
 
 /***/ }),
@@ -380,6 +413,47 @@ const VillaUtil = ()=>{
                             })
                         ]
                     }, index))
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("ul", {
+                className: (_villa_detail_module_css__WEBPACK_IMPORTED_MODULE_2___default().list_util_free),
+                children: [
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__.FaStarOfLife, {
+                                size: 8,
+                                style: {
+                                    margin: "0px 6px 0px 3px"
+                                },
+                                color: "var(--green-dark-2)"
+                            }),
+                            "Miễn ph\xed buffet s\xe1ng"
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__.FaStarOfLife, {
+                                size: 8,
+                                style: {
+                                    margin: "0px 6px 0px 3px"
+                                },
+                                color: "var(--green-dark-2)"
+                            }),
+                            "Nước uống ch\xe0o mừng khi nhận ph\xf2ng"
+                        ]
+                    }),
+                    /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("li", {
+                        children: [
+                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_1__.FaStarOfLife, {
+                                size: 8,
+                                style: {
+                                    margin: "0px 6px 0px 3px"
+                                },
+                                color: "var(--green-dark-2)"
+                            }),
+                            "Đặt trước, thanh to\xe1n sau"
+                        ]
+                    })
+                ]
             })
         ]
     });
@@ -430,17 +504,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(1853);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var query_string__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(2194);
-/* harmony import */ var _styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(7928);
-/* harmony import */ var _styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(7928);
+/* harmony import */ var _styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default = /*#__PURE__*/__webpack_require__.n(_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18__);
 /* harmony import */ var _tanstack_react_query__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(9752);
 /* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(8096);
 /* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_slick__WEBPACK_IMPORTED_MODULE_10__);
 /* harmony import */ var _components_pages_villa_detail__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(2842);
 /* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(5848);
 /* harmony import */ var _stores_zustand__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(4433);
+/* harmony import */ var _assets_constants__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(3250);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(6290);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(4074);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(6689);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_17__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_components__WEBPACK_IMPORTED_MODULE_1__, _config__WEBPACK_IMPORTED_MODULE_2__, _layouts__WEBPACK_IMPORTED_MODULE_3__, _services__WEBPACK_IMPORTED_MODULE_4__, axios__WEBPACK_IMPORTED_MODULE_6__, query_string__WEBPACK_IMPORTED_MODULE_8__, _tanstack_react_query__WEBPACK_IMPORTED_MODULE_9__, _components_pages_villa_detail__WEBPACK_IMPORTED_MODULE_11__, _stores_zustand__WEBPACK_IMPORTED_MODULE_13__]);
 ([_components__WEBPACK_IMPORTED_MODULE_1__, _config__WEBPACK_IMPORTED_MODULE_2__, _layouts__WEBPACK_IMPORTED_MODULE_3__, _services__WEBPACK_IMPORTED_MODULE_4__, axios__WEBPACK_IMPORTED_MODULE_6__, query_string__WEBPACK_IMPORTED_MODULE_8__, _tanstack_react_query__WEBPACK_IMPORTED_MODULE_9__, _components_pages_villa_detail__WEBPACK_IMPORTED_MODULE_11__, _stores_zustand__WEBPACK_IMPORTED_MODULE_13__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 /* eslint-disable @next/next/no-img-element */ 
+
+
+
+
 
 
 
@@ -466,8 +550,15 @@ const VillaDetail = (props)=>{
             "VILLA_GALLERIES",
             villa_id
         ],
-        queryFn: ()=>_services__WEBPACK_IMPORTED_MODULE_4__/* .api.villa_galleries */ .h.villa_galleries(villa_id)
+        queryFn: ()=>_services__WEBPACK_IMPORTED_MODULE_4__/* .api.villa_galleries */ .h.villa_galleries(villa_id),
+        staleTime: _assets_constants__WEBPACK_IMPORTED_MODULE_14__/* .QR_TIME_CACHE */ .C
     });
+    const villaGalleries = data?.data.map((i)=>i.image?.original_url) ?? [];
+    const listImageUrl = [
+        villa.thumbnail?.original_url ?? "",
+        ...villaGalleries
+    ];
+    const isMb = (0,_mui_material__WEBPACK_IMPORTED_MODULE_5__.useMediaQuery)("(max-width:767px)");
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
         children: [
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_1__/* .Seo */ .pQ, {
@@ -476,52 +567,98 @@ const VillaDetail = (props)=>{
                 url: router.asPath,
                 image_url: villa.thumbnail?.original_url
             }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_1__/* .HeadBanner */ .RJ, {
-                image_url: villa.thumbnail?.original_url,
-                title: villa.name
-            }),
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14___default().container),
-                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Container, {
-                    children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                        className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14___default().body),
-                        children: [
-                            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14___default().body_left),
-                                children: [
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
-                                        className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14___default().body_left_name),
-                                        children: villa.name
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                        className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14___default().body_left_images),
-                                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_slick__WEBPACK_IMPORTED_MODULE_10___default()), {
-                                            ..._settings__WEBPACK_IMPORTED_MODULE_12__/* .settings */ .X,
-                                            children: data?.data?.map((item, index)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                                    className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14___default().slick_img_cnt),
-                                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                                        className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14___default().slick_img),
-                                                        src: item.image?.original_url,
-                                                        alt: ""
-                                                    })
-                                                }, index))
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Container, {
+                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                    className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().container),
+                    children: [
+                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().head),
+                            children: [
+                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                    className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().head_detail),
+                                    children: [
+                                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                            className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().head_detail_left),
+                                            children: [
+                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("h1", {
+                                                    className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().villa_name),
+                                                    children: villa.name
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+                                                    className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().villa_cate),
+                                                    children: [
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_15__.FaThList, {
+                                                            size: 13,
+                                                            color: "var(--primary)"
+                                                        }),
+                                                        villa.villa_cate?.villa_cate_name
+                                                    ]
+                                                }),
+                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("p", {
+                                                    className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().villa_star),
+                                                    children: [
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_15__.FaStar, {
+                                                            size: 12,
+                                                            color: "var(--primary)"
+                                                        }),
+                                                        " 5,0"
+                                                    ]
+                                                })
+                                            ]
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                            className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().head_detail_right)
                                         })
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                        className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14___default().body_left_desc),
-                                        children: villa.description
-                                    }),
-                                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_villa_detail__WEBPACK_IMPORTED_MODULE_11__/* .VillaUtil */ .U, {})
-                                ]
-                            }),
-                            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
-                                className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_14___default().body_right),
-                                children: !isLoading && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_villa_detail__WEBPACK_IMPORTED_MODULE_11__/* .FormBooking */ .W, {
+                                    ]
+                                }),
+                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                    className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().head_banner_cnt),
+                                    children: isMb ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(SliderImage, {
+                                        images: listImageUrl
+                                    }) : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                        className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().head_banner_desk),
+                                        children: listImageUrl.slice(0, 4).map((url)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().banner_item_cnt),
+                                                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                                                    src: url,
+                                                    alt: ""
+                                                })
+                                            }, url))
+                                    })
+                                })
+                            ]
+                        }),
+                        !isMb && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Price, {
+                            villa: villa
+                        }),
+                        /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                            className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().body),
+                            children: [
+                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                    className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().body_left),
+                                    children: [
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                                            className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().body_title),
+                                            children: "Giới thiệu về biệt thự n\xe0y"
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                            className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().body_desc),
+                                            children: villa.description
+                                        }),
+                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_villa_detail__WEBPACK_IMPORTED_MODULE_11__/* .VillaUtil */ .U, {})
+                                    ]
+                                }),
+                                !isMb ? /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                    className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().body_right),
+                                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_villa_detail__WEBPACK_IMPORTED_MODULE_11__/* .FormBooking */ .W, {
+                                        villa: villa
+                                    })
+                                }) : /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Bottom, {
                                     villa: villa
                                 })
-                            })
-                        ]
-                    })
+                            ]
+                        })
+                    ]
                 })
             })
         ]
@@ -529,6 +666,105 @@ const VillaDetail = (props)=>{
 };
 VillaDetail.Layout = _layouts__WEBPACK_IMPORTED_MODULE_3__/* .MainLayout */ .Zn;
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (VillaDetail);
+const SliderImage = ({ images  })=>{
+    const [cur, setCur] = (0,react__WEBPACK_IMPORTED_MODULE_17__.useState)(1);
+    const bannerSettings = {
+        ..._settings__WEBPACK_IMPORTED_MODULE_12__/* .settings */ .X,
+        autoplay: false,
+        afterChange: (currentSlide)=>setCur(currentSlide + 1)
+    };
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().head_banner_mb),
+        children: [
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().slide_page),
+                children: [
+                    cur,
+                    "/",
+                    images.length
+                ]
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_slick__WEBPACK_IMPORTED_MODULE_10___default()), {
+                ...bannerSettings,
+                children: images.map((url, i)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().slider_item),
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                            src: url,
+                            alt: ""
+                        })
+                    }, i))
+            })
+        ]
+    });
+};
+const Price = ({ villa  })=>{
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+        className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().price),
+        children: villa.special_price < villa.price ? /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+            children: [
+                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                    children: [
+                        (0,_utils__WEBPACK_IMPORTED_MODULE_16__/* .fmPrice */ .BX)(villa.special_price),
+                        " VND/đ\xeam"
+                    ]
+                }),
+                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+                    children: [
+                        (0,_utils__WEBPACK_IMPORTED_MODULE_16__/* .fmPrice */ .BX)(villa.price),
+                        " VND/đ\xeam"
+                    ]
+                })
+            ]
+        }) : /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
+            children: [
+                (0,_utils__WEBPACK_IMPORTED_MODULE_16__/* .fmPrice */ .BX)(villa.price),
+                " VND/đ\xeam"
+            ]
+        })
+    });
+};
+const Bottom = ({ villa  })=>{
+    const [open, setOpen] = (0,react__WEBPACK_IMPORTED_MODULE_17__.useState)(false);
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Drawer, {
+                open: open,
+                onClose: ()=>setOpen(false),
+                anchor: "bottom",
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                    className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().bottom_form_cnt),
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components_pages_villa_detail__WEBPACK_IMPORTED_MODULE_11__/* .FormBooking */ .W, {
+                        villa: villa
+                    })
+                })
+            }),
+            /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().bottom),
+                children: [
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().bottom_left),
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(Price, {
+                            villa: villa
+                        })
+                    }),
+                    /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                        className: (_styles_villa_module_css__WEBPACK_IMPORTED_MODULE_18___default().bottom_right),
+                        children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_5__.Button, {
+                            onClick: ()=>setOpen(true),
+                            variant: "contained",
+                            size: "large",
+                            style: {
+                                backgroundColor: "var(--primary)",
+                                width: "100%"
+                            },
+                            children: "Đặt ph\xf2ng"
+                        })
+                    })
+                ]
+            })
+        ]
+    });
+};
 async function getServerSideProps(context) {
     (0,_config__WEBPACK_IMPORTED_MODULE_2__/* .serverSideCache */ .O3)(context);
     const { params  } = context;

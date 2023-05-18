@@ -15,6 +15,6 @@
   "/blogs/[blogId]": "pages/blogs/[blogId].js",
   "/blogs": "pages/blogs.js",
   "/branches/[branchId]": "pages/branches/[branchId].js",
-  "/villas/[villaId]": "pages/villas/[villaId].js",
-  "/villas": "pages/villas.js"
+  "/villas": "pages/villas.js",
+  "/villas/[villaId]": "pages/villas/[villaId].js"
 }

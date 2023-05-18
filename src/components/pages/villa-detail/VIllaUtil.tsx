@@ -1,6 +1,7 @@
 import style from './villa-detail.module.css'
 import {
-  FaWifi, FaParking, FaDoorClosed, FaSmokingBan, FaHouseUser, FaWineGlassAlt, FaWheelchair
+  FaWifi, FaParking, FaDoorClosed, FaSmokingBan, FaHouseUser, FaWineGlassAlt, FaWheelchair,
+  FaStarOfLife
 } from 'react-icons/fa'
 
 export const VillaUtil = () => {
@@ -46,6 +47,20 @@ export const VillaUtil = () => {
             </li>
           ))
         }
+      </ul>
+      <ul className={style.list_util_free}>
+        <li>
+          <FaStarOfLife size={8} style={{margin:'0px 6px 0px 3px'}} color='var(--green-dark-2)' />
+          Miễn phí buffet sáng
+        </li>
+        <li>
+          <FaStarOfLife size={8} style={{margin:'0px 6px 0px 3px'}} color='var(--green-dark-2)' />
+          Nước uống chào mừng khi nhận phòng
+        </li>
+        <li>
+          <FaStarOfLife size={8} style={{margin:'0px 6px 0px 3px'}} color='var(--green-dark-2)' />
+          Đặt trước, thanh toán sau
+        </li>
       </ul>
     </div>
   )

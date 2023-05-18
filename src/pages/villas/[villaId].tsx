@@ -5,21 +5,22 @@ import { baseURL, captKey, serverSideCache } from "@/config";
 import { Villa } from "@/interfaces";
 import { MainLayout } from "@/layouts";
 import { api } from "@/services";
-import { Container } from "@mui/material";
+import { Button, Container, Drawer, useMediaQuery } from "@mui/material";
 import axios from "axios";
 import { GetServerSidePropsContext } from "next";
 import { useRouter } from "next/router";
 import queryString from "query-string";
-import { useCallback, useState } from "react";
-import { GoogleReCaptcha, GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 import style from '@/styles/villa.module.css'
 import { useQuery } from "@tanstack/react-query";
-import Slider from "react-slick";
+import Slider, { Settings } from "react-slick";
 import { FormBooking, VillaUtil } from "@/components/pages/villa-detail";
 import { settings } from "@/settings";
 import { useProfileStore } from "@/stores/zustand";
 import { ZProfileState } from "@/stores/zustand/type";
-import moment from "moment";
+import { QR_TIME_CACHE } from "@/assets/constants";
+import { FaStar, FaThList } from "react-icons/fa";
+import { fmPrice } from "@/utils";
+import { useState } from "react";
 
 interface VIllaProps {
   villa: Villa,
@@ -33,8 +34,12 @@ const VillaDetail: NextPageWithLayout = (props) => {
   const [isLoading] = useProfileStore((state: ZProfileState) => [state.isLoading])
   const { data } = useQuery({
     queryKey: ['VILLA_GALLERIES', villa_id],
-    queryFn: () => api.villa_galleries(villa_id)
+    queryFn: () => api.villa_galleries(villa_id),
+    staleTime: QR_TIME_CACHE
   })
+  const villaGalleries = data?.data.map(i => i.image?.original_url) ?? []
+  const listImageUrl = [villa.thumbnail?.original_url ?? '', ...villaGalleries]
+  const isMb = useMediaQuery('(max-width:767px)');
   return (
     <>
       <Seo
@@ -43,46 +48,136 @@ const VillaDetail: NextPageWithLayout = (props) => {
         url={router.asPath}
         image_url={villa.thumbnail?.original_url}
       />
-      <HeadBanner
-        image_url={villa.thumbnail?.original_url}
-        title={villa.name}
-      />
-      <div className={style.container}>
-        <Container>
-          <div className={style.body}>
-            <div className={style.body_left}>
-              <h1 className={style.body_left_name}>{villa.name}</h1>
-              <div className={style.body_left_images}>
-                <Slider {...settings}>
-                  {
-                    data?.data?.map((item: any, index: number) => (
-                      <div className={style.slick_img_cnt} key={index}>
-                        <img
-                          className={style.slick_img}
-                          src={item.image?.original_url}
-                          alt=""
-                        />
-                      </div>
-                    ))
-                  }
-                </Slider>
+      <Container>
+        <div className={style.container}>
+          <div className={style.head}>
+            <div className={style.head_detail}>
+              <div className={style.head_detail_left}>
+                <h1 className={style.villa_name}>{villa.name}</h1>
+                <p className={style.villa_cate}>
+                  <FaThList size={13} color='var(--primary)' />
+                  {villa.villa_cate?.villa_cate_name}
+                </p>
+                <p className={style.villa_star}>
+                  <FaStar size={12} color='var(--primary)' /> 5,0
+                </p>
               </div>
-              <div className={style.body_left_desc}>
-                {villa.description}
+              <div className={style.head_detail_right}>
+
               </div>
-              <VillaUtil/>
             </div>
-            <div className={style.body_right}>
-              {!isLoading && <FormBooking villa={villa} />}
+            <div className={style.head_banner_cnt}>
+              {
+                isMb ?
+                  <SliderImage images={listImageUrl} />
+                  :
+                  <div className={style.head_banner_desk}>
+                    {
+                      listImageUrl.slice(0, 4).map(url => (
+                        <div key={url} className={style.banner_item_cnt}>
+                          <img src={url} alt="" />
+                        </div>
+                      ))
+                    }
+                  </div>
+              }
             </div>
           </div>
-        </Container>
-      </div>
+          {!isMb && <Price villa={villa} />}
+          <div className={style.body}>
+            <div className={style.body_left}>
+              <p className={style.body_title}>
+                Giới thiệu về biệt thự này
+              </p>
+              <span className={style.body_desc}>
+                {villa.description}
+              </span>
+              <VillaUtil />
+            </div>
+            {
+              !isMb ?
+                <div className={style.body_right}>
+                  <FormBooking villa={villa} />
+                </div>
+                :
+                <Bottom villa={villa} />
+            }
+          </div>
+        </div>
+      </Container>
     </>
   )
 }
 VillaDetail.Layout = MainLayout
 export default VillaDetail
+
+const SliderImage = ({ images }: { images: string[] }) => {
+  const [cur, setCur] = useState(1)
+  const bannerSettings: Settings = {
+    ...settings,
+    autoplay: false,
+    afterChange: (currentSlide) => setCur(currentSlide + 1)
+  }
+  return (
+    <div className={style.head_banner_mb}>
+      <div className={style.slide_page}>
+        {cur}/{images.length}
+      </div>
+      <Slider {...bannerSettings}>
+        {
+          images.map((url, i) => (
+            <div key={i} className={style.slider_item}>
+              <img src={url} alt="" />
+            </div>
+          ))
+        }
+      </Slider>
+    </div>
+  )
+}
+
+const Price = ({ villa }: { villa: Villa }) => {
+  return (
+    <div className={style.price}>
+      {
+        villa.special_price < villa.price ?
+          <>
+            <span>{fmPrice(villa.special_price)} VND/đêm</span>
+            <span>{fmPrice(villa.price)} VND/đêm</span>
+          </>
+          :
+          <span>{fmPrice(villa.price)} VND/đêm</span>
+      }
+    </div>
+  )
+}
+const Bottom = ({ villa }: { villa: Villa }) => {
+  const [open, setOpen] = useState(false)
+  return (
+    <>
+      <Drawer open={open} onClose={() => setOpen(false)} anchor='bottom' >
+        <div className={style.bottom_form_cnt}>
+          <FormBooking villa={villa} />
+        </div>
+      </Drawer>
+      <div className={style.bottom}>
+        <div className={style.bottom_left}>
+          <Price villa={villa} />
+        </div>
+        <div className={style.bottom_right}>
+          <Button
+            onClick={() => setOpen(true)}
+            variant="contained"
+            size='large'
+            style={{ backgroundColor: 'var(--primary)', width: '100%' }}
+          >
+            Đặt phòng
+          </Button>
+        </div>
+      </div>
+    </>
+  )
+}
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   serverSideCache(context)

@@ -120,6 +120,14 @@
   font-weight: 500;
   line-height: 18px;
 }
+.list_util_free{
+  margin-top: 6px;
+}
+.list_util_free li{
+  font-size: 13px;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
 @media only screen and (max-width: 767px) {
   .util_item{
     width: calc(50% - 6px);

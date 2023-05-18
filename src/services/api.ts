@@ -12,7 +12,7 @@ import {
   ReqProfile,
   ReqRegister,
   ResponseDetail,
-  ResponseList, Villa, VillaCate
+  ResponseList, Villa, VillaCate, VillaGallery
 } from "@/interfaces";
 
 export const api = {
@@ -46,7 +46,7 @@ export const api = {
   },
   villa_galleries: (villa_id: number | string) => {
     return axiosConfig.get('villa_galleries', { params: { villa_id: villa_id } })
-      .then(res => res.data)
+      .then<ResponseList<VillaGallery[]>>(res => res.data)
   },
   uploadMedia: (file: FormData) => {
     return axiosConfig
