@@ -1,0 +1,14 @@
+.head{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 12px;
+  z-index: 10;
+}
+.head button{
+ border: solid 1px var(--white); 
+ padding: 6px;
+ min-width: unset;
+ border-radius: 100%;
+}

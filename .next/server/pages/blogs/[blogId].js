@@ -313,6 +313,14 @@ module.exports = require("react");
 
 /***/ }),
 
+/***/ 4871:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-gallery-carousel");
+
+/***/ }),
+
 /***/ 6290:
 /***/ ((module) => {
 

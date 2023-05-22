@@ -14,6 +14,17 @@ module.exports = {
 
 /***/ }),
 
+/***/ 574:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"head": "gallery-carousel_head__mbRnm"
+};
+
+
+/***/ }),
+
 /***/ 1776:
 /***/ ((module) => {
 
@@ -318,6 +329,65 @@ function Footer() {
 
 /***/ }),
 
+/***/ 7873:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "x": () => (/* binding */ GalleryCarousel)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5692);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_gallery_carousel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4871);
+/* harmony import */ var react_gallery_carousel__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_gallery_carousel__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _gallery_carousel_module_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(574);
+/* harmony import */ var _gallery_carousel_module_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_gallery_carousel_module_css__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6290);
+/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__);
+
+
+
+
+
+const GalleryCarousel = ({ src , open =false , onClose , index =0  })=>{
+    const close = ()=>onClose && onClose();
+    const settings = {
+        canAutoPlay: false
+    };
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_1__.Dialog, {
+        fullScreen: true,
+        open: open,
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                className: (_gallery_carousel_module_css__WEBPACK_IMPORTED_MODULE_4___default().head),
+                children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_1__.Button, {
+                    onClick: close,
+                    size: "small",
+                    variant: "text",
+                    children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_3__.FaAngleLeft, {
+                        color: "var(--white)",
+                        size: 16
+                    })
+                })
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((react_gallery_carousel__WEBPACK_IMPORTED_MODULE_2___default()), {
+                index: index ?? 0,
+                ...settings,
+                objectFit: "contain",
+                images: src.map((img_url)=>{
+                    return {
+                        src: img_url
+                    };
+                })
+            })
+        ]
+    });
+};
+
+
+/***/ }),
+
 /***/ 4532:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -550,7 +620,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "_f": () => (/* reexport safe */ _empty_result__WEBPACK_IMPORTED_MODULE_9__._),
 /* harmony export */   "bN": () => (/* reexport safe */ _route_progress__WEBPACK_IMPORTED_MODULE_2__.b),
 /* harmony export */   "h4": () => (/* reexport safe */ _header__WEBPACK_IMPORTED_MODULE_1__.h),
-/* harmony export */   "pQ": () => (/* reexport safe */ _seo__WEBPACK_IMPORTED_MODULE_3__.p)
+/* harmony export */   "pQ": () => (/* reexport safe */ _seo__WEBPACK_IMPORTED_MODULE_3__.p),
+/* harmony export */   "xq": () => (/* reexport safe */ _gallery_carousel__WEBPACK_IMPORTED_MODULE_10__.x)
 /* harmony export */ });
 /* harmony import */ var _footer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9972);
 /* harmony import */ var _header__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(8376);
@@ -562,8 +633,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _villa_card_item__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4485);
 /* harmony import */ var _villa_card_load__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(618);
 /* harmony import */ var _empty_result__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(4386);
+/* harmony import */ var _gallery_carousel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(7873);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_header__WEBPACK_IMPORTED_MODULE_1__]);
 _header__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -1483,6 +1556,9 @@ const api = {
         return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get("villas", {
             params
         }).then((res)=>res.data);
+    },
+    branchGalleries: (id)=>{
+        return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get(`branches/${id}/galleries`).then((res)=>res.data);
     }
 };
 

@@ -62,28 +62,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3250:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "C": () => (/* reexport */ QR_TIME_CACHE)
-});
-
-// UNUSED EXPORTS: KEY
-
-;// CONCATENATED MODULE: ./src/assets/constants/react-query.ts
-const KEY = {};
-const QR_TIME_CACHE = 15 * (60 * 1000);
-
-;// CONCATENATED MODULE: ./src/assets/constants/index.ts
-
-
-
-/***/ }),
-
 /***/ 8278:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -483,6 +461,28 @@ __webpack_async_result__();
 
 /***/ }),
 
+/***/ 4157:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "C": () => (/* reexport */ QR_TIME_CACHE)
+});
+
+// UNUSED EXPORTS: KEY
+
+;// CONCATENATED MODULE: ./src/constants/react-query.ts
+const KEY = {};
+const QR_TIME_CACHE = 15 * (60 * 1000);
+
+;// CONCATENATED MODULE: ./src/constants/index.ts
+
+
+
+/***/ }),
+
 /***/ 7783:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -512,7 +512,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_villa_detail__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(2842);
 /* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(5848);
 /* harmony import */ var _stores_zustand__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(4433);
-/* harmony import */ var _assets_constants__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(3250);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(4157);
 /* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(6290);
 /* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(4074);
@@ -551,7 +551,7 @@ const VillaDetail = (props)=>{
             villa_id
         ],
         queryFn: ()=>_services__WEBPACK_IMPORTED_MODULE_4__/* .api.villa_galleries */ .h.villa_galleries(villa_id),
-        staleTime: _assets_constants__WEBPACK_IMPORTED_MODULE_14__/* .QR_TIME_CACHE */ .C
+        staleTime: _constants__WEBPACK_IMPORTED_MODULE_14__/* .QR_TIME_CACHE */ .C
     });
     const villaGalleries = data?.data.map((i)=>i.image?.original_url) ?? [];
     const listImageUrl = [
@@ -1038,6 +1038,14 @@ module.exports = require("react");
 
 "use strict";
 module.exports = require("react-date-range");
+
+/***/ }),
+
+/***/ 4871:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-gallery-carousel");
 
 /***/ }),
 

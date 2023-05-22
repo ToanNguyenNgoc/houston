@@ -3,6 +3,7 @@ import {
   Banner,
   Booking,
   Branch,
+  Gallery,
   ParamBooking,
   ParamVilla,
   ParamVillaCate,
@@ -68,5 +69,8 @@ export const api = {
   },
   villas: (params: ParamVilla) => {
     return axiosConfig.get('villas', { params }).then<ResponseList<Villa[]>>(res => res.data)
+  },
+  branchGalleries: (id: number) => {
+    return axiosConfig.get(`branches/${id}/galleries`).then<ResponseList<Gallery[]>>(res => res.data)
   }
 }

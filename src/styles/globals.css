@@ -2,6 +2,7 @@
 @import "~slick-carousel/slick/slick-theme.css";
 @import 'react-date-range/dist/styles.css';
 @import 'react-date-range/dist/theme/default.css';
+@import 'react-gallery-carousel/dist/index.css';
 
 :root {
   --primary: #015258;

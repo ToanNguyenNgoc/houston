@@ -6,15 +6,15 @@ import { MainLayout } from "@/layouts";
 import { api } from "@/services";
 import { GetServerSidePropsContext } from "next";
 import style from '@/styles/branch.module.css'
-import { EmptyResult, Seo, VillaCard, VillaCardLoad } from "@/components";
+import { EmptyResult, GalleryCarousel, Seo, VillaCard, VillaCardLoad } from "@/components";
 import { slugify } from "@/utils";
 import queryString from "query-string";
-import { Button, Container, IconButton } from "@mui/material";
-import { FaMapMarkerAlt, FaHeart, FaShare, FaAngleDown } from 'react-icons/fa'
+import { Container, useMediaQuery } from "@mui/material";
+import { FaMapMarkerAlt, FaAngleDown } from 'react-icons/fa'
 import { useState } from "react";
-import { useInfiniteQuery } from "@tanstack/react-query";
-import { QR_TIME_CACHE } from "@/assets/constants";
-import { LoadingButton } from "@mui/lab";
+import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { QR_TIME_CACHE } from "@/constants";
+import { LoadingButton, Masonry } from "@mui/lab";
 
 interface BranchProps {
   branch: Branch
@@ -25,6 +25,7 @@ const Branch: NextPageWithLayout = (props) => {
   const tabs = [
     { id: 1, name: 'Biệt thự' },
     { id: 2, name: 'Giới thiệu' },
+    { id: 3, name: 'Thư viện' }
   ]
   const [tab, setTab] = useState(1)
   const renderTab = () => {
@@ -34,6 +35,8 @@ const Branch: NextPageWithLayout = (props) => {
         return child = <TabVillas branch={branch} />;
       case 2:
         return child = <TabDecs branch={branch} />;
+      case 3:
+        return child = <TabGallery branch={branch} />;
       default:
         break;
     }
@@ -158,13 +161,44 @@ const TabDecs = ({ branch }: { branch: Branch }) => {
     />
   )
 }
-
-
-
-
-
-
-
+const TabGallery = ({ branch }: { branch: Branch }) => {
+  const mb = useMediaQuery('(max-width:767px)')
+  const [full, setFull] = useState({
+    open: false,
+    index: 0
+  })
+  const { data } = useQuery({
+    queryKey: ['BRANCH_GALLERY', branch.id],
+    queryFn: () => api.branchGalleries(branch.id),
+    staleTime: QR_TIME_CACHE
+  })
+  return (
+    <>
+      <GalleryCarousel
+        src={data?.data.map(i => i.image?.original_url) ?? []}
+        open={full.open}
+        index={full.index}
+        onClose={() => setFull({ open: false, index: 0 })}
+      />
+      <div>
+        {
+          data?.data &&
+          <Masonry columns={mb ? 2 : 4} spacing={1}>
+            {
+              data?.data.map((item, index) => (
+                <img
+                  onClick={() => setFull({ open: true, index: index })}
+                  className={style.gallery_img_item}
+                  key={index} src={item.image?.original_url} alt=""
+                />
+              ))
+            }
+          </Masonry>
+        }
+      </div>
+    </>
+  )
+}
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   serverSideCache(context)
   let branch: Branch

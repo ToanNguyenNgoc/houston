@@ -6,7 +6,7 @@ import { api } from "@/services"
 import { ReactElement, useState } from "react"
 import { VillaCard } from "@/components/villa-card-item"
 import { VillaCardLoad } from "@/components/villa-card-load"
-import { QR_TIME_CACHE } from "@/assets/constants"
+import { QR_TIME_CACHE } from "@/constants"
 
 export const HomeVilla = () => {
   const [cate, setCate] = useState<number | string | undefined>()

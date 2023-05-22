@@ -22,13 +22,14 @@ module.exports = {
 	"villa_list": "branch_villa_list__q0_xS",
 	"villa_bot": "branch_villa_bot__Oe4Ov",
 	"desc_cnt": "branch_desc_cnt__EIIOh",
+	"gallery_img_item": "branch_gallery_img_item__xyTOM",
 	"banner_cnt": "branch_banner_cnt__6XWr0"
 };
 
 
 /***/ }),
 
-/***/ 3250:
+/***/ 4157:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -40,11 +41,11 @@ __webpack_require__.d(__webpack_exports__, {
 
 // UNUSED EXPORTS: KEY
 
-;// CONCATENATED MODULE: ./src/assets/constants/react-query.ts
+;// CONCATENATED MODULE: ./src/constants/react-query.ts
 const KEY = {};
 const QR_TIME_CACHE = 15 * (60 * 1000);
 
-;// CONCATENATED MODULE: ./src/assets/constants/index.ts
+;// CONCATENATED MODULE: ./src/constants/index.ts
 
 
 
@@ -76,7 +77,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _tanstack_react_query__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(9752);
-/* harmony import */ var _assets_constants__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(3250);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(4157);
 /* harmony import */ var _mui_lab__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(6072);
 /* harmony import */ var _mui_lab__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_mui_lab__WEBPACK_IMPORTED_MODULE_12__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_config__WEBPACK_IMPORTED_MODULE_1__, _layouts__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__, _components__WEBPACK_IMPORTED_MODULE_4__, query_string__WEBPACK_IMPORTED_MODULE_6__, _tanstack_react_query__WEBPACK_IMPORTED_MODULE_10__]);
@@ -105,6 +106,10 @@ const Branch = (props)=>{
         {
             id: 2,
             name: "Giới thiệu"
+        },
+        {
+            id: 3,
+            name: "Thư viện"
         }
     ];
     const [tab, setTab] = (0,react__WEBPACK_IMPORTED_MODULE_9__.useState)(1);
@@ -117,6 +122,10 @@ const Branch = (props)=>{
                 });
             case 2:
                 return child = /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(TabDecs, {
+                    branch: branch
+                });
+            case 3:
+                return child = /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(TabGallery, {
                     branch: branch
                 });
             default:
@@ -212,7 +221,7 @@ const TabVillas = ({ branch  })=>{
                 branch_id: branch.id,
                 status: true
             }),
-        staleTime: _assets_constants__WEBPACK_IMPORTED_MODULE_11__/* .QR_TIME_CACHE */ .C,
+        staleTime: _constants__WEBPACK_IMPORTED_MODULE_11__/* .QR_TIME_CACHE */ .C,
         getNextPageParam: (page)=>page?.current_page + 1
     });
     const villas = data?.pages?.map((i)=>i.data).flat() ?? [];
@@ -262,6 +271,49 @@ const TabDecs = ({ branch  })=>{
         dangerouslySetInnerHTML: {
             __html: branch.description
         }
+    });
+};
+const TabGallery = ({ branch  })=>{
+    const mb = (0,_mui_material__WEBPACK_IMPORTED_MODULE_7__.useMediaQuery)("(max-width:767px)");
+    const [full, setFull] = (0,react__WEBPACK_IMPORTED_MODULE_9__.useState)({
+        open: false,
+        index: 0
+    });
+    const { data  } = (0,_tanstack_react_query__WEBPACK_IMPORTED_MODULE_10__.useQuery)({
+        queryKey: [
+            "BRANCH_GALLERY",
+            branch.id
+        ],
+        queryFn: ()=>_services__WEBPACK_IMPORTED_MODULE_3__/* .api.branchGalleries */ .h.branchGalleries(branch.id),
+        staleTime: _constants__WEBPACK_IMPORTED_MODULE_11__/* .QR_TIME_CACHE */ .C
+    });
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_4__/* .GalleryCarousel */ .xq, {
+                src: data?.data.map((i)=>i.image?.original_url) ?? [],
+                open: full.open,
+                index: full.index,
+                onClose: ()=>setFull({
+                        open: false,
+                        index: 0
+                    })
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                children: data?.data && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_lab__WEBPACK_IMPORTED_MODULE_12__.Masonry, {
+                    columns: mb ? 2 : 4,
+                    spacing: 1,
+                    children: data?.data.map((item, index)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
+                            onClick: ()=>setFull({
+                                    open: true,
+                                    index: index
+                                }),
+                            className: (_styles_branch_module_css__WEBPACK_IMPORTED_MODULE_13___default().gallery_img_item),
+                            src: item.image?.original_url,
+                            alt: ""
+                        }, index))
+                })
+            })
+        ]
     });
 };
 async function getServerSideProps(context) {
@@ -481,6 +533,14 @@ module.exports = require("nprogress");
 
 "use strict";
 module.exports = require("react");
+
+/***/ }),
+
+/***/ 4871:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-gallery-carousel");
 
 /***/ }),
 

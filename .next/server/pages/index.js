@@ -49,28 +49,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ 3250:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "C": () => (/* reexport */ QR_TIME_CACHE)
-});
-
-// UNUSED EXPORTS: KEY
-
-;// CONCATENATED MODULE: ./src/assets/constants/react-query.ts
-const KEY = {};
-const QR_TIME_CACHE = 15 * (60 * 1000);
-
-;// CONCATENATED MODULE: ./src/assets/constants/index.ts
-
-
-
-/***/ }),
-
 /***/ 1356:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -281,7 +259,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_villa_card_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4485);
 /* harmony import */ var _components_villa_card_load__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(618);
-/* harmony import */ var _assets_constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(3250);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4157);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__]);
 ([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
@@ -317,7 +295,7 @@ const HomeVilla = ()=>{
                 villa_cate_id: cate,
                 includes: "full_address"
             }),
-        staleTime: _assets_constants__WEBPACK_IMPORTED_MODULE_7__/* .QR_TIME_CACHE */ .C
+        staleTime: _constants__WEBPACK_IMPORTED_MODULE_7__/* .QR_TIME_CACHE */ .C
     });
     const villas = dataVilla?.data ?? [];
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_1__.Container, {
@@ -570,6 +548,28 @@ _Villa__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (aw
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 4157:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, {
+  "C": () => (/* reexport */ QR_TIME_CACHE)
+});
+
+// UNUSED EXPORTS: KEY
+
+;// CONCATENATED MODULE: ./src/constants/react-query.ts
+const KEY = {};
+const QR_TIME_CACHE = 15 * (60 * 1000);
+
+;// CONCATENATED MODULE: ./src/constants/index.ts
+
+
 
 /***/ }),
 
@@ -832,6 +832,14 @@ module.exports = require("nprogress");
 
 "use strict";
 module.exports = require("react");
+
+/***/ }),
+
+/***/ 4871:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-gallery-carousel");
 
 /***/ }),
 

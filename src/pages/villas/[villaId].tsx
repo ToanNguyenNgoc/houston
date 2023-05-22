@@ -17,7 +17,7 @@ import { FormBooking, VillaUtil } from "@/components/pages/villa-detail";
 import { settings } from "@/settings";
 import { useProfileStore } from "@/stores/zustand";
 import { ZProfileState } from "@/stores/zustand/type";
-import { QR_TIME_CACHE } from "@/assets/constants";
+import { QR_TIME_CACHE } from "@/constants";
 import { FaStar, FaThList } from "react-icons/fa";
 import { fmPrice } from "@/utils";
 import { useState } from "react";
