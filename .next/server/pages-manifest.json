@@ -11,9 +11,9 @@
   "/branches": "pages/branches.html",
   "/check-out": "pages/check-out.html",
   "/_error": "pages/_error.js",
-  "/": "pages/index.js",
   "/blogs/[blogId]": "pages/blogs/[blogId].js",
   "/blogs": "pages/blogs.js",
+  "/": "pages/index.js",
   "/branches/[branchId]": "pages/branches/[branchId].js",
   "/villas": "pages/villas.js",
   "/villas/[villaId]": "pages/villas/[villaId].js"
