@@ -713,6 +713,7 @@ function RouteProgress() {
 
 function Seo(props) {
     const domain = "https://houstongarden.click";
+    //---
     const { title , description , url , image_url  } = props;
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_head__WEBPACK_IMPORTED_MODULE_2___default()), {
         children: [
@@ -917,7 +918,7 @@ var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([axio
 
 // export const baseURL = process.env.NEXT_PUBLIC_API_URL_DEV;
 const baseURL = "https://api.houstongarden.click/";
-const captKey = "6Ld6kRYmAAAAALuaAH_7ch8Q9AV2SCq5F6WfRpLp" ?? 0;
+const captKey = "6LdjBWcmAAAAAMSTAReRgdzKcpEbXnzy2wd7jZre" ?? 0;
 const apiBlog = "https://admin.houstongarden.vn";
 const axiosConfig = axios__WEBPACK_IMPORTED_MODULE_0__["default"].create({
     baseURL: baseURL,

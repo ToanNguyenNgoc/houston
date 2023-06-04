@@ -10,6 +10,7 @@ interface SeoProps {
 
 export function Seo(props: SeoProps) {
   const domain = "https://houstongarden.click"
+  //---
   const { title, description, url, image_url } = props
   return (
     <Head>
