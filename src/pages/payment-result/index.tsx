@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { NextPageWithLayout } from "@/common";
-import { MainLayout } from "@/layouts";
+import { AuthLayout } from "@/layouts";
 import { api } from "@/services";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
@@ -18,7 +18,7 @@ const PaymentResult: NextPageWithLayout = () => {
     queryKey: ['PM-RESULT', txn_ref],
     queryFn: () => api.paymentGatewayStatus(txn_ref),
     enabled: txn_ref ? true : false,
-    // onError:() => router.push('404')
+    onError:() => router.push('404')
   })
   const booking = data?.data
   return (
@@ -92,5 +92,5 @@ const PaymentResult: NextPageWithLayout = () => {
     </div>
   )
 }
-PaymentResult.Layout = MainLayout
+PaymentResult.Layout = AuthLayout
 export default PaymentResult
