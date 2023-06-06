@@ -156,7 +156,6 @@ const FormBooking = ({ villa  })=>{
     };
     const onSubmit = (value)=>{
         const { from_date_booking , to_date_booking , note , customer_count , baby_count  } = value;
-        console.log(villa);
         if (villa.branch) {
             const data = {
                 branch_id: villa.branch?.id,
@@ -461,14 +460,15 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 4157:
+/***/ 1027:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "C": () => (/* reexport */ QR_TIME_CACHE)
+  "CA": () => (/* reexport */ QR_TIME_CACHE),
+  "HD": () => (/* reexport */ pmIcon)
 });
 
 // UNUSED EXPORTS: KEY
@@ -477,7 +477,31 @@ __webpack_require__.d(__webpack_exports__, {
 const KEY = {};
 const QR_TIME_CACHE = 15 * (60 * 1000);
 
+// EXTERNAL MODULE: ./src/assets/icon/index.js + 15 modules
+var icon = __webpack_require__(3416);
+;// CONCATENATED MODULE: ./src/constants/payment-method-icon.ts
+
+const pmIcon = [
+    {
+        key: "CASH",
+        icon: icon/* icon.money */.q.money
+    },
+    {
+        key: "VNPAYQR",
+        icon: icon/* icon.qrVnpay */.q.qrVnpay
+    },
+    {
+        key: "VNBANK",
+        icon: icon/* icon.bankCard */.q.bankCard
+    },
+    {
+        key: "INTCARD",
+        icon: icon/* icon.creditCard */.q.creditCard
+    }
+];
+
 ;// CONCATENATED MODULE: ./src/constants/index.ts
+
 
 
 
@@ -512,7 +536,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_pages_villa_detail__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(2842);
 /* harmony import */ var _settings__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(5848);
 /* harmony import */ var _stores_zustand__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(4433);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(4157);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(1027);
 /* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(6290);
 /* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_15__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(4074);
@@ -551,7 +575,7 @@ const VillaDetail = (props)=>{
             villa_id
         ],
         queryFn: ()=>_services__WEBPACK_IMPORTED_MODULE_4__/* .api.villa_galleries */ .h.villa_galleries(villa_id),
-        staleTime: _constants__WEBPACK_IMPORTED_MODULE_14__/* .QR_TIME_CACHE */ .C
+        staleTime: _constants__WEBPACK_IMPORTED_MODULE_14__/* .QR_TIME_CACHE */ .CA
     });
     const villaGalleries = data?.data.map((i)=>i.image?.original_url) ?? [];
     const listImageUrl = [

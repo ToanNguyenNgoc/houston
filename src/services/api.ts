@@ -7,6 +7,7 @@ import {
   ParamBooking,
   ParamVilla,
   ParamVillaCate,
+  PaymentMethod,
   ReqBooking,
   ReqForgot,
   ReqLogin,
@@ -72,6 +73,9 @@ export const api = {
   },
   branchGalleries: (id: number) => {
     return axiosConfig.get(`branches/${id}/galleries`).then<ResponseList<Gallery[]>>(res => res.data)
+  },
+  paymentMethods: () => {
+    return axiosConfig.get('payment_methods').then<ResponseList<PaymentMethod[]>>(res => res.data)
   },
   paymentGatewayStatus: (txn_ref: string) => {
     return axiosConfig

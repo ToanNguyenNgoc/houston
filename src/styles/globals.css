@@ -225,6 +225,11 @@ a:hover {
   border: solid 1px #F5F8FA !important;
   background-color: #F5F8FA !important;
 }
+.MuiDialog-paper{
+  margin: 0px !important;
+  max-width: unset !important;
+  max-height: unset !important;
+}
 
 /* slick */
 

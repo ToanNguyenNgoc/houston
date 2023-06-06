@@ -37,5 +37,7 @@ export interface ReqBooking {
   customer_count: number | string;
   baby_count: number | string;
   note?: string;
+  payment_method:'CASH'|'VNPAY';
+  payment_method_bank:string|null;
   recaptcha: string;
 }

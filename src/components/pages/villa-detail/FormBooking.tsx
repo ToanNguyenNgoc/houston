@@ -77,9 +77,8 @@ export const FormBooking = ({ villa }: { villa: Villa }) => {
   }
   const onSubmit = (value: FormValue) => {
     const { from_date_booking, to_date_booking, note, customer_count, baby_count } = value
-    console.log(villa)
     if (villa.branch) {
-      const data: ReqBooking = {
+      const data: any = {
         branch_id: villa.branch?.id,
         villa_id: villa.id,
         recaptcha: '',

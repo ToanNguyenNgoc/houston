@@ -39,6 +39,18 @@ module.exports = {
 
 /***/ }),
 
+/***/ 3354:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"container": "poup_container__IKCj_",
+	"title": "poup_title__P8Lsk"
+};
+
+
+/***/ }),
+
 /***/ 648:
 /***/ ((module) => {
 
@@ -93,6 +105,17 @@ module.exports = {
 
 /***/ }),
 
+/***/ 9796:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"container": "footer_container__qWIWC"
+};
+
+
+/***/ }),
+
 /***/ 9158:
 /***/ ((module) => {
 
@@ -137,7 +160,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 7780:
+/***/ 3416:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -165,7 +188,25 @@ __webpack_require__.d(__webpack_exports__, {
 /* harmony default export */ const spa_cate = ({"src":"/_next/static/media/spa_cate.60824732.png","height":200,"width":200,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAArklEQVR42iWOSw7CIBQAeVBoYq2/+LmBrtQjeHaPoMsewGhFUfpJeI8WSd3OLGYghNB4ulijyTHGljI9TuZZIqEmPL/LqvMKIAoMIRfitNjwqzXW01ipt9bl/Z4rVfddhLxEN5Lyay0RtU1TFIXo+qdHDgDe+8ftFmPOuZfWiBghX6dpS0jOfYyJIs8yF/qVTJP9eGYQxW4rGXDOibFcRDiF/+61+jyH3VWiDsPuD3DlbP5xA6O5AAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./src/assets/icon/dribbble.png
 /* harmony default export */ const dribbble = ({"src":"/_next/static/media/dribbble.830df4e4.png","height":300,"width":400,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAGCAMAAADJ2y/JAAAATlBMVEX///////7+/////v///v7+/v79/v79/v3+/f39/f37+vr6+vr5+vv4+Pj29vb59PD19fX09PTw8fHv6+fq5Nvl39XR39vX0dLH2NTWztDmSyf+AAAAMUlEQVR42gXABxJAMBAAwBVOixKd/3/UCKnR1cTgOvVB670FefQ95qws03rsZUOV4Ack6wFycmqEuAAAAABJRU5ErkJggg==","blurWidth":8,"blurHeight":6});
+;// CONCATENATED MODULE: ./src/assets/icon/money.png
+/* harmony default export */ const money = ({"src":"/_next/static/media/money.1b952999.png","height":64,"width":64,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAaUlEQVR42gXAzQrBcAAA8N8Ouzq5eQfF/Z+DoxI1uclHkpWQppQkx9lptXbaE+wlFxH6do4yqRsR1g4eRoIXMYLaD5yBgdbT0tSexMpGo/SXK7jYmouNpXItM0MBPSdXb+4SXxMLH5WsA9VwFHCq/Bq9AAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./src/assets/icon/qr-code.png
+/* harmony default export */ const qr_code = ({"src":"/_next/static/media/qr-code.8b9d2a5b.png","height":64,"width":64,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAQAAABuBnYAAAAAb0lEQVR42g3HywoBUQAA0LP3iLK3FZqFn7FlR5NQE810S2oQC2XhsfIBPoDydXPP7vATJJraEiFOIXP0NFfKFAzszORSS2WcloOrsYWXsxrk7lKFt4s6HTcPo9iVvSFTax/Bxkkm52+iq6+hZ+tbAdcuGeUvcACmAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./src/assets/icon/atm-card.png
+/* harmony default export */ const atm_card = ({"src":"/_next/static/media/atm-card.6e939cad.png","height":64,"width":64,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAABE0lEQVR4nAEIAff+AfW4PQEKCAQEABO/+wD5JQAADNstAPZec+X0G3sFA/7lAf+5AAAABQAAACEAEwDnLXvb6TVnv9sRCjQkAZbe6PZrAf+xAAoADhNq6/Imf8HXGQzo/hYATzb7/h0cDgIAAwM0Aci2r7Tt/RpLuOUTALfvDPx6IfwDCgkD/gIA9gNCF6+7AYO26ZNiEqZswvdP/Jj0IQTy8gAAMgQA/yAGAAEg8s1kAVey/oQZA/d78v4F+vgAAwMGA/8A+v4AAQHwAQCl3gIzAXi7/Y4kEAJx9vz/AAMB/wAHAgAA9/0AAAwEAAB7zv48AVSm/kgCA/9u/wAA+P7/AQEEAgD/DwYABPD5APH6/gBy1s9oa9hLU20AAAAASUVORK5CYII=","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./src/assets/icon/bank-card.png
+/* harmony default export */ const bank_card = ({"src":"/_next/static/media/bank-card.3cb27d54.png","height":64,"width":64,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA0klEQVR42oWPsU4CQRRF73v7sijqGrVAQ6JREiy0s7c0xMY/sLXyL/wCe3tbe0sNiYlfQAglsAkQkhmG2ZndB3wBpz6nONgGzZ8eP5DgSksUICLEoHzaTIwv7P/v+FX40j3XOj1ZfrZRjXaAYKAXLURj8dO+u5Zyejhx3fuGMkXNPMFVSL6/lL2Ka72cCbtklwebcg69uUXVPAegCH9dpLl3MjN26CwyLINotpZoiqgVTDzAQmon8rbXebDp0XvJvM95UVLPkwAajhtpXq/3t26uADDUWPw4yC0aAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./src/assets/icon/qrVnpay.png
+/* harmony default export */ const qrVnpay = ({"src":"/_next/static/media/qrVnpay.20e841bf.png","height":312,"width":298,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAAuklEQVR42i3L2w7BMACA4b3/E+walyK4cMjWOcyaateROVUkSEyYhCWO1VaLZLf/l99S2qjbjbP5drYO5/t0k5j79Rett1SM7WIYkQD5AYlGbLnav7iwjDF9xEpl13GboAvqDd/pTX7xD1EYAtchdLmLpzAYEIxzmC4WkNIxQKdW2/EAQkhr/YeEUtpuYTKs1Kq2beeH+ugMwsQf0HhSLJQ8r4MxFlJa/C2FkGn2Opwfx8szzbhSH87FFyXBpEdRwiA/AAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
+;// CONCATENATED MODULE: ./src/assets/icon/credit-card.png
+/* harmony default export */ const credit_card = ({"src":"/_next/static/media/credit-card.403715b8.png","height":64,"width":64,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAA6klEQVR42mP4f56B8dyuVSwMi/8zM6CBrWuOoIr9f8fA8/8kg8O/vQK9/08zyEAELzBIXNmzIn/TjotbTu7b8/L07i3/T29e/X/N6vMbGeb+l2b4fymw7MjqKf9tGo/8D2878N+n7fBfhtoT33gqDv4PrdoygeH/RQbTg9u3/4je+OVH+ebXP6OWffg9bcm5H8tatv93n/yuleH/fwam9RvPPA1b+/9/+vrf/4NW/v8/Yc3T/wtmXPnvOffvJAYGBgaGBYtPJsUs+bEwcunvyQnLfk5zWPp/itbq/3PCFv6yZ2CY85+RAQ8AABcQeWXjHouhAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":8});
 ;// CONCATENATED MODULE: ./src/assets/icon/index.js
+
+
+
+
+
+
 
 
 
@@ -184,7 +225,13 @@ const icon = {
     foodCate: food_cate,
     transportCate: transport_cate,
     spaCate: spa_cate,
-    nullResult: dribbble
+    nullResult: dribbble,
+    money: money,
+    qrCode: qr_code,
+    atmCard: atm_card,
+    bankCard: bank_card,
+    qrVnpay: qrVnpay,
+    creditCard: credit_card
 };
 
 
@@ -286,7 +333,7 @@ const ButtonUpload = (props)=>{
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _empty_result_module_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(9386);
 /* harmony import */ var _empty_result_module_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_empty_result_module_css__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7780);
+/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3416);
 
 
 
@@ -319,9 +366,13 @@ const EmptyResult = ({ children , title  })=>{
 /* harmony export */   "$": () => (/* binding */ Footer)
 /* harmony export */ });
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _styles_footer_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(9796);
+/* harmony import */ var _styles_footer_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_styles_footer_module_css__WEBPACK_IMPORTED_MODULE_1__);
+
 
 function Footer() {
     return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+        className: (_styles_footer_module_css__WEBPACK_IMPORTED_MODULE_1___default().container),
         children: "Footer"
     });
 }
@@ -613,6 +664,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "$_": () => (/* reexport safe */ _footer__WEBPACK_IMPORTED_MODULE_0__.$),
 /* harmony export */   "Ct": () => (/* reexport safe */ _app_snack__WEBPACK_IMPORTED_MODULE_4__.C),
+/* harmony export */   "GI": () => (/* reexport safe */ _popup__WEBPACK_IMPORTED_MODULE_11__.G),
 /* harmony export */   "Gg": () => (/* reexport safe */ _villa_card_load__WEBPACK_IMPORTED_MODULE_8__.G),
 /* harmony export */   "Jp": () => (/* reexport safe */ _villa_card_item__WEBPACK_IMPORTED_MODULE_7__.J),
 /* harmony export */   "RJ": () => (/* reexport safe */ _head_banner__WEBPACK_IMPORTED_MODULE_5__.R),
@@ -634,6 +686,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _villa_card_load__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(618);
 /* harmony import */ var _empty_result__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(4386);
 /* harmony import */ var _gallery_carousel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(7873);
+/* harmony import */ var _popup__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(4824);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_header__WEBPACK_IMPORTED_MODULE_1__]);
 _header__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
 
@@ -648,8 +701,44 @@ _header__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (a
 
 
 
+
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
+
+/***/ }),
+
+/***/ 4824:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "G": () => (/* binding */ Popup)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(5692);
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _poup_module_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3354);
+/* harmony import */ var _poup_module_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_poup_module_css__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+const Popup = ({ open , onClose , children , title ="Th\xf4ng b\xe1o"  })=>{
+    return /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_1__.Dialog, {
+        open: open,
+        onClose: onClose,
+        children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+            className: (_poup_module_css__WEBPACK_IMPORTED_MODULE_2___default().container),
+            children: [
+                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                    className: (_poup_module_css__WEBPACK_IMPORTED_MODULE_2___default().title),
+                    children: title
+                }),
+                children
+            ]
+        })
+    });
+};
+
 
 /***/ }),
 
@@ -1017,6 +1106,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "E": () => (/* binding */ queryClient)
 /* harmony export */ });
+/* unused harmony export STALE_TIME */
 /* harmony import */ var _tanstack_react_query__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(9752);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_0__]);
 _tanstack_react_query__WEBPACK_IMPORTED_MODULE_0__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
@@ -1029,6 +1119,7 @@ const queryClient = new _tanstack_react_query__WEBPACK_IMPORTED_MODULE_0__.Query
         }
     }
 });
+const STALE_TIME = (/* unused pure expression or super */ null && (3600 * 10 * 5));
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
@@ -1372,7 +1463,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4277);
 /* harmony import */ var _styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(1404);
 /* harmony import */ var _styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7780);
+/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3416);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5675);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(5692);
@@ -1560,6 +1651,9 @@ const api = {
     },
     branchGalleries: (id)=>{
         return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get(`branches/${id}/galleries`).then((res)=>res.data);
+    },
+    paymentMethods: ()=>{
+        return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get("payment_methods").then((res)=>res.data);
     },
     paymentGatewayStatus: (txn_ref)=>{
         return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get("payment_gateways/status", {

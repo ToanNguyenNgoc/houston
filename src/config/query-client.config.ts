@@ -8,3 +8,4 @@ export const queryClient = new QueryClient({
     }
   }
 })
+export const STALE_TIME = 3600 * 10 * 5

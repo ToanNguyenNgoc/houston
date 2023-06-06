@@ -20,7 +20,7 @@
 }
 
 .left {
-  width: calc(35% - 12px);
+  width: calc(40% - 12px);
 }
 
 .left_title {
@@ -119,8 +119,33 @@
   color: var(--orange);
 }
 
+.method_list {
+  margin-top: 8px;
+}
+
+.method_item {
+  padding: 8px 0px;
+}
+
+.method_item,
+.method_de {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.method_de {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+.method_de img {
+  margin-right: 12px;
+}
+
 .right {
-  width: calc(65% - 12px);
+  width: calc(60% - 12px);
 }
 
 .right_villa_card {
@@ -188,7 +213,9 @@
   justify-content: space-between;
   margin-bottom: 8px;
 }
-.util_item::after,.util_item::before{
+
+.util_item::after,
+.util_item::before {
   display: none;
 }
 
@@ -236,12 +263,44 @@
   width: calc(50% - 7px);
 }
 
-.right_bot {
+.right_bot{
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  z-index: 10;
+  padding: 8px 0px;
+}
+.right_bot_cnt{
+  padding: 12px;
+  border-radius: var(--normal);
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: flex-end;
+}
+.right_bot_cnt button {
+  width: 33.33%;
+  color: var(--white) !important;
+}
+
+.success {
   margin-top: 24px;
 }
 
-.right_bot button {
-  width: 100%;
+.success_cnt {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+}
+.success_bot{
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+.success_bot button{
+  width: 40%;
+  margin: 0px 12px;
 }
 
 @media only screen and (max-width: 992px) and (min-width: 767px) {}
@@ -270,13 +329,16 @@
   .right_info_card {
     margin-top: 12px;
   }
-  .villa_detail_name{
+
+  .villa_detail_name {
     font-size: 14px;
   }
-  .villa_detail_address{
+
+  .villa_detail_address {
     font-size: 12px;
     line-height: 18px;
   }
+
   .right_bot {
     position: fixed;
     bottom: 0;
@@ -287,5 +349,16 @@
     border-radius: 12px 12px 0 0;
     padding: 12px 12px 20px;
     box-shadow: var(--box-shadow);
+  }
+  .right_bot div{
+    padding: 0px;
+  }
+  .right_bot_cnt{
+    box-shadow: none;
+    padding: 0px;
+    justify-content: center;
+  }
+  .right_bot_cnt button{
+    width: 100%;
   }
 }

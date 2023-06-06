@@ -259,7 +259,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_villa_card_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4485);
 /* harmony import */ var _components_villa_card_load__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(618);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(4157);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(1027);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__]);
 ([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
@@ -295,7 +295,7 @@ const HomeVilla = ()=>{
                 villa_cate_id: cate,
                 includes: "full_address"
             }),
-        staleTime: _constants__WEBPACK_IMPORTED_MODULE_7__/* .QR_TIME_CACHE */ .C
+        staleTime: _constants__WEBPACK_IMPORTED_MODULE_7__/* .QR_TIME_CACHE */ .CA
     });
     const villas = dataVilla?.data ?? [];
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_1__.Container, {
@@ -380,7 +380,7 @@ __webpack_async_result__();
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2597);
 /* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_home_module_css__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7780);
+/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3416);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5675);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1664);
@@ -551,14 +551,15 @@ __webpack_async_result__();
 
 /***/ }),
 
-/***/ 4157:
+/***/ 1027:
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 
 // EXPORTS
 __webpack_require__.d(__webpack_exports__, {
-  "C": () => (/* reexport */ QR_TIME_CACHE)
+  "CA": () => (/* reexport */ QR_TIME_CACHE),
+  "HD": () => (/* reexport */ pmIcon)
 });
 
 // UNUSED EXPORTS: KEY
@@ -567,7 +568,31 @@ __webpack_require__.d(__webpack_exports__, {
 const KEY = {};
 const QR_TIME_CACHE = 15 * (60 * 1000);
 
+// EXTERNAL MODULE: ./src/assets/icon/index.js + 15 modules
+var icon = __webpack_require__(3416);
+;// CONCATENATED MODULE: ./src/constants/payment-method-icon.ts
+
+const pmIcon = [
+    {
+        key: "CASH",
+        icon: icon/* icon.money */.q.money
+    },
+    {
+        key: "VNPAYQR",
+        icon: icon/* icon.qrVnpay */.q.qrVnpay
+    },
+    {
+        key: "VNBANK",
+        icon: icon/* icon.bankCard */.q.bankCard
+    },
+    {
+        key: "INTCARD",
+        icon: icon/* icon.creditCard */.q.creditCard
+    }
+];
+
 ;// CONCATENATED MODULE: ./src/constants/index.ts
+
 
 
 
