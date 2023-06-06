@@ -281,7 +281,7 @@
 }
 .right_bot_cnt button {
   width: 33.33%;
-  color: var(--white) !important;
+  /* color: var(--white) !important; */
 }
 
 .success {
