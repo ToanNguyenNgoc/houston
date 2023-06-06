@@ -1,0 +1,111 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+
+.bg_image {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.bg_image img {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bill_cnt {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  padding-top: 96px;
+  backdrop-filter: blur(8px);
+}
+
+.bill_card {
+  width: 50%;
+  height: max-content;
+  background-color: var(--white);
+  border-radius: var(--max);
+  box-shadow: var(--box-shadow);
+  padding: 24px 12px;
+}
+
+.bill_head {
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+.bill_head_icon {
+  width: 64px;
+  height: 64px;
+  background-color: #66bb6a73;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bill_head_title {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--green-dark-2);
+}
+
+.bill_body {
+  margin-top: 26px;
+  padding: 12px;
+  border-radius: var(--max);
+  background-color: #F7FAFB;
+}
+
+.row::after,
+.row::before {
+  display: none;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  color: #5E6163;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 12px 0px;
+}
+
+.value {
+  max-width: 75%;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--grey-dark);
+}
+
+.bill_body_de {
+  border-top: solid 1px #E1E2E4;
+}
+
+.bill_bot::after,
+.bill_bot::before {
+  display: none;
+}
+
+.bill_bot {
+  margin-top: 26px;
+  display: flex;
+  justify-content: center
+}
+
+.bill_bot button {
+  width: 40%;
+  margin: 0px 8px;
+}

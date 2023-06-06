@@ -72,5 +72,10 @@ export const api = {
   },
   branchGalleries: (id: number) => {
     return axiosConfig.get(`branches/${id}/galleries`).then<ResponseList<Gallery[]>>(res => res.data)
+  },
+  paymentGatewayStatus: (txn_ref: string) => {
+    return axiosConfig
+      .get('payment_gateways/status', { params: { txn_ref: txn_ref } })
+      .then<ResponseDetail<Booking>>(res => res.data)
   }
 }

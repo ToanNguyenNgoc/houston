@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/Id-e35P5XDN3_buddiKjG/_buildManifest.js",
-    "static/Id-e35P5XDN3_buddiKjG/_ssgManifest.js"
+    "static/h_y3xnhxr57-QjizojE0B/_buildManifest.js",
+    "static/h_y3xnhxr57-QjizojE0B/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -31,7 +31,7 @@
       "static/chunks/framework-73b8966a3c579ab0.js",
       "static/chunks/main-1fa14a457b90c406.js",
       "static/css/233aa725dbf653c7.css",
-      "static/chunks/pages/_app-edc43367dc92d817.js"
+      "static/chunks/pages/_app-c06ca62f889c29cb.js"
     ],
     "/_error": [
       "static/chunks/webpack-36d12a75f0098f30.js",
@@ -117,6 +117,15 @@
       "static/chunks/75fc9c18-1392eae2c2450c26.js",
       "static/css/501924a40f6fbda5.css",
       "static/chunks/pages/check-out-7e6f27a8db7a9ccc.js"
+    ],
+    "/payment-result": [
+      "static/chunks/webpack-36d12a75f0098f30.js",
+      "static/chunks/framework-73b8966a3c579ab0.js",
+      "static/chunks/main-1fa14a457b90c406.js",
+      "static/chunks/75fc9c18-1392eae2c2450c26.js",
+      "static/chunks/828-fea1c9f61705849c.js",
+      "static/css/9ed3db52050aabe0.css",
+      "static/chunks/pages/payment-result-6de713b0c72758c8.js"
     ],
     "/villas": [
       "static/chunks/webpack-36d12a75f0098f30.js",

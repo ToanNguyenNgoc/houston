@@ -1560,6 +1560,13 @@ const api = {
     },
     branchGalleries: (id)=>{
         return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get(`branches/${id}/galleries`).then((res)=>res.data);
+    },
+    paymentGatewayStatus: (txn_ref)=>{
+        return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get("payment_gateways/status", {
+            params: {
+                txn_ref: txn_ref
+            }
+        }).then((res)=>res.data);
     }
 };
 

@@ -1,6 +1,7 @@
 import { Branch } from "@/interfaces/branch";
 import { User } from "@/interfaces/user";
 import { Villa } from "@/interfaces/villa";
+import {PaymentGateway, PaymentMethod} from "./payment"
 
 export interface Booking {
   amount: number;
@@ -17,5 +18,7 @@ export interface Booking {
   status_booking: string;
   to_date_booking: string;
   updated_at: string;
-  villa: Villa
+  villa: Villa,
+  payment_method?:PaymentMethod,
+  payment_gateway?:PaymentGateway
 }
