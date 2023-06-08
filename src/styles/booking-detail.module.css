@@ -1,0 +1,157 @@
+.created_at {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin: 6px 0px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--grey-4);
+}
+
+.created_at span {
+  margin-right: 4px;
+  font-weight: 400;
+}
+
+.payment_method::after,
+.payment_method::before,
+.payment_gateway::after,
+.payment_gateway::before,
+.villa::after,
+.villa::before,
+.booking_date::after,
+.booking_date::before {
+  display: none;
+}
+
+.payment_method,
+.payment_gateway {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.payment_method span {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.payment_method span img {
+  margin-right: 8px;
+}
+
+.payment_gateway {
+  align-items: flex-end;
+}
+
+.pmt_gw_cnt {
+  display: flex;
+}
+
+.pmt_gw_cnt div:nth-child(2) {
+  margin-left: 8px;
+}
+
+.body {
+  padding: 12px 0px;
+  margin-top: 12px;
+  border-top: solid 1px var(--grey);
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.villa {
+  margin: 12px 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.villa_img {
+  width: 150px;
+  height: 150px;
+  border-radius: var(--normal);
+  position: relative;
+  background-color: var(--grey);
+}
+
+.villa_img img {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--normal);
+}
+
+.villa_info {
+  width: calc(100% - 162px);
+}
+
+.villa_name {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+  display: block;
+}
+
+.address {
+  display: block;
+  color: var(--grey-4);
+}
+
+.address p {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.address span {
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 6px;
+}
+
+.booking_date {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.booking_date_item {
+  background-color: var(--grey);
+  padding: 10px 16px;
+  border-radius: var(--normal);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--grey-3);
+  margin: 0px 20px;
+}
+
+.booking_date_item p:nth-child(2) {
+  font-weight: 600;
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--grey-4);
+  font-style: oblique;
+}
+
+
+
+
+@media only screen and (max-width: 992px) and (min-width: 767px) {}
+
+@media only screen and (max-width: 767px) {
+  .container {
+    border-top: solid 1px var(--grey-1);
+  }
+}

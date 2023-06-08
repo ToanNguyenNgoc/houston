@@ -109,3 +109,30 @@
   width: 40%;
   margin: 0px 8px;
 }
+
+@media only screen and (max-width: 992px) and (min-width: 767px) {
+  .bill_card{
+    width: calc(100% - 128px);
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .bill_cnt {
+    padding-top: 64px;
+  }
+
+  .bill_card {
+    width: calc(100% - 24px);
+  }
+
+  .bill_bot {
+    justify-content: space-between;
+  }
+
+  .bill_bot button {
+    width: calc(50% - 12px);
+  }
+  .row{
+    font-size: 12px;
+  }
+}

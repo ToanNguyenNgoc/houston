@@ -117,7 +117,7 @@
 
 .booking_item_detail {
   width: calc(100% - 212px);
-  height: 200px;
+  height: max-content;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -129,9 +129,17 @@
   font-weight: 500;
   color: var(--grey-4);
 }
+.booking_item_status_cnt{
+  display: flex;
+  justify-content: flex-end;
+  margin: 6px 0px;
+}
+.booking_item_status_cnt div:first-child{
+  margin-right: 8px;
+}
 
 .booking_item_detail_head {
-  margin-top: 6px;
+  margin: 6px 0px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -156,7 +164,6 @@
 }
 
 .booking_item_detail_address {
-  margin-top: 4px;
   font-size: 14px;
   line-height: 16px;
   font-weight: 500;
@@ -190,6 +197,7 @@
 }
 
 .booking_item_detail_amount {
+  margin-top: 8px;
   background-color: var(--grey);
   padding: 10px 12px;
   border-radius: var(--normal);

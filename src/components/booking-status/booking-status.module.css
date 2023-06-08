@@ -1,0 +1,17 @@
+.container {
+  padding: 6px 8px;
+  width: fit-content;
+  border-radius: var(--small);
+  color: var(--white);
+}
+
+.title {
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.status {
+  margin-top: 3px;
+  font-size: 14px;
+  font-weight: 600;
+}

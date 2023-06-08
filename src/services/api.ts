@@ -43,6 +43,9 @@ export const api = {
   bookings: (params: ParamBooking) => {
     return axiosConfig.get('bookings_customer', { params }).then<ResponseList<Booking[]>>(res => res.data)
   },
+  bookingById: (id: string) => {
+    return axiosConfig.get(`bookings_customer/${id}`).then<ResponseDetail<Booking>>(res => res.data)
+  },
   booking: (body: ReqBooking) => {
     return axiosConfig.post('bookings_customer', body).then(res => res.data)
   },

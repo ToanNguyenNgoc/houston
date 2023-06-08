@@ -23,6 +23,7 @@ module.exports = {
 	"booking_item_detail_amount": "account_booking_item_detail_amount__hPeZT",
 	"booking_item_img": "account_booking_item_img__hSbjz",
 	"booking_item_detail_head_create": "account_booking_item_detail_head_create__0_9rt",
+	"booking_item_status_cnt": "account_booking_item_status_cnt__e_XaL",
 	"booking_item_detail_address": "account_booking_item_detail_address__kKbUr",
 	"range_date": "account_range_date__C1LDC",
 	"range_date_item": "account_range_date_item__jRXps",
@@ -126,7 +127,7 @@ const Bookings = ()=>{
                         children: bookings.map((item)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                                 className: (_styles_account_module_css__WEBPACK_IMPORTED_MODULE_11___default().booking_list_item),
                                 children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)((next_link__WEBPACK_IMPORTED_MODULE_7___default()), {
-                                    href: "/",
+                                    href: `/account/bookings/${item.payment_gateway?.txn_ref ?? item.id}`,
                                     className: (_styles_account_module_css__WEBPACK_IMPORTED_MODULE_11___default().booking_item),
                                     children: [
                                         /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
@@ -149,19 +150,22 @@ const Bookings = ()=>{
                                                             ]
                                                         }),
                                                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
-                                                            className: (_styles_account_module_css__WEBPACK_IMPORTED_MODULE_11___default().booking_item_detail_head),
+                                                            className: (_styles_account_module_css__WEBPACK_IMPORTED_MODULE_11___default().booking_item_status_cnt),
                                                             children: [
-                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
-                                                                    children: item.villa?.name
+                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_1__/* .BookingStatus */ .gn, {
+                                                                    status: item.status_booking
                                                                 }),
-                                                                /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
-                                                                    children: [
-                                                                        "Trạng th\xe1i đặt ",
-                                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("br", {}),
-                                                                        item.status_booking
-                                                                    ]
+                                                                /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_components__WEBPACK_IMPORTED_MODULE_1__/* .BookingStatus */ .gn, {
+                                                                    status: item.payment_gateway?.status ?? "",
+                                                                    statusType: "PAYMENT"
                                                                 })
                                                             ]
+                                                        }),
+                                                        /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
+                                                            className: (_styles_account_module_css__WEBPACK_IMPORTED_MODULE_11___default().booking_item_detail_head),
+                                                            children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
+                                                                children: item.villa?.name
+                                                            })
                                                         }),
                                                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("span", {
                                                             className: (_styles_account_module_css__WEBPACK_IMPORTED_MODULE_11___default().booking_item_detail_address),

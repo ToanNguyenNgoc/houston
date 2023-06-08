@@ -2,6 +2,19 @@ exports.id = 557;
 exports.ids = [557];
 exports.modules = {
 
+/***/ 6667:
+/***/ ((module) => {
+
+// Exports
+module.exports = {
+	"container": "booking-status_container__mdPRu",
+	"title": "booking-status_title__d1nNi",
+	"status": "booking-status_status__hTfSl"
+};
+
+
+/***/ }),
+
 /***/ 9386:
 /***/ ((module) => {
 
@@ -274,6 +287,78 @@ function AppSnack(props) {
         })
     });
 }
+
+
+/***/ }),
+
+/***/ 5125:
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "g": () => (/* binding */ BookingStatus)
+/* harmony export */ });
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5893);
+/* harmony import */ var _booking_status_module_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(6667);
+/* harmony import */ var _booking_status_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_booking_status_module_css__WEBPACK_IMPORTED_MODULE_1__);
+
+
+const BookingStatus = ({ status , statusType ="BOOKING"  })=>{
+    let title = "Trạng th\xe1i đặt ph\xf2ng";
+    if (statusType === "PAYMENT") title = "Trạng th\xe1i thanh to\xe1n";
+    const renderStatus = ()=>{
+        let cnt = {
+            txt: "",
+            bg: "",
+            color: ""
+        };
+        switch(status){
+            case "PENDING":
+                return cnt = {
+                    txt: "Đang chờ",
+                    color: "#f9a825",
+                    bg: "#f9a82526"
+                };
+            case "SUCCESS":
+                return cnt = {
+                    txt: "Th\xe0nh c\xf4ng",
+                    color: "#43a047",
+                    bg: "#43a04747"
+                };
+            case "CANCEL":
+                return cnt = {
+                    txt: "Đ\xe3 hủy",
+                    color: "#ef5350",
+                    bg: "#ef535057"
+                };
+            default:
+                return cnt;
+        }
+    };
+    const {} = renderStatus();
+    return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+        style: {
+            backgroundColor: renderStatus().bg
+        },
+        className: (_booking_status_module_css__WEBPACK_IMPORTED_MODULE_1___default().container),
+        children: [
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                style: {
+                    color: renderStatus().color
+                },
+                className: (_booking_status_module_css__WEBPACK_IMPORTED_MODULE_1___default().title),
+                children: title
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+                style: {
+                    color: renderStatus().color
+                },
+                className: (_booking_status_module_css__WEBPACK_IMPORTED_MODULE_1___default().status),
+                children: renderStatus().txt
+            })
+        ]
+    });
+};
 
 
 /***/ }),
@@ -671,6 +756,7 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony export */   "Zy": () => (/* reexport safe */ _button_upload__WEBPACK_IMPORTED_MODULE_6__.Z),
 /* harmony export */   "_f": () => (/* reexport safe */ _empty_result__WEBPACK_IMPORTED_MODULE_9__._),
 /* harmony export */   "bN": () => (/* reexport safe */ _route_progress__WEBPACK_IMPORTED_MODULE_2__.b),
+/* harmony export */   "gn": () => (/* reexport safe */ _booking_status__WEBPACK_IMPORTED_MODULE_12__.g),
 /* harmony export */   "h4": () => (/* reexport safe */ _header__WEBPACK_IMPORTED_MODULE_1__.h),
 /* harmony export */   "pQ": () => (/* reexport safe */ _seo__WEBPACK_IMPORTED_MODULE_3__.p),
 /* harmony export */   "xq": () => (/* reexport safe */ _gallery_carousel__WEBPACK_IMPORTED_MODULE_10__.x)
@@ -687,8 +773,10 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var _empty_result__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(4386);
 /* harmony import */ var _gallery_carousel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(7873);
 /* harmony import */ var _popup__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(4824);
+/* harmony import */ var _booking_status__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(5125);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_header__WEBPACK_IMPORTED_MODULE_1__]);
 _header__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__)[0];
+
 
 
 
@@ -1615,6 +1703,9 @@ const api = {
         return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get("bookings_customer", {
             params
         }).then((res)=>res.data);
+    },
+    bookingById: (id)=>{
+        return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.get */ .p7.get(`bookings_customer/${id}`).then((res)=>res.data);
     },
     booking: (body)=>{
         return _config__WEBPACK_IMPORTED_MODULE_0__/* .axiosConfig.post */ .p7.post("bookings_customer", body).then((res)=>res.data);

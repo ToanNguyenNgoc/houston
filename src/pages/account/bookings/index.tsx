@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { NextPageWithLayout } from "@/common";
-import { Seo } from "@/components";
+import { BookingStatus, Seo } from "@/components";
 import { AccountLayout } from "@/layouts";
 import { api } from "@/services";
 import style from '@/styles/account.module.css'
@@ -12,15 +12,15 @@ import { fmPrice } from "@/utils";
 import { LoadingButton } from "@mui/lab";
 import { useRouter } from "next/router";
 
-export const PageHeaderAccount = ({title}:{title:string})=>{
+export const PageHeaderAccount = ({ title }: { title: string }) => {
   const router = useRouter()
   return (
     <div className={style.account_page_title}>
-    <button onClick={() => router.back()} className={style.account_page_title_btn}>
-      <FaAngleLeft size={26} color="var(--primary)" />
-    </button>
-    <span>{title}</span>
-  </div>
+      <button onClick={() => router.back()} className={style.account_page_title_btn}>
+        <FaAngleLeft size={26} color="var(--primary)" />
+      </button>
+      <span>{title}</span>
+    </div>
   )
 }
 
@@ -45,7 +45,7 @@ const Bookings: NextPageWithLayout = () => {
           {
             bookings.map(item => (
               <li key={item.id} className={style.booking_list_item}>
-                <Link href='/' className={style.booking_item}>
+                <Link href={`/account/bookings/${item.payment_gateway?.txn_ref ?? item.id}`} className={style.booking_item}>
                   <div className={style.booking_item_img}>
                     <img src={item.villa?.thumbnail?.original_url} alt="" />
                   </div>
@@ -54,9 +54,17 @@ const Bookings: NextPageWithLayout = () => {
                       <div className={style.booking_item_detail_head_create}>
                         ngày đặt: {moment(item.created_at).format('HH:mm DD [thg] MM, YYYY')}
                       </div>
+                      <div className={style.booking_item_status_cnt}>
+                        <BookingStatus
+                          status={item.status_booking}
+                        />
+                        <BookingStatus
+                          status={item.payment_gateway?.status ?? ''}
+                          statusType="PAYMENT"
+                        />
+                      </div>
                       <div className={style.booking_item_detail_head}>
                         <span>{item.villa?.name}</span>
-                        <span>Trạng thái đặt <br />{item.status_booking}</span>
                       </div>
                       <span className={style.booking_item_detail_address}>
                         <FaMapMarkerAlt color="var(--primary)" size={12} />
