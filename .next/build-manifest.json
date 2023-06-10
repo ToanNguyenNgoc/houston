@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/vjXo17qcIYDyerxLiVOGy/_buildManifest.js",
-    "static/vjXo17qcIYDyerxLiVOGy/_ssgManifest.js"
+    "static/_FNRurR-C_KpS70RXKmss/_buildManifest.js",
+    "static/_FNRurR-C_KpS70RXKmss/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -31,7 +31,7 @@
       "static/chunks/framework-73b8966a3c579ab0.js",
       "static/chunks/main-1fa14a457b90c406.js",
       "static/css/38b9ff2acd7a6d8f.css",
-      "static/chunks/pages/_app-876fba39b0637358.js"
+      "static/chunks/pages/_app-d878eae710a160d7.js"
     ],
     "/_error": [
       "static/chunks/webpack-36d12a75f0098f30.js",
@@ -81,7 +81,7 @@
       "static/chunks/main-1fa14a457b90c406.js",
       "static/chunks/466-b9f98ddf2afebf2c.js",
       "static/css/76b52b35c66adb9e.css",
-      "static/chunks/pages/auth/login-924c51d8540f721a.js"
+      "static/chunks/pages/auth/login-884c8a3108d74644.js"
     ],
     "/auth/register": [
       "static/chunks/webpack-36d12a75f0098f30.js",
@@ -128,16 +128,25 @@
       "static/chunks/828-fea1c9f61705849c.js",
       "static/chunks/880-29be2418c1a0eb21.js",
       "static/css/6f4691e7c0519f89.css",
-      "static/chunks/pages/check-out-2ca6fd0de1801295.js"
+      "static/chunks/pages/check-out-d2fa7b5c568d40be.js"
+    ],
+    "/forgot-password": [
+      "static/chunks/webpack-36d12a75f0098f30.js",
+      "static/chunks/framework-73b8966a3c579ab0.js",
+      "static/chunks/main-1fa14a457b90c406.js",
+      "static/chunks/466-b9f98ddf2afebf2c.js",
+      "static/css/2b5cf84e1c94b094.css",
+      "static/chunks/pages/forgot-password-e11bf19234684e14.js"
     ],
     "/payment-result": [
       "static/chunks/webpack-36d12a75f0098f30.js",
       "static/chunks/framework-73b8966a3c579ab0.js",
       "static/chunks/main-1fa14a457b90c406.js",
       "static/chunks/75fc9c18-1392eae2c2450c26.js",
+      "static/chunks/d7eeaac4-b7f3008888afac50.js",
       "static/chunks/828-fea1c9f61705849c.js",
       "static/css/df553e7128f43f23.css",
-      "static/chunks/pages/payment-result-f34c5729ac518c07.js"
+      "static/chunks/pages/payment-result-aba9701c2df91278.js"
     ],
     "/villas": [
       "static/chunks/webpack-36d12a75f0098f30.js",

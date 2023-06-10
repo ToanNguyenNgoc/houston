@@ -8,7 +8,11 @@ import Link from "next/link"
 import { useRouter } from "next/router"
 import { useState } from "react"
 
-export const SignLayout = ({ children }: LayoutProps) => {
+interface SignLayoutProps extends LayoutProps {
+  isForgot?: boolean
+}
+
+export const SignLayout = ({ children, isForgot = false }: SignLayoutProps) => {
   const router = useRouter()
   const [tab, setTab] = useState(router.pathname)
   return (
@@ -37,27 +41,32 @@ export const SignLayout = ({ children }: LayoutProps) => {
                   <span className={style.header_title}>Houston Garden</span>
                 </Link>
                 <span className={style.header_path}>
-                  {tab === '/auth/login' ? 'Đăng nhập' : 'Đăng ký'}
+                  {isForgot ? "Quên mật khâu" : (tab === '/auth/login' ? 'Đăng nhập' : 'Đăng ký')}
                 </span>
               </div>
             </Container>
           </div>
           <Container className={style.child_cnt} >
-            <div className={style.card_cnt}>
-              <div className={style.card_cnt_head}>
-                <Link
-                  onClick={() => setTab('/auth/login')}
-                  className={style.card_cnt_head_link}
-                  href={'/auth/login'} >Đăng nhập
-                </Link>
-                <Link
-                  onClick={() => setTab('/auth/register')}
-                  className={style.card_cnt_head_link}
-                  href={'/auth/register'}>Đăng ký
-                </Link>
-              </div>
-              {children}
-            </div>
+            {
+              !isForgot ?
+                <div className={style.card_cnt}>
+                  <div className={style.card_cnt_head}>
+                    <Link
+                      onClick={() => setTab('/auth/login')}
+                      className={style.card_cnt_head_link}
+                      href={'/auth/login'} >Đăng nhập
+                    </Link>
+                    <Link
+                      onClick={() => setTab('/auth/register')}
+                      className={style.card_cnt_head_link}
+                      href={'/auth/register'}>Đăng ký
+                    </Link>
+                  </div>
+                  {children}
+                </div>
+                :
+                children
+            }
           </Container>
         </div>
       </div>

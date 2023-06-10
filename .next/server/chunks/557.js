@@ -303,7 +303,7 @@ function AppSnack(props) {
 /* harmony import */ var _booking_status_module_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_booking_status_module_css__WEBPACK_IMPORTED_MODULE_1__);
 
 
-const BookingStatus = ({ status , statusType ="BOOKING"  })=>{
+const BookingStatus = ({ status , statusType ="BOOKING" , hideTitle =false  })=>{
     let title = "Trạng th\xe1i đặt ph\xf2ng";
     if (statusType === "PAYMENT") title = "Trạng th\xe1i thanh to\xe1n";
     const renderStatus = ()=>{
@@ -342,7 +342,7 @@ const BookingStatus = ({ status , statusType ="BOOKING"  })=>{
         },
         className: (_booking_status_module_css__WEBPACK_IMPORTED_MODULE_1___default().container),
         children: [
-            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
+            !hideTitle && /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("p", {
                 style: {
                     color: renderStatus().color
                 },
@@ -1573,7 +1573,7 @@ _components__WEBPACK_IMPORTED_MODULE_1__ = (__webpack_async_dependencies__.then 
 
 
 
-const SignLayout = ({ children  })=>{
+const SignLayout = ({ children , isForgot =false  })=>{
     const router = (0,next_router__WEBPACK_IMPORTED_MODULE_6__.useRouter)();
     const [tab, setTab] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(router.pathname);
     return /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.Fragment, {
@@ -1617,7 +1617,7 @@ const SignLayout = ({ children  })=>{
                                             }),
                                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("span", {
                                                 className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().header_path),
-                                                children: tab === "/auth/login" ? "Đăng nhập" : "Đăng k\xfd"
+                                                children: isForgot ? "Qu\xean mật kh\xe2u" : tab === "/auth/login" ? "Đăng nhập" : "Đăng k\xfd"
                                             })
                                         ]
                                     })
@@ -1625,7 +1625,7 @@ const SignLayout = ({ children  })=>{
                             }),
                             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(_mui_material__WEBPACK_IMPORTED_MODULE_4__.Container, {
                                 className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().child_cnt),
-                                children: /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
+                                children: !isForgot ? /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
                                     className: (_styles_sign_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().card_cnt),
                                     children: [
                                         /*#__PURE__*/ (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsxs)("div", {
@@ -1647,7 +1647,7 @@ const SignLayout = ({ children  })=>{
                                         }),
                                         children
                                     ]
-                                })
+                                }) : children
                             })
                         ]
                     })

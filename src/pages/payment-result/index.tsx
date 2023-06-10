@@ -6,9 +6,12 @@ import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
 import style from "@/styles/payment-result.module.css"
 import { FaCheckCircle } from "react-icons/fa";
+import { AiFillCloseCircle } from "react-icons/ai"
 import moment from "moment";
 import { fmPrice } from "@/utils";
 import { Button } from "@mui/material";
+import { BookingStatus } from "@/components";
+import { Booking } from "@/interfaces";
 
 
 const PaymentResult: NextPageWithLayout = () => {
@@ -18,7 +21,7 @@ const PaymentResult: NextPageWithLayout = () => {
     queryKey: ['PM-RESULT', txn_ref],
     queryFn: () => api.paymentGatewayStatus(txn_ref),
     enabled: txn_ref ? true : false,
-    onError:() => router.push('404')
+    onError: () => router.push('404')
   })
   const booking = data?.data
   return (
@@ -28,21 +31,23 @@ const PaymentResult: NextPageWithLayout = () => {
       </div>
       <div className={style.bill_cnt}>
         <div className={style.bill_card}>
-          <div className={style.bill_head}>
-            <div className={style.bill_head_icon}>
-              <FaCheckCircle style={{ width: '24px', height: '24px' }} color="var(--green-dark-2)" />
-            </div>
-            <p className={style.bill_head_title}>Thanh toán thành công !</p>
-          </div>
+          {booking && <Status booking={booking} />}
           <div className={style.bill_body}>
             <div className={style.row}>
               <span className={style.label}>Villa</span>
               <span className={style.value}>{booking?.villa?.name}</span>
             </div>
-            <div className={style.row}>
-              <span className={style.label}>Trạng thái</span>
-              <span className={style.value}>Thành công</span>
-            </div>
+            {
+              booking?.payment_gateway &&
+              <div className={style.row} style={{ alignItems: "center" }}>
+                <span className={style.label}>Trạng thái</span>
+                <BookingStatus
+                  status={booking?.payment_gateway.status}
+                  statusType="PAYMENT"
+                  hideTitle
+                />
+              </div>
+            }
             <div className={style.bill_body_de}>
               <div className={style.row}>
                 <span className={style.label}>Txn ref</span>
@@ -93,4 +98,43 @@ const PaymentResult: NextPageWithLayout = () => {
   )
 }
 PaymentResult.Layout = AuthLayout
+
+const Status = ({ booking }: { booking: Booking }) => {
+  const renderStatus = () => {
+    let ctx = {
+      title: '',
+      bg: '',
+      color: '',
+      icon: <></>
+    }
+    switch (booking.payment_gateway?.status) {
+      case "SUCCESS":
+        return ctx = {
+          title: "Thanh toán thành công !",
+          color: 'var(--green-dark-2)',
+          bg: '#66bb6a73',
+          icon: <FaCheckCircle style={{ width: '24px', height: '24px' }} color="var(--green-dark-2)" />
+        };
+      case "CANCEL":
+        return ctx = {
+          title: "Thanh toán thất bại !",
+          color: '#ef5350',
+          bg: '#ef535057',
+          icon: <AiFillCloseCircle style={{ width: '24px', height: '24px' }} color="#ef535057" />
+        };
+      default:
+        return ctx
+    }
+  }
+  const { title, bg, color, icon } = renderStatus()
+  return (
+    <div className={style.bill_head}>
+      <div style={{ backgroundColor: bg }} className={style.bill_head_icon}>
+        {icon}
+      </div>
+      <p style={{ color: color }} className={style.bill_head_title}>{title}</p>
+    </div>
+  )
+}
+
 export default PaymentResult

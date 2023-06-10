@@ -72,7 +72,7 @@ const Login: NextPageWithLayout = () => {
           {errors.password && <p className={style.form_row_error}>{errors.password.message}</p>}
         </div>
         <div className={style.form_btn}>
-          <Link className={style.form_btn_forgot} href={'/forgot'} >Quên mật khẩu</Link>
+          <Link className={style.form_btn_forgot} href={'/forgot-password'} >Quên mật khẩu</Link>
           <LoadingButton
             type='submit'
             style={{ backgroundColor: 'var(--primary)' }}

@@ -37,14 +37,14 @@ const Checkout: NextPageWithLayout = () => {
   const router = useRouter()
   const { firstLoad, resultLoad, noti, onCloseNoti } = useNoti()
   const [refreshReCaptcha, setRefreshReCaptcha] = useState(false)
-  useEffect(() => {
-    setRefreshReCaptcha(r => !r)
-    if (!data.villa || !data.booking_value) router.push('/')
-  }, [])
   const [captcha, setCaptcha] = useState('')
   const verifyRecaptchaCallback = useCallback((token: string) => {
     setCaptcha(token)
   }, [])
+  useEffect(() => {
+    setRefreshReCaptcha(r => !r)
+    if (!data.villa || !data.booking_value) router.push('/')
+  }, [captcha])
   const night = rangeDate(data.booking_value?.from_date_booking, data.booking_value?.to_date_booking)
   let price = data.villa?.price ?? 0
   if (data.villa && data.villa.price > data.villa.special_price) { price = data.villa.special_price }
@@ -71,6 +71,7 @@ const Checkout: NextPageWithLayout = () => {
     staleTime: QR_TIME_CACHE
   })
   const onSubmitBooking = () => {
+    if (captcha === "") return setRefreshReCaptcha(r => !r)
     if (data.booking_value) {
       mutate({
         ...data.booking_value,

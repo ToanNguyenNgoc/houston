@@ -12,10 +12,11 @@
   "/_error": "pages/_error.js",
   "/branches": "pages/branches.html",
   "/check-out": "pages/check-out.html",
+  "/forgot-password": "pages/forgot-password.html",
   "/payment-result": "pages/payment-result.html",
   "/": "pages/index.js",
-  "/blogs/[blogId]": "pages/blogs/[blogId].js",
   "/blogs": "pages/blogs.js",
+  "/blogs/[blogId]": "pages/blogs/[blogId].js",
   "/branches/[branchId]": "pages/branches/[branchId].js",
   "/villas": "pages/villas.js",
   "/villas/[villaId]": "pages/villas/[villaId].js"

@@ -2,10 +2,11 @@ import style from "./booking-status.module.css"
 
 interface IBookingStatusProps {
   status: string;
-  statusType?: 'BOOKING' | 'PAYMENT'
+  statusType?: 'BOOKING' | 'PAYMENT';
+  hideTitle?: boolean
 }
 
-export const BookingStatus = ({ status, statusType = 'BOOKING' }: IBookingStatusProps) => {
+export const BookingStatus = ({ status, statusType = 'BOOKING', hideTitle = false }: IBookingStatusProps) => {
   let title = 'Trạng thái đặt phòng'
   if (statusType === 'PAYMENT') title = 'Trạng thái thanh toán'
   const renderStatus = () => {
@@ -28,7 +29,10 @@ export const BookingStatus = ({ status, statusType = 'BOOKING' }: IBookingStatus
   const { } = renderStatus()
   return (
     <div style={{ backgroundColor: renderStatus().bg }} className={style.container} >
-      <p style={{ color: renderStatus().color }} className={style.title}>{title}</p>
+      {
+        !hideTitle &&
+        <p style={{ color: renderStatus().color }} className={style.title}>{title}</p>
+      }
       <p style={{ color: renderStatus().color }} className={style.status}>{renderStatus().txt}</p>
     </div>
   )
