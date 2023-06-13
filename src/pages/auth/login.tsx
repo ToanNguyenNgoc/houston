@@ -94,11 +94,19 @@ const Login: NextPageWithLayout = () => {
       <div className={style.social_cnt}>
         <p className={style.social_title}>hoặc đăng nhập với</p>
         <div className={style.social_cnt_btn}>
-          <Button className={style.social_btn} onClick={() => onLoginSocial('customers/auth/google/login')}>
+          <Button
+            className={style.social_btn}
+            variant="outlined"
+            style={{ color: "var(--primary)", borderColor: 'var(--primary)' }}
+            onClick={() => onLoginSocial('customers/auth/google/login')}>
             <FcGoogle size={32} />
             Google
           </Button>
-          <Button disabled className={style.social_btn} onClick={() => onLoginSocial('customers/auth/google/facebook')}>
+          <Button disabled
+            className={style.social_btn}
+            variant="outlined"
+            style={{ color: "var(--primary)", borderColor: 'var(--primary)' }}
+            onClick={() => onLoginSocial('customers/auth/google/facebook')}>
             <FaFacebook color="#1771E5" size={29} />
             Facebook
           </Button>

@@ -65,12 +65,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: solid 1px var(--primary);
   padding: 4px 0px;
-  border-radius: var(--normal);
   font-size: 15px;
   font-weight: 500;
-  color: var(--primary);
 }
 .social_btn svg{
   margin-right: 4px;
