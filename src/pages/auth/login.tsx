@@ -17,6 +17,10 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { useNoti } from "@/hooks";
 import { AppSnack } from "@/components";
+import { FcGoogle } from "react-icons/fc";
+import { FaFacebook } from "react-icons/fa";
+import { baseURL } from "@/config";
+import { Button } from "@mui/material";
 
 const schema = Yup.object({
   email: Yup.string().required('Vui lòng nhập email')
@@ -37,7 +41,7 @@ const Login: NextPageWithLayout = () => {
     mutationFn: (body: ReqLogin) => api.login(body),
     onSuccess: async (res) => {
       Cookies.set('token_expired_at', res.data.token_expired_at, { secure: true })
-      Cookies.set('access_token', res.data.token,{secure:true})
+      Cookies.set('access_token', res.data.token, { secure: true })
       getProfile()
       router.push('/')
       reset()
@@ -48,6 +52,11 @@ const Login: NextPageWithLayout = () => {
   })
   const onSubmit = (data: ReqLogin) => {
     mutate(data)
+  }
+  const onLoginSocial = (path: string) => {
+    if (typeof window !== "undefined") {
+      window.location.assign(`${baseURL}${path}`)
+    }
   }
   return (
     <>
@@ -82,6 +91,19 @@ const Login: NextPageWithLayout = () => {
           </LoadingButton>
         </div>
       </form>
+      <div className={style.social_cnt}>
+        <p className={style.social_title}>hoặc đăng nhập với</p>
+        <div className={style.social_cnt_btn}>
+          <Button className={style.social_btn} onClick={() => onLoginSocial('customers/auth/google/login')}>
+            <FcGoogle size={32} />
+            Google
+          </Button>
+          <Button disabled className={style.social_btn} onClick={() => onLoginSocial('customers/auth/google/facebook')}>
+            <FaFacebook color="#1771E5" size={29} />
+            Facebook
+          </Button>
+        </div>
+      </div>
     </>
   )
 }

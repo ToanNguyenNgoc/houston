@@ -3,7 +3,8 @@
   padding: 12px 0px;
   position: relative;
 }
-.form_row_change_mail{
+
+.form_row_change_mail {
   position: absolute;
   z-index: 2;
   margin-top: 6px;
@@ -19,13 +20,15 @@
   color: var(--red);
   bottom: -4px;
 }
-.form_btn_forgot{
+
+.form_btn_forgot {
   margin-top: 8px;
   display: block;
   text-align: end;
   color: var(--primary);
   font-size: 14px;
 }
+
 .form_btn {
   margin-top: 28px;
 }
@@ -33,4 +36,42 @@
 .form_btn button {
   margin-top: 16px;
   width: 100%;
+}
+
+.social_cnt {
+  width: 100%;
+  margin-top: 26px;
+}
+
+.social_title {
+  text-align: center;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.social_cnt_btn::after,
+.social_cnt_btn::before {
+  display: none;
+}
+
+.social_cnt_btn {
+  margin-top: 14px;
+  grid-gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.social_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--primary);
+  padding: 4px 0px;
+  border-radius: var(--normal);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--primary);
+}
+.social_btn svg{
+  margin-right: 4px;
 }
