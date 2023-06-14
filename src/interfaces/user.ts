@@ -19,4 +19,7 @@ export interface User {
   token: string;
   token_expired_at: string;
   updated_at: string;
+  social_avatar?: string;
+  social_id?: string;
+  social_platform?: string;
 }

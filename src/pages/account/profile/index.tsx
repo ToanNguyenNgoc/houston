@@ -107,7 +107,7 @@ const ProfileForm = () => {
       <div className={`${style.acc_form_row} ${style.row_avatar}`}>
           <label className={style.acc_form_row_label}>Avatar</label>
           <div className={style.form_avatar}>
-            <img src={profile?.avatar?.original_url} alt="" />
+            <img src={profile?.avatar?.original_url ?? profile?.social_avatar} alt="" />
             <ButtonUpload
               onChange={onChangeMedia}
               className={style.form_avatar_btn}

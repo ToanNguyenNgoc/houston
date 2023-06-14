@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/8h3WTv8l9kw0DwbLYZldH/_buildManifest.js",
-    "static/8h3WTv8l9kw0DwbLYZldH/_ssgManifest.js"
+    "static/uuBAM7M9gM4gPX46KOfzd/_buildManifest.js",
+    "static/uuBAM7M9gM4gPX46KOfzd/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -30,8 +30,8 @@
       "static/chunks/webpack-36d12a75f0098f30.js",
       "static/chunks/framework-73b8966a3c579ab0.js",
       "static/chunks/main-1fa14a457b90c406.js",
-      "static/css/38b9ff2acd7a6d8f.css",
-      "static/chunks/pages/_app-3e884aaecb8c0408.js"
+      "static/css/f2f0b006d2422f9c.css",
+      "static/chunks/pages/_app-48e0848e76577578.js"
     ],
     "/_error": [
       "static/chunks/webpack-36d12a75f0098f30.js",
@@ -70,10 +70,10 @@
       "static/chunks/75fc9c18-1392eae2c2450c26.js",
       "static/chunks/828-fea1c9f61705849c.js",
       "static/chunks/466-b9f98ddf2afebf2c.js",
-      "static/chunks/880-29be2418c1a0eb21.js",
-      "static/chunks/641-1814cda948ce444d.js",
+      "static/chunks/744-40e184e875ada909.js",
+      "static/chunks/641-c178fe8e61283e14.js",
       "static/css/9e8eebac237f472c.css",
-      "static/chunks/pages/account/profile-fe4e7cdeeaa136e8.js"
+      "static/chunks/pages/account/profile-8562bb60f2d30702.js"
     ],
     "/auth/login": [
       "static/chunks/webpack-36d12a75f0098f30.js",
@@ -119,7 +119,7 @@
       "static/chunks/main-1fa14a457b90c406.js",
       "static/chunks/828-fea1c9f61705849c.js",
       "static/css/f37352986af23fd0.css",
-      "static/chunks/pages/branches/[branchId]-f07a35f8343ca5a9.js"
+      "static/chunks/pages/branches/[branchId]-fdc63d5492cc44f8.js"
     ],
     "/check-out": [
       "static/chunks/webpack-36d12a75f0098f30.js",
@@ -127,9 +127,9 @@
       "static/chunks/main-1fa14a457b90c406.js",
       "static/chunks/75fc9c18-1392eae2c2450c26.js",
       "static/chunks/828-fea1c9f61705849c.js",
-      "static/chunks/880-29be2418c1a0eb21.js",
+      "static/chunks/744-40e184e875ada909.js",
       "static/css/6f4691e7c0519f89.css",
-      "static/chunks/pages/check-out-d2fa7b5c568d40be.js"
+      "static/chunks/pages/check-out-cde3629a404e1432.js"
     ],
     "/forgot-password": [
       "static/chunks/webpack-36d12a75f0098f30.js",
@@ -164,9 +164,9 @@
       "static/chunks/828-fea1c9f61705849c.js",
       "static/chunks/466-b9f98ddf2afebf2c.js",
       "static/chunks/583-520b2165d58343e6.js",
-      "static/chunks/459-ca0bac029e0a9dbd.js",
+      "static/chunks/890-96aae549ae708684.js",
       "static/css/3bd134d40e99fd07.css",
-      "static/chunks/pages/villas/[villaId]-7be1770f24380ff9.js"
+      "static/chunks/pages/villas/[villaId]-a1726145d3bb97dc.js"
     ]
   },
   "ampFirstPages": []

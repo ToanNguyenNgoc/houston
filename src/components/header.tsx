@@ -3,13 +3,14 @@ import Link from "next/link"
 import style from '@/styles/header.module.css'
 import Head from "next/head"
 import { useRef } from "react"
-import { Container } from "@mui/material"
+import { Container, useMediaQuery } from "@mui/material"
 import { FaListUl } from 'react-icons/fa'
 import { useProfileStore } from "@/stores/zustand"
 import { ZProfileState } from "@/stores/zustand/type"
 
 export function Header() {
   const [profile] = useProfileStore((state: ZProfileState) => [state.profile])
+  const mb = useMediaQuery('(max-width:767px)');
   const refHeader = useRef<HTMLDivElement>(null)
   const refHeaderRight = useRef<HTMLDivElement>(null)
   if (typeof window !== 'undefined') {
@@ -74,8 +75,10 @@ export function Header() {
                     </div>
                     :
                     <div className={style.header_right_auth_link}>
-                      <img src={profile?.avatar?.original_url} alt="" />
-                      <Link href={'/account'}>{profile.email}</Link>
+                      <img src={profile?.avatar?.original_url ?? profile?.social_avatar} alt="" />
+                      <Link href={mb ? '/account' : '/account/profile'}>
+                        {profile?.fullname || profile.email}
+                      </Link>
                     </div>
                 }
               </div>

@@ -600,6 +600,7 @@ function Header() {
     const [profile] = (0,_stores_zustand__WEBPACK_IMPORTED_MODULE_6__/* .useProfileStore */ .O)((state)=>[
             state.profile
         ]);
+    const mb = (0,_mui_material__WEBPACK_IMPORTED_MODULE_4__.useMediaQuery)("(max-width:767px)");
     const refHeader = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);
     const refHeaderRight = (0,react__WEBPACK_IMPORTED_MODULE_3__.useRef)(null);
     if (false) {}
@@ -716,12 +717,12 @@ function Header() {
                                             className: (_styles_header_module_css__WEBPACK_IMPORTED_MODULE_7___default().header_right_auth_link),
                                             children: [
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                                    src: profile?.avatar?.original_url,
+                                                    src: profile?.avatar?.original_url ?? profile?.social_avatar,
                                                     alt: ""
                                                 }),
                                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_1___default()), {
-                                                    href: "/account",
-                                                    children: profile.email
+                                                    href: mb ? "/account" : "/account/profile",
+                                                    children: profile?.fullname || profile.email
                                                 })
                                             ]
                                         })
@@ -1304,7 +1305,7 @@ function AccountLayout({ children  }) {
                                     /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("div", {
                                         className: (_styles_account_layout_module_css__WEBPACK_IMPORTED_MODULE_8___default().l_profile_left),
                                         children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("img", {
-                                            src: profile?.avatar?.original_url,
+                                            src: profile?.avatar?.original_url ?? profile?.social_avatar,
                                             alt: ""
                                         })
                                     }),

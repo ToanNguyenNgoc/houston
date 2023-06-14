@@ -37,7 +37,7 @@ export function AccountLayout({ children }: LayoutProps) {
           <div className={style.left}>
             <div className={style.left_profile}>
               <div className={style.l_profile_left}>
-                <img src={profile?.avatar?.original_url} alt="" />
+                <img src={profile?.avatar?.original_url ?? profile?.social_avatar} alt="" />
               </div>
               <div className={style.l_profile_right}>
                 <span className={style.l_profile_right_name}>{profile?.fullname}</span>
