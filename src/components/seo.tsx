@@ -30,6 +30,7 @@ export function Seo(props: SeoProps) {
       <meta property="twitter:title" content={title} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image_url ?? ''}></meta>
+      <meta name="zalo-platform-site-verification" content="GVA5Ex_P5M5Dsi8zkwvrCJsAvYNHz3TuDJG" />
     </Head>
   );
 }

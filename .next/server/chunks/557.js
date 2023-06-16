@@ -949,6 +949,10 @@ function Seo(props) {
             /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
                 property: "twitter:image",
                 content: image_url ?? ""
+            }),
+            /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("meta", {
+                name: "zalo-platform-site-verification",
+                content: "GVA5Ex_P5M5Dsi8zkwvrCJsAvYNHz3TuDJG"
             })
         ]
     });
