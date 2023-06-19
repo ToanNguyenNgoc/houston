@@ -29,53 +29,6 @@ module.exports = {
 
 /***/ }),
 
-/***/ 1027:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "CA": () => (/* reexport */ QR_TIME_CACHE),
-  "HD": () => (/* reexport */ pmIcon)
-});
-
-// UNUSED EXPORTS: KEY
-
-;// CONCATENATED MODULE: ./src/constants/react-query.ts
-const KEY = {};
-const QR_TIME_CACHE = 15 * (60 * 1000);
-
-// EXTERNAL MODULE: ./src/assets/icon/index.js + 15 modules
-var icon = __webpack_require__(3416);
-;// CONCATENATED MODULE: ./src/constants/payment-method-icon.ts
-
-const pmIcon = [
-    {
-        key: "CASH",
-        icon: icon/* icon.money */.q.money
-    },
-    {
-        key: "VNPAYQR",
-        icon: icon/* icon.qrVnpay */.q.qrVnpay
-    },
-    {
-        key: "VNBANK",
-        icon: icon/* icon.bankCard */.q.bankCard
-    },
-    {
-        key: "INTCARD",
-        icon: icon/* icon.creditCard */.q.creditCard
-    }
-];
-
-;// CONCATENATED MODULE: ./src/constants/index.ts
-
-
-
-
-/***/ }),
-
 /***/ 5640:
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -102,7 +55,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _tanstack_react_query__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(9752);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(1027);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(7379);
 /* harmony import */ var _mui_lab__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(6072);
 /* harmony import */ var _mui_lab__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_mui_lab__WEBPACK_IMPORTED_MODULE_12__);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_config__WEBPACK_IMPORTED_MODULE_1__, _layouts__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__, _components__WEBPACK_IMPORTED_MODULE_4__, query_string__WEBPACK_IMPORTED_MODULE_6__, _tanstack_react_query__WEBPACK_IMPORTED_MODULE_10__]);
@@ -521,7 +474,7 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ 8513:
+/***/ 618:
 /***/ ((module) => {
 
 "use strict";
@@ -574,6 +527,14 @@ module.exports = require("react-gallery-carousel");
 
 "use strict";
 module.exports = require("react-icons/fa");
+
+/***/ }),
+
+/***/ 5856:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-icons/go");
 
 /***/ }),
 

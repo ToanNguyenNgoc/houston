@@ -1,5 +1,5 @@
 import { LayoutProps } from "@/common";
-import { Footer, Header } from "@/components";
+import {  Footer, Header } from "@/components";
 
 export function MainLayout({ children }: LayoutProps) {
   return (

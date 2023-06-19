@@ -3,15 +3,10 @@ import style from './home.module.css'
 import { icon } from '@/assets/icon'
 import Image from 'next/image'
 import Link from 'next/link'
-import { FaYoutube, FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa'
+import { socials } from '@/constants'
 
 export const WelCome = () => {
-  const socials = [
-    { link: 'https://www.youtube.com/watch?v=o0mSrIedcq8', icon: <FaYoutube color='var(--primary)' size={18} /> },
-    { link: 'https://www.facebook.com/houston.garden01', icon: <FaFacebook color='var(--primary)' size={18} /> },
-    { link: 'https://www.instagram.com/houston.garden/', icon: <FaInstagram color='var(--primary)' size={18} /> },
-    { link: 'https://www.tiktok.com/@houstongarden', icon: <FaTiktok color='var(--primary)' size={18} /> },
-  ]
+
   const utils = [
     { name: 'Lễ tân 24/7', icon: icon.foodCate },
     { name: 'Nhà hàng', icon: icon.dinnerCate },

@@ -298,7 +298,7 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ 8513:
+/***/ 618:
 /***/ ((module) => {
 
 "use strict";
@@ -351,6 +351,14 @@ module.exports = require("react-gallery-carousel");
 
 "use strict";
 module.exports = require("react-icons/fa");
+
+/***/ }),
+
+/***/ 5856:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-icons/go");
 
 /***/ }),
 

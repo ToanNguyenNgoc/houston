@@ -49,12 +49,12 @@ export function Header() {
                 Houton Garden Villa
               </Link>
             </div>
-            <div onClick={(e) => {
+            {/* <div onClick={(e) => {
               e.stopPropagation();
               openMenu()
             }} className={style.btn_open_menu}>
               <FaListUl color="var(--primary)" size={20} />
-            </div>
+            </div> */}
             <div onClick={(e) => e.stopPropagation()} ref={refHeaderRight} className={style.header_right}>
               <div
                 onClick={closeTimeOut}

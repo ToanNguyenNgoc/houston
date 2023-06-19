@@ -258,8 +258,8 @@ __webpack_require__.a(module, async (__webpack_handle_async_dependencies__, __we
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(6689);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _components_villa_card_item__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(4485);
-/* harmony import */ var _components_villa_card_load__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(618);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(1027);
+/* harmony import */ var _components_villa_card_load__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(1432);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(7379);
 var __webpack_async_dependencies__ = __webpack_handle_async_dependencies__([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__]);
 ([_tanstack_react_query__WEBPACK_IMPORTED_MODULE_2__, _services__WEBPACK_IMPORTED_MODULE_3__] = __webpack_async_dependencies__.then ? (await __webpack_async_dependencies__)() : __webpack_async_dependencies__);
 
@@ -380,13 +380,12 @@ __webpack_async_result__();
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_mui_material__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(2597);
 /* harmony import */ var _home_module_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_home_module_css__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(3416);
+/* harmony import */ var _assets_icon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(4794);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(5675);
 /* harmony import */ var next_image__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_image__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(1664);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(6290);
-/* harmony import */ var react_icons_fa__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(7379);
 
 
 
@@ -395,36 +394,6 @@ __webpack_async_result__();
 
 
 const WelCome = ()=>{
-    const socials = [
-        {
-            link: "https://www.youtube.com/watch?v=o0mSrIedcq8",
-            icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__.FaYoutube, {
-                color: "var(--primary)",
-                size: 18
-            })
-        },
-        {
-            link: "https://www.facebook.com/houston.garden01",
-            icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__.FaFacebook, {
-                color: "var(--primary)",
-                size: 18
-            })
-        },
-        {
-            link: "https://www.instagram.com/houston.garden/",
-            icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__.FaInstagram, {
-                color: "var(--primary)",
-                size: 18
-            })
-        },
-        {
-            link: "https://www.tiktok.com/@houstongarden",
-            icon: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx(react_icons_fa__WEBPACK_IMPORTED_MODULE_5__.FaTiktok, {
-                color: "var(--primary)",
-                size: 18
-            })
-        }
-    ];
     const utils = [
         {
             name: "Lễ t\xe2n 24/7",
@@ -483,7 +452,7 @@ const WelCome = ()=>{
                                 }),
                                 /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("ul", {
                                     className: (_home_module_css__WEBPACK_IMPORTED_MODULE_6___default().welcome_right_social),
-                                    children: socials.map((item, i)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
+                                    children: _constants__WEBPACK_IMPORTED_MODULE_5__/* .socials.map */ .UY.map((item, i)=>/*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx("li", {
                                             children: /*#__PURE__*/ react_jsx_runtime__WEBPACK_IMPORTED_MODULE_0__.jsx((next_link__WEBPACK_IMPORTED_MODULE_4___default()), {
                                                 href: item.link,
                                                 target: "_blank",
@@ -548,53 +517,6 @@ _Villa__WEBPACK_IMPORTED_MODULE_3__ = (__webpack_async_dependencies__.then ? (aw
 
 __webpack_async_result__();
 } catch(e) { __webpack_async_result__(e); } });
-
-/***/ }),
-
-/***/ 1027:
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-
-// EXPORTS
-__webpack_require__.d(__webpack_exports__, {
-  "CA": () => (/* reexport */ QR_TIME_CACHE),
-  "HD": () => (/* reexport */ pmIcon)
-});
-
-// UNUSED EXPORTS: KEY
-
-;// CONCATENATED MODULE: ./src/constants/react-query.ts
-const KEY = {};
-const QR_TIME_CACHE = 15 * (60 * 1000);
-
-// EXTERNAL MODULE: ./src/assets/icon/index.js + 15 modules
-var icon = __webpack_require__(3416);
-;// CONCATENATED MODULE: ./src/constants/payment-method-icon.ts
-
-const pmIcon = [
-    {
-        key: "CASH",
-        icon: icon/* icon.money */.q.money
-    },
-    {
-        key: "VNPAYQR",
-        icon: icon/* icon.qrVnpay */.q.qrVnpay
-    },
-    {
-        key: "VNBANK",
-        icon: icon/* icon.bankCard */.q.bankCard
-    },
-    {
-        key: "INTCARD",
-        icon: icon/* icon.creditCard */.q.creditCard
-    }
-];
-
-;// CONCATENATED MODULE: ./src/constants/index.ts
-
-
-
 
 /***/ }),
 
@@ -820,7 +742,7 @@ module.exports = require("next/dist/shared/lib/utils.js");
 
 /***/ }),
 
-/***/ 8513:
+/***/ 618:
 /***/ ((module) => {
 
 "use strict";
@@ -873,6 +795,14 @@ module.exports = require("react-gallery-carousel");
 
 "use strict";
 module.exports = require("react-icons/fa");
+
+/***/ }),
+
+/***/ 5856:
+/***/ ((module) => {
+
+"use strict";
+module.exports = require("react-icons/go");
 
 /***/ }),
 

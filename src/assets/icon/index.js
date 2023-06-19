@@ -13,6 +13,7 @@ import atmCard from './atm-card.png'
 import bankCard from './bank-card.png'
 import qrVnpay from './qrVnpay.png'
 import creditCard from './credit-card.png'
+import houstonPanel from './houston-panel.png'
 
 export const icon = {
   iconOrigin,
@@ -24,5 +25,6 @@ export const icon = {
   transportCate,
   spaCate,
   nullResult,
-  money, qrCode, atmCard, bankCard, qrVnpay, creditCard
+  money, qrCode, atmCard, bankCard, qrVnpay, creditCard,
+  houstonPanel
 }
