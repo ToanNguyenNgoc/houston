@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/VEZT6vujMam0QcLDDKLNa/_buildManifest.js",
-    "static/VEZT6vujMam0QcLDDKLNa/_ssgManifest.js"
+    "static/NGkPZDNGR3BItkjVfuqHy/_buildManifest.js",
+    "static/NGkPZDNGR3BItkjVfuqHy/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -31,7 +31,7 @@
       "static/chunks/framework-73b8966a3c579ab0.js",
       "static/chunks/main-1fa14a457b90c406.js",
       "static/css/f674d01daa24305c.css",
-      "static/chunks/pages/_app-40780d068e3a7341.js"
+      "static/chunks/pages/_app-1f4cc7916734fbb1.js"
     ],
     "/_error": [
       "static/chunks/webpack-36d12a75f0098f30.js",
@@ -70,10 +70,10 @@
       "static/chunks/75fc9c18-1392eae2c2450c26.js",
       "static/chunks/828-fea1c9f61705849c.js",
       "static/chunks/466-b9f98ddf2afebf2c.js",
-      "static/chunks/744-40e184e875ada909.js",
-      "static/chunks/641-01ad573a99df92b6.js",
+      "static/chunks/276-0851808a878502da.js",
+      "static/chunks/694-c464fcfcde39a5d0.js",
       "static/css/9e8eebac237f472c.css",
-      "static/chunks/pages/account/profile-657ce1c3329643a0.js"
+      "static/chunks/pages/account/profile-2130a8a47eea8ff5.js"
     ],
     "/auth/login": [
       "static/chunks/webpack-36d12a75f0098f30.js",
@@ -127,9 +127,16 @@
       "static/chunks/main-1fa14a457b90c406.js",
       "static/chunks/75fc9c18-1392eae2c2450c26.js",
       "static/chunks/828-fea1c9f61705849c.js",
-      "static/chunks/744-40e184e875ada909.js",
+      "static/chunks/694-c464fcfcde39a5d0.js",
       "static/css/6f4691e7c0519f89.css",
-      "static/chunks/pages/check-out-dc266be653870261.js"
+      "static/chunks/pages/check-out-fbf1c96f3d05d045.js"
+    ],
+    "/foods": [
+      "static/chunks/webpack-36d12a75f0098f30.js",
+      "static/chunks/framework-73b8966a3c579ab0.js",
+      "static/chunks/main-1fa14a457b90c406.js",
+      "static/chunks/276-0851808a878502da.js",
+      "static/chunks/pages/foods-b017accde7c7aa65.js"
     ],
     "/forgot-password": [
       "static/chunks/webpack-36d12a75f0098f30.js",

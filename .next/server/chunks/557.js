@@ -1610,8 +1610,8 @@ const socials = [
 ];
 const info = {
     location: "https://goo.gl/maps/LLeDGA5rJdfvvUxc6",
-    phone: "0392645745",
-    email: "houstongarden@gmail.com"
+    phone: "0976245775",
+    email: "houstongarden.villa@gmail.com"
 };
 
 ;// CONCATENATED MODULE: ./src/constants/index.ts
