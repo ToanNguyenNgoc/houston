@@ -20,8 +20,11 @@
   position: relative;
 }
 
-.input_date {
+.input_date_cnt{
   width: calc(50% - 12px);
+}
+.input_date {
+  cursor: pointer;
 }
 
 .input_date::after,

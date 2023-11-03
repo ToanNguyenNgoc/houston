@@ -76,6 +76,7 @@ export const FormBooking = ({ villa }: { villa: Villa }) => {
     })
   }
   const onSubmit = (value: FormValue) => {
+    console.log(villa.branch)
     const { from_date_booking, to_date_booking, note, customer_count, baby_count } = value
     if (villa.branch) {
       const data: any = {
@@ -92,6 +93,7 @@ export const FormBooking = ({ villa }: { villa: Villa }) => {
       onSetBooking(villa, data)
     }
   }
+
   return (
     <>
       <div className={style.booking_form_cnt}>
@@ -105,18 +107,20 @@ export const FormBooking = ({ villa }: { villa: Villa }) => {
             onClick={(e) => { e.stopPropagation(); onShowRangDate() }}
             className={`${style.form_row} ${style.form_row_col_2}`}
           >
-            <input type="text"
-              disabled
-              className={`app-input ${style.input_date}`}
-              placeholder="Từ ngày"
-              {...register('from_date_booking')}
-            />
-            <input type="text"
-              disabled
-              className={`app-input ${style.input_date}`}
-              placeholder="Đến ngày"
-              {...register('to_date_booking')}
-            />
+            <div className={style.input_date_cnt} onClick={(e) => { e.stopPropagation(); onShowRangDate() }}>
+              <input type="text"
+                className={`app-input ${style.input_date}`}
+                placeholder="Từ ngày"
+                {...register('from_date_booking')}
+              />
+            </div>
+            <div className={style.input_date_cnt} onClick={(e) => { e.stopPropagation(); onShowRangDate() }}>
+              <input type="text"
+                className={`app-input ${style.input_date}`}
+                placeholder="Đến ngày"
+                {...register('to_date_booking')}
+              />
+            </div>
             <div ref={rangeDateRef} className={style.range_date_cnt}>
               <DateRangePicker
                 className={style.booking_range_date_picker}
